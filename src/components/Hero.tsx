@@ -7,10 +7,7 @@ const Hero = () => {
 
   return (
     <section ref={scope} className="relative h-full rounded-lg bg-white">
-      <div
-        className="mx-auto flex items-center h-full lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 
-"
-      >
+      <div className="flex items-center h-full  w-full px-5 ">
         <div className="absolute w-full lg:w-1/2 inset-y-0 lg:right-0 hidden lg:block">
           <span
             id="dot"
@@ -44,7 +41,7 @@ const Hero = () => {
             en codigo🚀
           </p>
         </div>
-        <div className="">
+        <div >
           <Animated />
         </div>
       </div>
