@@ -6,7 +6,7 @@ const Hero = () => {
   const [scope, animate] = useAnimate();
 
   return (
-    <section ref={scope} className="relative h-full rounded-lg bg-white">
+    <section ref={scope} className="relative h-[95%] rounded-lg bg-white m-4">
       <div className="flex items-center h-full  w-full px-5 ">
         <div className="absolute w-full lg:w-1/2 inset-y-0 lg:right-0 hidden lg:block">
           <span

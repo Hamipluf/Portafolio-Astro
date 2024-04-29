@@ -10,32 +10,29 @@ interface Image {
 const items: Image[] = [
   {
     id: 1,
-    img: "https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg",
-    alt: "Fruta",
+    img: "/assets/express.png",
+    alt: "Express Brand",
   },
   {
     id: 2,
-
-    img: "https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg",
-    alt: "Fruta",
+    img: "assets/node.png",
+    alt: "NodeJS Brand",
   },
   {
     id: 3,
-
-    img: "https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg",
-    alt: "Fruta",
+    img: "/assets/react.png",
+    alt: "ReactJS Brand",
   },
   {
     id: 4,
 
-    img: "https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg",
-    alt: "Fruta",
+    img: "/assets/MongoDb.png",
+    alt: "MongoDB Brand",
   },
   {
     id: 5,
-
-    img: "https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg",
-    alt: "Fruta",
+    img: "/assets/next.png",
+    alt: "NextJS Brand",
   },
 ];
 
@@ -44,7 +41,7 @@ const Animated: React.FC = () => {
 
   const variants = {
     enter: (direction: number) => ({
-      y: direction > 0 ? 1000 : -1000,
+      y: direction > 0 ? 300 : -300,
       opacity: 0,
     }),
     center: {
@@ -54,7 +51,7 @@ const Animated: React.FC = () => {
     },
     exit: (direction: number) => ({
       zIndex: 0,
-      y: direction < 0 ? 1000 : -1000,
+      y: direction < 0 ? 200 : -200,
       opacity: 0,
     }),
   };
@@ -62,14 +59,14 @@ const Animated: React.FC = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-    }, 3000);
+    }, 4000);
 
     return () => clearInterval(intervalId);
   }, []);
 
   return (
-    <div className="w-full h-full overflow-hidden">
-      <AnimatePresence>
+    <div className="w-60 h-full overflow-hidden">
+      <AnimatePresence mode="wait">
         <motion.div
           key={items[currentIndex].id}
           variants={variants}
@@ -80,7 +77,7 @@ const Animated: React.FC = () => {
             y: { type: "spring", stiffness: 300, damping: 30 },
             opacity: { duration: 0.3 },
           }}
-          className="w-80 h-60 bg-cover bg-center"
+          className="w-42 h-32 bg-contain bg-no-repeat bg-center"
           style={{ backgroundImage: `url(${items[currentIndex].img})` }}
         />
       </AnimatePresence>
