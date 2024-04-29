@@ -1,9 +1,12 @@
 ---
+import AboutMe from "@/components/AboutMe.astro";
 import Layout from "../layouts/Layout.astro";
-import Animated from "@/components/Animated";
 import Hero from "@/components/Hero";
+import Expirience from "@/components/Experience.astro";
 ---
 
 <Layout title="Home">
-  <Hero client:visible />
+  <Hero client:only />
+  <Expirience />
+  <AboutMe />
 </Layout>
