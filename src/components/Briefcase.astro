@@ -1,0 +1,8 @@
+---
+import ProjectAnimated from "./ProjectAnimated";
+import project_data from "@/utils/project-data.json";
+---
+
+<section id="Projects" class="flex justify-center ml-10 w-full h-screen">
+  <ProjectAnimated projects={project_data} client:visible/>
+</section>

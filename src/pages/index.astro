@@ -3,10 +3,12 @@ import AboutMe from "@/components/AboutMe.astro";
 import Layout from "../layouts/Layout.astro";
 import Hero from "@/components/Hero";
 import Expirience from "@/components/Experience.astro";
+import Briefcase from "@/components/Briefcase.astro";
 ---
 
-<Layout title="Home">
-  <Hero client:only />
+<Layout title="Ramiro.Dev">
+  <Hero client:visible />
   <Expirience />
-  <AboutMe />
+  <Briefcase />
+  <!-- <AboutMe /> -->
 </Layout>

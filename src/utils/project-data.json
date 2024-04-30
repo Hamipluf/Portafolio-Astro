@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "title": "Resto Sync Client",
+    "subtitle": "Cliente de software de gestión gastronómica desarrollado con React y TypeScript",
+    "description": "Gestioné las operaciones diarias de un restaurante, incluyendo control de turnos, inventario, pedidos, análisis de productos y facturación. Utilicé software para automatizar tareas repetitivas, mejorar la eficiencia operativa y reducir costos. Generé informes detallados para identificar tendencias, optimizar procesos y tomar decisiones estratégicas.",
+    "demo_url": null,
+    "finished": false,
+    "github": "https://github.com/Hamipluf/RestoSync-Client",
+    "slug": "resto-sync-client",
+    "tools": [
+      "Axios",
+      "React Query Tanstack",
+      "React",
+      "Typescript",
+      "Redux TLK",
+      "Tailwind"
+    ],
+    "image": null
+  },
+  {
+    "id": 2,
+    "title": "Resto Sync Server",
+    "subtitle": "Desarrollo del backend para una aplicación de gestión gastronómica basada en una arquitectura por capas y POO con Node.js",
+    "description": "Diseñé e implementé una arquitectura en capas para separar de manera eficiente la lógica empresarial de la infraestructura, lo que facilitó la escalabilidad y el mantenimiento a largo plazo. Aplicando los principios de la Programación Orientada a Objetos (OOP), creé clases y objetos desacoplados para mejorar la modularidad y la reutilización del código. Desarrollé servicios de API RESTful para brindar funcionalidades del backend a las aplicaciones cliente, asegurando una comunicación eficiente y segura. Para gestionar los datos de la aplicación, implementé una base de datos relacional en PostgreSQL, garantizando un almacenamiento confiable y eficiente. Y para el testing implemete testing unitario en la capa de acceso a datos, para evitar problemas a fururo con el puesto en producción. El desarrollo del backend aún está en curso, con un enfoque continuo en la mejora y la optimización.",
+    "demo_url": null,
+    "finished": false,
+    "github": "https://github.com/Hamipluf/RestoSync-Server",
+    "slug": "resto-sync-server",
+    "tools": [
+      "Mocha",
+      "OOP",
+      "Node.JS",
+      "PostgreSQL",
+      "Chai",
+      "JWT",
+      "Express",
+      "Multer",
+      "Passport"
+    ],
+    "image": null
+  },
+  {
+    "id": 3,
+    "title": "E-Commerce CoderHouse",
+    "subtitle": "Proyecto final del curso Desarrollador Backend en CoderHouse. Desarrollé una aplicación de comercio electrónico integral utilizando Node.js, Express.js, Handlebars, MongoDB, NodeMailer y Stripe",
+    "description": "Implementé un backend robusto utilizando Node.js y Express.js, encargándome de la autenticación de usuarios, gestión de productos, procesamiento de pedidos e integración de pagos.Utilicé el motor de plantillas Handlebars para generar dinámicamente páginas web, garantizando una experiencia de usuario fluida. Empleé MongoDB como la base de datos para almacenar y gestionar información de productos, datos de usuarios y detalles de pedidos de manera efectiva. Integré NodeMailer para enviar correos electrónicos transaccionales, como confirmaciones de pedidos y notificaciones de cuenta. Implementé Stripe como pasarela de pago para procesar de manera segura pagos en línea y gestionar diversos métodos de pago. Desarrollé una documentación API exhaustiva utilizando Swagger para facilitar la integración sin problemas con aplicaciones frontend. Experiencia de usuario optimizada: Implementé autenticación JWT para un inicio de sesión seguro y autorización mejorada. Funcionalidad de comercio electrónico mejorada: Desarrollé características para la navegación de productos, gestión de carrito de compras y realización de pedidos. Procesamiento de pagos robusto: Integré Stripe para facilitar pagos en línea seguros y sin problemas.",
+    "demo_url": null,
+    "finished": true,
+    "github": "https://github.com/Hamipluf/E-Commerce_coderhouse",
+    "slug": "resto-sync-server",
+    "tools": [
+      "MongoDB",
+      "OOP",
+      "Node.JS",
+      "Nodemailer",
+      "Socket.io",
+      "Swagger",
+      "JWT",
+      "Express",
+      "Handlebars",
+      "Passport"
+    ],
+    "image": "assets/e-commerce-coderhouse.PNG"
+  },
+  {
+    "id": 4,
+    "title": "Netfix Clone",
+    "subtitle": "Desarrollo de un clon de Netflix con React, Redux, Firestore y autenticación de Google.",
+    "description": "Se desarrolló una aplicación web funcional similar a Netflix, con una interfaz de usuario intuitiva y un rendimiento optimizado. La implementación de Redux como herramienta de gestión de estado facilitó el mantenimiento y la escalabilidad del proyecto. La integración de Firestore como una base de datos NoSQL permitió un almacenamiento y recuperación eficientes y escalables de datos. La autenticación con Google Auth proporcionó a los usuarios acceso seguro y personalizado al contenido de la aplicación. El uso de la API de TMDB y Axios permitió el consumo y procesamiento efectivos de datos de películas. El uso de condicionales y autenticaciones garantizó una experiencia de usuario personalizada y segura.",
+    "demo_url": null,
+    "finished": true,
+    "github": "https://github.com/Hamipluf/E-Commerce_coderhouse",
+    "slug": "resto-sync-server",
+    "tools": ["React", "Axios", "Redux", "Firebase", "CSS"],
+    "image": "assets/net.png"
+  }
+]
