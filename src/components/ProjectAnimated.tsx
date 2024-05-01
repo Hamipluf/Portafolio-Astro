@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AnimatedCard from "./AnimatedCard";
 import type { Project } from "@/styles/interfaces/project";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface ProjectsAnimatedProps {
   projects: Project[];
@@ -24,19 +24,35 @@ const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
 
   return (
     <>
-      <div className="flex justify-center items-center flex-wrap gap-10 h-full">
-        {projects.map((project) => (
-          <AnimatedCard
-            key={project.id}
-            project={project}
-            openModal={openModal}
-          />
-        ))}
-      </div>
+      <AnimatePresence mode="sync">
+        <div className="flex items-center flex-wrap gap-10 h-full">
+          {projects.map((project) => (
+            <motion.div
+              key={project.id}
+              animate={{
+                x: [-300, -200, 0],
+                opacity: [0, 50, 100],
+              }}
+              transition={{
+                x: {
+                  duration: 2,
+                  type: "spring",
+                },
+                opacity: {
+                  ease: 'easeIn',
+                  duration: 1
+                }
+              }}
+            >
+              <AnimatedCard project={project} openModal={openModal} />
+            </motion.div>
+          ))}
+        </div>
+      </AnimatePresence>
 
       {selectedProject && (
-        <dialog id={selectedProject.slug} className="modal">
-          <div className="modal-box glass p-2">
+        <dialog id={selectedProject.slug} className="modal ">
+          <div className="modal-box glass p-2 ">
             <form method="dialog">
               <button
                 onClick={closeModal}

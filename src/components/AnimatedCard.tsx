@@ -58,7 +58,7 @@ const AnimatedCard: React.FC<{
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative h-52 w-72 rounded-xl bg-inherit"
+      className="relative min-h-40 max-w-lg rounded-xl bg-inherit"
     >
       <div
         style={{

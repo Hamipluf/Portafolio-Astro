@@ -31,9 +31,13 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <Sidebar />
-    <div class="ml-28 overflow-x-hidden">
-      <slot />
+    <div class="containter">
+      <div>
+        <Sidebar />
+      </div>
+      <div class="overflow-x-hidden">
+        <slot />
+      </div>
     </div>
   </body>
 </html>
@@ -61,14 +65,23 @@ const { title } = Astro.props;
     color: var(--dark);
   }
   html {
-        scroll-behavior: smooth;
-      }
+    scroll-behavior: smooth;
+  }
   body {
     background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
+
     min-height: 100vh;
     overscroll-behavior: none;
+  }
+
+  .containter {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
 
   aside {

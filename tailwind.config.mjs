@@ -5,7 +5,15 @@ export default {
     extend: {},
   },
   daisyui: {
-    themes: ["cupcake", "dark"],
+    themes: [
+      {
+        mytheme: {
+          "obscure": "#1d232a"
+        },
+      },
+      "cupcake",
+      "dark",
+    ],
   },
   plugins: [require("daisyui")],
 };
