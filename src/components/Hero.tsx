@@ -61,6 +61,7 @@ const Hero = () => {
                 duration: 0.6,
                 ease: "easeIn",
                 type: "spring",
+                delay: 1,
               }}
               className="text-3xl leading-tight sm:text-4xl md:text-5xl xl:text-6xl
             font-bold z-10"
@@ -71,11 +72,32 @@ const Hero = () => {
               </span>{" "}
               Developer
             </motion.h1>
-            <p className="text-xl mt-8 z-10">
+            <motion.p
+              animate={{
+                opacity: [0, 50, 100],
+              }}
+              transition={{
+                duration: 1,
+                ease: "easeIn",
+                delay: 1,
+              }}
+              className="text-xl mt-8 z-10"
+            >
               FullStack MERN Developer | +3 años de experiencia | Convierto
               ideas en codigo🚀
-            </p>
-            <p className="flex gap-x-2 my-10">
+            </motion.p>
+            <motion.p
+              animate={{
+                y: [30, 0],
+                opacity: [0, 50, 100],
+              }}
+              transition={{
+                duration: .3,
+                ease: "easeIn",
+                delay: 1,
+              }}
+              className="flex gap-x-2 my-10"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -98,7 +120,7 @@ const Hero = () => {
                 src="/assets/argentina.png"
                 alt="Bandera argentina"
               />
-            </p>
+            </motion.p>
           </div>
 
           <div className="flex flex-col justify-around items-center w-3/12 h-full">

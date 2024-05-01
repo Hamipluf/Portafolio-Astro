@@ -7,12 +7,15 @@ export default {
   daisyui: {
     themes: [
       {
-        mytheme: {
-          "obscure": "#1d232a"
+        cupcake: {
+          ...require("daisyui/src/theming/themes")["cupcake"],
+          "base-content": "#034159",
+        },
+        dark: {
+          ...require("daisyui/src/theming/themes")["dark"],
+          "base-content": "#D2FAD0",
         },
       },
-      "cupcake",
-      "dark",
     ],
   },
   plugins: [require("daisyui")],

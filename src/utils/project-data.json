@@ -16,7 +16,7 @@
       "Redux TLK",
       "Tailwind"
     ],
-    "image": null
+    "image": "assets/RestoSyncCodeClient.png"
   },
   {
     "id": 2,
@@ -38,7 +38,7 @@
       "Multer",
       "Passport"
     ],
-    "image": null
+    "image": "assets/RestoSyncCode.png"
   },
   {
     "id": 3,
@@ -68,7 +68,7 @@
     "title": "Netfix Clone",
     "subtitle": "Desarrollo de un clon de Netflix con React, Redux, Firestore y autenticación de Google.",
     "description": "Se desarrolló una aplicación web funcional similar a Netflix, con una interfaz de usuario intuitiva y un rendimiento optimizado. La implementación de Redux como herramienta de gestión de estado facilitó el mantenimiento y la escalabilidad del proyecto. La integración de Firestore como una base de datos NoSQL permitió un almacenamiento y recuperación eficientes y escalables de datos. La autenticación con Google Auth proporcionó a los usuarios acceso seguro y personalizado al contenido de la aplicación. El uso de la API de TMDB y Axios permitió el consumo y procesamiento efectivos de datos de películas. El uso de condicionales y autenticaciones garantizó una experiencia de usuario personalizada y segura.",
-    "demo_url": null,
+    "demo_url": "https://netflix-clone-rg.firebaseapp.com/",
     "finished": true,
     "github": "https://github.com/Hamipluf/E-Commerce_coderhouse",
     "slug": "resto-sync-server",

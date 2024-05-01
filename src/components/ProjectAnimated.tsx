@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import AnimatedCard from "./AnimatedCard";
 import type { Project } from "@/styles/interfaces/project";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 
 interface ProjectsAnimatedProps {
   projects: Project[];
@@ -9,6 +9,17 @@ interface ProjectsAnimatedProps {
 
 const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const animationVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: [0, 50, 100],
+      x: [-300, -200, 0],
+      transition: { duration: 1, ease: "easeIn", delay: 0.2 },
+    },
+  };
 
   const openModal = (project: Project) => {
     setSelectedProject(project);
@@ -25,27 +36,18 @@ const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
   return (
     <>
       <AnimatePresence mode="sync">
-        <div className="flex items-center flex-wrap gap-10 h-full">
+        <div ref={ref} className="flex items-center flex-wrap gap-10 h-full">
           {projects.map((project) => (
-            <motion.div
+            <div
+              style={{
+                transform: isInView ? "none" : "translateX(-200px)",
+                opacity: isInView ? 1 : 0,
+                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+              }}
               key={project.id}
-              animate={{
-                x: [-300, -200, 0],
-                opacity: [0, 50, 100],
-              }}
-              transition={{
-                x: {
-                  duration: 2,
-                  type: "spring",
-                },
-                opacity: {
-                  ease: 'easeIn',
-                  duration: 1
-                }
-              }}
             >
               <AnimatedCard project={project} openModal={openModal} />
-            </motion.div>
+            </div>
           ))}
         </div>
       </AnimatePresence>
@@ -85,14 +87,39 @@ const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
                 <p className="mb-8 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
                   {selectedProject.description}
                 </p>
-                <div className="flex justify-end w-full">
+                <div className="flex gap-x-4 justify-end w-full">
+                  {selectedProject.demo_url && (
+                    <a
+                      href={selectedProject.demo_url}
+                      target="_blank"
+                      className="relative group overflow-hidden px-4 h-8 rounded-full flex space-x-2 items-center bg-gradient-to-r from-primary to-primary hover:to-secondary transition-all duration-200 ease-in-out"
+                    >
+                      <span className="relative text-sm text-white">Demo</span>
+                      <div className="flex items-center -space-x-3 translate-x-3">
+                        <div className="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </div>
+                    </a>
+                  )}
                   <a
-                    href={
-                      selectedProject.demo_url ? selectedProject.demo_url : "#"
-                    }
+                    href={selectedProject.github}
+                    target="_blank"
                     className="relative group overflow-hidden px-4 h-8 rounded-full flex space-x-2 items-center bg-gradient-to-r from-primary to-primary hover:to-secondary transition-all duration-200 ease-in-out"
                   >
-                    <span className="relative text-sm text-white">Demo</span>
+                    <span className="relative text-sm text-white">Code</span>
                     <div className="flex items-center -space-x-3 translate-x-3">
                       <div className="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
                       <svg
