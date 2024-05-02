@@ -12,14 +12,7 @@ const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const animationVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: [0, 50, 100],
-      x: [-300, -200, 0],
-      transition: { duration: 1, ease: "easeIn", delay: 0.2 },
-    },
-  };
+
 
   const openModal = (project: Project) => {
     setSelectedProject(project);
@@ -36,7 +29,7 @@ const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
   return (
     <>
       <AnimatePresence mode="sync">
-        <div ref={ref} className="flex items-center flex-wrap gap-10 h-full">
+        <div ref={ref} className="flex justify-center items-center flex-wrap gap-10 h-full w-full">
           {projects.map((project) => (
             <div
               style={{

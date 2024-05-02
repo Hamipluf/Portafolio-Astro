@@ -37,7 +37,7 @@ const AnimatedCard: React.FC<{
     const mouseX = (e.clientX - rect.left) * ROTATION_RANGE;
     const mouseY = (e.clientY - rect.top) * ROTATION_RANGE;
 
-    const rX = (mouseY / height - HALF_ROTATION_RANGE) * -1;
+    const rX = (mouseY / height - HALF_ROTATION_RANGE) * -1.5;
     const rY = mouseX / width - HALF_ROTATION_RANGE;
 
     x.set(rX);
@@ -97,7 +97,7 @@ const AnimatedCard: React.FC<{
                 transform: "translateZ(75px)",
                 transformStyle: "preserve-3d",
               }}
-              className="btn btn-primary btn-square"
+              className="btn btn-primary btn-square z-30"
               onClick={() => openModal(project)}
             >
               <svg

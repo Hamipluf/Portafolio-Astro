@@ -9,11 +9,21 @@ export default {
       {
         cupcake: {
           ...require("daisyui/src/theming/themes")["cupcake"],
-          "base-content": "#034159",
+          "primary": "#3CA69B",
+          "secondary": "#D9D9D9",
+          "accent": "#1C4039",
+          "neutral": "#A6A6A6",
+          "base-100": "#3CA692",   
+          "base-text": "#0D0D0D"
         },
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
-          "base-content": "#D2FAD0",
+          "primary": "#213140",
+          "secondary": "#73A2BF",
+          "accent": "#9AC7D9",
+          "neutral": "#4A738C",
+          "base-100": "#0A0B0D",  
+          "base-text":  '#F2F2F2'
         },
       },
     ],

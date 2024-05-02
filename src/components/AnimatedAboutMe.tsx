@@ -41,7 +41,7 @@ const AnimatedAboutMe: React.FC = () => {
               ease: "backIn",
               duration: 1,
             }}
-            className="text-2xl text-slate-900 font-bold md:text-4xl"
+            className="text-2xl text-accent font-bold md:text-4xl"
           >
             ¡Hola!{" "}
             <motion.span
@@ -52,7 +52,7 @@ const AnimatedAboutMe: React.FC = () => {
                 delay: 1,
                 duration: 0.5,
               }}
-              className="text-secondary font-mono"
+              className="text-base-100 font-mono"
             >
               Soy Ramiro Gumma, un desarrollador FullStack MERN
             </motion.span>{" "}
@@ -61,7 +61,7 @@ const AnimatedAboutMe: React.FC = () => {
           <motion.p
             animate={animate_p.animate}
             transition={animate_p.transition}
-            className="mt-6 text-base-content"
+            className="mt-6 text-accent"
           >
             Desde mis comienzos en el mundo del desarrollo web, he sido
             impulsado por un inquebrantable deseo de aprendizaje y mejora
@@ -78,7 +78,7 @@ const AnimatedAboutMe: React.FC = () => {
           <motion.p
             animate={animate_p.animate}
             transition={{ ...animate_p.transition, delay: 0.2 }}
-            className="mt-4 text-base-content"
+            className="mt-4 text-accent"
           >
             Lo que me distingue es mi capacidad para adaptarme ágilmente a las
             metodologías de gestión, lo que me permite ofrecer soluciones

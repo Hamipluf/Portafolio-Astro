@@ -1,16 +1,17 @@
 ---
 import certificated_data from "@/utils/certificated-data.json";
 import CertificatedCard from "./CertificatedCard";
+const data = certificated_data.reverse()
 ---
 
 <section class="min-h-screen w-full" id="Certificates">
-  <div class="container px-6 py-10 mx-auto">
-    <h1 class="text-3xl font-semibold capitalize">From the blog</h1>
+  <div class="container px-6 mx-auto">
+    <h1 class="text-2xl font-semibold capitalize underline underline-offset-2 m-2">Estudios y Certificados</h1>
 
-    <div class="flex m-4 gap-4 flex-1 flex-wrap w-full">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 items-stretch justify-stretch">
       {
-        certificated_data.map((certificate) => (
-          <CertificatedCard certificate={certificate} />
+        data.map((certificate) => (
+          <CertificatedCard certificate={certificate} client:visible />
         ))
       }
     </div>
