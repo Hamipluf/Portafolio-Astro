@@ -4,11 +4,13 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "@/components/Hero";
 import Expirience from "@/components/Experience.astro";
 import Briefcase from "@/components/Briefcase.astro";
+import Certificates from "@/components/Certificates.astro";
 ---
 
 <Layout title="Ramiro.Dev">
   <Hero client:visible />
+  <AboutMe />
   <Expirience />
   <Briefcase />
-  <AboutMe />
+  <Certificates />
 </Layout>
