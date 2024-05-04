@@ -1,7 +1,8 @@
 {
-  "name": "tasty-tower",
+  "name": "portafolio-web-fullstack",
   "type": "module",
   "version": "0.0.1",
+  "author": "Ramiro Gumma",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

@@ -3,12 +3,12 @@ import Animated from "./Animated";
 
 const Hero = () => {
   return (
-    <section id="Hero" className="min-h-screen rounded-lg m-4 ">
+    <section id="Hero" className="min-h-screen rounded-lg m-4">
       <div className="flex  items-center h-full w-full px-5 ">
         <div className="absolute w-1/2 inset-y-0 lg:right-0 hidden lg:block">
           <motion.span
             id="dot"
-            className="absolute -left-6 md:-left-30 top-24 lg:top-48 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"
+            className="absolute -left-6 md:-left-30 top-24 lg:top-48 w-24 h-24 rotate-90 skew-x-12 rounded-3xl ball-1 blur-xl opacity-60 lg:opacity-95 lg:block hidden"
             animate={{
               y: [0, -30, 0],
               scale: [1, 1.3, 1],
@@ -30,7 +30,7 @@ const Hero = () => {
               duration: 2,
             }}
             id="dot"
-            className="absolute right-80 bottom-32 w-24 h-24 rounded-3xl bg-blue-600 blur-xl opacity-80"
+            className="absolute right-80 bottom-32 w-24 h-24 rounded-3xl bg-accent blur-xl opacity-80"
           ></motion.span>
         </div>
         <motion.span
@@ -63,11 +63,10 @@ const Hero = () => {
                 type: "spring",
                 delay: 1,
               }}
-              className="text-3xl leading-tight sm:text-4xl md:text-5xl xl:text-6xl
-            font-bold z-10"
+              className="font-nunito font-semibold base-text text-3xl leading-tight sm:text-4xl md:text-5xl xl:text-6xl z-10"
             >
               Ramiro Gumma{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600">
+              <span className="text-transparent bg-clip-text hero-text">
                 Full-Stack
               </span>{" "}
               Developer
@@ -81,7 +80,7 @@ const Hero = () => {
                 ease: "easeIn",
                 delay: 1,
               }}
-              className="text-xl mt-8 z-10"
+              className="font-nunito text-xl mt-8 z-10"
             >
               FullStack MERN Developer | +3 años de experiencia | Convierto
               ideas en codigo🚀
@@ -96,7 +95,7 @@ const Hero = () => {
                 ease: "easeIn",
                 delay: 1,
               }}
-              className="flex gap-x-2 my-10"
+              className="font-nunito font-medium flex items-center gap-x-2 my-10"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +115,7 @@ const Hero = () => {
               </svg>
               - Capital Federal, Argentina{" "}
               <img
-                className="w-6 h-6"
+                className="w-7 h-7"
                 src="/assets/argentina.png"
                 alt="Bandera argentina"
               />

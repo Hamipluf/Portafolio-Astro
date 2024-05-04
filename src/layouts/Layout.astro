@@ -28,10 +28,26 @@ const { title } = Astro.props;
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Font Nunito-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Permanent+Marker&family=Poetsen+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sedgwick+Ave+Display&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Nunito-->
+    <!-- Font Permanent Marker-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poetsen+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sedgwick+Ave+Display&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Permanent Marker-->
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="bg-secondary">
     <div class="containter">
       <div>
         <Sidebar />
@@ -44,33 +60,10 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
-  :root {
-    --ligth: #d2fad0;
-    --dark: #13151a;
-    --primary: #034159;
-    --secondary: #025951;
-    --accent: #038c3e;
-    --info: #0cf25d;
-    --error: #e32b1e;
-    --warning: #e3701e;
-    --bg-color: #d2fad0;
-    --aside-color: #034159;
-  }
-  [data-theme="dark"] {
-    --bg-color: var(--primary);
-    --aside-color: var(--ligth);
-    color: #d2fad0;
-  }
-  [data-theme="cupcake"] {
-    --bg-color: var(--ligth);
-    --aside-color: var(--primary);
-    color: var(--dark);
-  }
   html {
     scroll-behavior: smooth;
   }
   body {
-    background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
 

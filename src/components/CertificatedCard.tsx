@@ -1,11 +1,9 @@
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import { type Certificated } from "@/styles/interfaces/project";
 const CertificatedCard: React.FC<{ certificate: Certificated }> = ({
   certificate,
 }) => {
-  const ref = useRef(null);
-  const InView = useInView(ref, { once: true });
   return (
     <motion.div
       animate={{
@@ -18,7 +16,7 @@ const CertificatedCard: React.FC<{ certificate: Certificated }> = ({
       }}
       className="mt-10 group overflow-hidden p-8 rounded-xl bg-base-100 h-fit"
     >
-      <h3 className="font-mono font-medium mb-4">{certificate.title}</h3>
+      <h3 className="font-mono font-medium mb-4 text-secondary">{certificate.title}</h3>
       {/* Image */}
       <div className="border border-blue-500/10 flex relative  rounded-lg hover:scale-105 hover:translate-y-1 transition-all duration-300 ease-in-out">
         <img
@@ -29,7 +27,7 @@ const CertificatedCard: React.FC<{ certificate: Certificated }> = ({
       </div>
       {/* Text */}
       <div className=" mt-6 pb-6">
-        <p className="text-base-text">{certificate.description}</p>
+        <p className="text-secondary">{certificate.description}</p>
       </div>
       {/* BUttons */}
       <div className="flex gap-3 -mb-8 py-4">
