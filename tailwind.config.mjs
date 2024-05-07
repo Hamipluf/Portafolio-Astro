@@ -14,21 +14,23 @@ export default {
       {
         cupcake: {
           ...require("daisyui/src/theming/themes")["cupcake"],
-          "primary": "#027368",
-          "secondary": "#04D9C4",
-          "accent": "#F205B3",
-          "neutral": "#F2B705",
-          "base-100": "#F28705",
+          "primary": "#F2F2F2",
+          "secondary": "#F29E38",
+          "accent": "#328C6B",
+          "neutral": "#A64153",
+          "base-100": "#733F2D",
           ".base-text": {
-            "color": "#0D0D0D",
+            "font-family": "Montserrat, sans-serif",
+            "color": "#201f1e",
           },
-          ".secodary-text": {
-            "color": "#D8D9D7",
+          ".secondary-text": {
+            "font-family": "Lato, sans-serif",
+            "color": "#727374",
           },
           ".hero-text": {
             "background-image":
-            "linear-gradient(to bottom right, #027368 20%, #F205B3 30%, #04D9C4)",
-            "font-family": "Permanent Marker, cursive"
+            "linear-gradient(to bottom right, #733F2D 20%, #F29E38 30%, #F2F2F2 )",
+            "font-family": "Poetsen One, sans-serif"
           },
         },
         dark: {

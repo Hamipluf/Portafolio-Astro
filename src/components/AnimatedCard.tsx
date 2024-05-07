@@ -97,7 +97,7 @@ const AnimatedCard: React.FC<{
                 transform: "translateZ(75px)",
                 transformStyle: "preserve-3d",
               }}
-              className="btn btn-primary btn-square z-30"
+              className="btn btn-primary hover:btn-accent btn-square z-30"
               onClick={() => openModal(project)}
             >
               <svg

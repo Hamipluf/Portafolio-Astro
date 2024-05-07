@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="absolute w-1/2 inset-y-0 lg:right-0 hidden lg:block">
           <motion.span
             id="dot"
-            className="absolute -left-6 md:-left-30 top-24 lg:top-48 w-24 h-24 rotate-90 skew-x-12 rounded-3xl ball-1 blur-xl opacity-60 lg:opacity-95 lg:block hidden"
+            className="absolute bg-accent -left-6 md:-left-30 top-24 lg:top-48 w-24 h-24 rotate-90 skew-x-12 rounded-3xl ball-1 blur-xl opacity-60 lg:opacity-95 lg:block hidden"
             animate={{
               y: [0, -30, 0],
               scale: [1, 1.3, 1],
@@ -30,12 +30,12 @@ const Hero = () => {
               duration: 2,
             }}
             id="dot"
-            className="absolute right-80 bottom-32 w-24 h-24 rounded-3xl bg-accent blur-xl opacity-80"
+            className="absolute right-80 bottom-32 w-24 h-24 rounded-3xl bg-secondary blur-xl opacity-80"
           ></motion.span>
         </div>
         <motion.span
           animate={{
-            y: [0, 30, 0],
+            y: [0, -30, 0],
             scale: [1, 1.3, 1],
           }}
           transition={{
@@ -44,7 +44,7 @@ const Hero = () => {
             duration: 2,
           }}
           id="dot"
-          className=" lg:w-2/12 aspect-square bg-gradient-to-tr from-blue-600 to-green-400 absolute top-5 lg:left-60 rounded-full skew-y-12 blur-2xl opacity-60 skew-x-12 rotate-90"
+          className=" lg:w-2/12 aspect-square bg-base-100 absolute top-5 lg:left-60 rounded-full skew-y-12 blur-2xl opacity-60 skew-x-12 rotate-90"
         ></motion.span>
 
         <div className="flex w-full h-full">

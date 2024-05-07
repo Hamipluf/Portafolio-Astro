@@ -56,7 +56,7 @@ const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
                 ✕
               </button>
             </form>
-            <div className="flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+            <div className="flex w-full flex-col rounded-xl bg-primary bg-clip-border text-gray-700 shadow-md">
               <div className="m-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
                 {selectedProject.image && (
                   <img
@@ -74,10 +74,10 @@ const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
                 >
                   {selectedProject.finished ? "Finalizado" : "En desarrollo..."}
                 </div>
-                <h3 className="mb-2 block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                <h3 className="mb-2 block base-text text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                   {selectedProject.title}
                 </h3>
-                <p className="mb-8 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+                <p className="mb-8 block secondary-text text-base font-normal leading-relaxed text-gray-700 antialiased">
                   {selectedProject.description}
                 </p>
                 <div className="flex gap-x-4 justify-end w-full">
@@ -85,7 +85,7 @@ const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
                     <a
                       href={selectedProject.demo_url}
                       target="_blank"
-                      className="relative group overflow-hidden px-4 h-8 rounded-full flex space-x-2 items-center bg-gradient-to-r from-primary to-primary hover:to-secondary transition-all duration-200 ease-in-out"
+                      className="relative group overflow-hidden px-4 h-8 rounded-full flex space-x-2 items-center bg-gradient-to-r from-secondary to-base-100 hover:to-secondary transition-all duration-200 ease-in-out"
                     >
                       <span className="relative text-sm text-white">Demo</span>
                       <div className="flex items-center -space-x-3 translate-x-3">
@@ -110,7 +110,7 @@ const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
                   <a
                     href={selectedProject.github}
                     target="_blank"
-                    className="relative group overflow-hidden px-4 h-8 rounded-full flex space-x-2 items-center bg-gradient-to-r from-primary to-primary hover:to-secondary transition-all duration-200 ease-in-out"
+                    className="relative group overflow-hidden px-4 h-8 rounded-full flex space-x-2 items-center bg-gradient-to-r from-secondary to-base-100 hover:to-secondary transition-all duration-200 ease-in-out"
                   >
                     <span className="relative text-sm text-white">Code</span>
                     <div className="flex items-center -space-x-3 translate-x-3">
@@ -132,15 +132,15 @@ const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
                     </div>
                   </a>
                 </div>
-                <div className="divider divider-primary my-0"></div>
-                <p className="text-md font-semibold underline underline-offset-2 mb-2">
+                <div className="divider divider-base-100 my-0"></div>
+                <p className="text-md secondary-text font-semibold underline underline-offset-2 mb-2">
                   Desarrollo
                 </p>
                 <div className="flex gap-x-4 gap-y-2 w-full flex-wrap">
                   {selectedProject.tools.map((tool, index) => (
                     <div
                       key={index}
-                      className="badge badge-primary badge-outline"
+                      className="badge badge-secondary badge-outline"
                     >
                       {tool}
                     </div>
