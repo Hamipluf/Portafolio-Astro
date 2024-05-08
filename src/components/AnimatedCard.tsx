@@ -9,8 +9,8 @@ import {
 } from "framer-motion";
 import type { Project } from "@/styles/interfaces/project";
 
-const ROTATION_RANGE = 20.5;
-const HALF_ROTATION_RANGE = 15.5 / 2;
+const ROTATION_RANGE = 32.5;
+const HALF_ROTATION_RANGE = 32.5 / 2;
 
 const AnimatedCard: React.FC<{
   project: Project;
@@ -37,7 +37,7 @@ const AnimatedCard: React.FC<{
     const mouseX = (e.clientX - rect.left) * ROTATION_RANGE;
     const mouseY = (e.clientY - rect.top) * ROTATION_RANGE;
 
-    const rX = (mouseY / height - HALF_ROTATION_RANGE) * -1.5;
+    const rX = (mouseY / height - HALF_ROTATION_RANGE) * -1;
     const rY = mouseX / width - HALF_ROTATION_RANGE;
 
     x.set(rX);
@@ -51,7 +51,6 @@ const AnimatedCard: React.FC<{
 
   return (
     <motion.div
-      ref={ref}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{
@@ -61,18 +60,22 @@ const AnimatedCard: React.FC<{
       className="relative min-h-40 max-w-lg rounded-xl bg-inherit"
     >
       <div
-        style={{
-          transform: "translateZ(75px)",
-          transformStyle: "preserve-3d",
-        }}
+        ref={ref}
+     
         className="card bg-base-100 shadow-xl image-full"
       >
         {project.image && (
           <figure>
-            <img className="" src={project.image} alt={project.slug} />
+            <img src={project.image} alt={project.slug} />
           </figure>
         )}
-        <div className="card-body ">
+        <div
+          style={{
+            transform: "translateZ(75px)",
+            transformStyle: "preserve-3d",
+          }}
+          className="card-body "
+        >
           <h2
             style={{
               transform: "translateZ(75px)",
@@ -107,10 +110,14 @@ const AnimatedCard: React.FC<{
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="icon icon-tabler icons-tabler-outline icon-tabler-info-circle"
+                style={{
+                  transform: "translateZ(75px)",
+                  transformStyle: "preserve-3d",
+                }}
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />

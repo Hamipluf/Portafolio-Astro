@@ -12,8 +12,6 @@ const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-
-
   const openModal = (project: Project) => {
     setSelectedProject(project);
     const modal = document.getElementById(project.slug) as HTMLDialogElement;
@@ -29,7 +27,10 @@ const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
   return (
     <>
       <AnimatePresence mode="sync">
-        <div ref={ref} className="flex justify-center items-center flex-wrap gap-10 h-full w-full">
+        <div
+          ref={ref}
+          className="flex justify-center items-center flex-wrap gap-10 h-full w-full"
+        >
           {projects.map((project) => (
             <div
               style={{
@@ -51,7 +52,7 @@ const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
             <form method="dialog">
               <button
                 onClick={closeModal}
-                className="btn btn-xs btn-circle btn-primary absolute right-4 top-4"
+                className="btn btn-xs btn-circle btn-secondary absolute right-4 top-4"
               >
                 ✕
               </button>
