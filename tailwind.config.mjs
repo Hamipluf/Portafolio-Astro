@@ -35,16 +35,22 @@ export default {
         },
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
-          "primary": "#213140",
-          "secondary": "#73A2BF",
-          "accent": "#9AC7D9",
+          "primary": "#191919",
+          "secondary": "#DDAC4B",
+          "accent": "#A61D42",
           "neutral": "#4A738C",
-          "base-100": "#0A0B0D",
+          "base-100": "#363438",
           ".base-text": {
-            "color": "#F2F1EB",
+            "font-family": "Kanit , sans-serif",
+            "color": "#F1F1F1",
           },
           ".secodary-text": {
-            "color": "#A0A697",
+            "font-family": "Josefin Sans , sans-serif",
+          },
+          ".hero-text": {
+            "background-image":
+            "linear-gradient(to bottom right, #363438 20%, #DDAC4B 30%, #191919 )",
+            "font-family": "Poetsen One, sans-serif"
           },
         },
       },

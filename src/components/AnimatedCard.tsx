@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { inView, animate } from "framer-motion/dom";
 
 import {
   motion,
@@ -21,8 +20,8 @@ const AnimatedCard: React.FC<{
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
-  const xSpring = useSpring(x);
-  const ySpring = useSpring(y);
+  const xSpring = useSpring(x, { duration: 0.5, damping: 15 });
+  const ySpring = useSpring(y, { duration: 0.5, damping: 15 });
 
   const transform = useMotionTemplate`rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
 
@@ -53,19 +52,22 @@ const AnimatedCard: React.FC<{
     <motion.div
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      ref={ref}
       style={{
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative min-h-40 max-w-lg rounded-xl bg-inherit"
+      className="relative min-h-40 max-w-lg rounded-xl"
     >
       <div
-        ref={ref}
-     
-        className="card bg-base-100 shadow-xl image-full"
+        style={{
+          transform: "translateZ(75px)",
+          transformStyle: "preserve-3d",
+        }}
+        className="card shadow-xl image-full"
       >
         {project.image && (
-          <figure>
+          <figure className="bg-white opacity-60">
             <img src={project.image} alt={project.slug} />
           </figure>
         )}
@@ -81,7 +83,7 @@ const AnimatedCard: React.FC<{
               transform: "translateZ(75px)",
               transformStyle: "preserve-3d",
             }}
-            className="card-title text-slate-50"
+            className="card-title base-text"
           >
             {project.title}
           </h2>
@@ -90,7 +92,7 @@ const AnimatedCard: React.FC<{
               transform: "translateZ(75px)",
               transformStyle: "preserve-3d",
             }}
-            className="text-slate-200"
+            className="base-text"
           >
             {project.subtitle}
           </p>
