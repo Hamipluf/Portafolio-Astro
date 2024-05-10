@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
-import { inView, animate } from "framer-motion/dom";
-
+import { truncateText } from "@/utils/truncateText";
 import {
   motion,
   useMotionTemplate,
@@ -9,8 +8,8 @@ import {
 } from "framer-motion";
 import type { Project } from "@/styles/interfaces/project";
 
-const ROTATION_RANGE = 32.5;
-const HALF_ROTATION_RANGE = 32.5 / 2;
+const ROTATION_RANGE = 34.5;
+const HALF_ROTATION_RANGE = ROTATION_RANGE / 2;
 
 const AnimatedCard: React.FC<{
   project: Project;
@@ -21,8 +20,8 @@ const AnimatedCard: React.FC<{
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
-  const xSpring = useSpring(x);
-  const ySpring = useSpring(y);
+  const xSpring = useSpring(x, { duration: .5, damping: 30 });
+  const ySpring = useSpring(y, { duration: 1, damping: 30 });
 
   const transform = useMotionTemplate`rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
 
@@ -49,83 +48,97 @@ const AnimatedCard: React.FC<{
     y.set(0);
   };
 
+
+
   return (
     <motion.div
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      ref={ref}
       style={{
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative min-h-40 max-w-lg rounded-xl bg-inherit"
+      className="card card-side bg-secondary bg-opacity-20 shadow-xl h-56"
     >
+      {project && project.image && (
+        <figure
+          style={{
+            transform: "translateZ(90px)",
+            transformStyle: "preserve-3d",
+          }}
+          className="m-2 shadow-2xl"
+        >
+          <img
+          
+            className="rounded-md w-40 h-full object-cover object-left "
+            src={project.image}
+            alt={project.slug}
+          />
+        </figure>
+      )}
       <div
-        ref={ref}
-     
-        className="card bg-base-100 shadow-xl image-full"
+        style={{
+          transform: "translateZ(75px)",
+          transformStyle: "preserve-3d",
+        }}
+        className="card-body"
       >
-        {project.image && (
-          <figure>
-            <img src={project.image} alt={project.slug} />
-          </figure>
-        )}
+        <h2
+          style={{
+            transform: "translateZ(75px)",
+            transformStyle: "preserve-3d",
+          }}
+          className="card-title"
+        >
+          {project.title}
+        </h2>
+        <p
+          style={{
+            transform: "translateZ(75px)",
+            transformStyle: "preserve-3d",
+          }}
+          className="max-w-72"
+        >
+          {truncateText(project.description, 12)}
+        </p>
         <div
           style={{
             transform: "translateZ(75px)",
             transformStyle: "preserve-3d",
           }}
-          className="card-body "
+          className="card-actions justify-end"
         >
-          <h2
+          <button
             style={{
               transform: "translateZ(75px)",
               transformStyle: "preserve-3d",
             }}
-            className="card-title text-slate-50"
+            onClick={() => openModal(project)}
+            className="btn btn-accent px-2 shadow-2xl"
           >
-            {project.title}
-          </h2>
-          <p
-            style={{
-              transform: "translateZ(75px)",
-              transformStyle: "preserve-3d",
-            }}
-            className="text-slate-200"
-          >
-            {project.subtitle}
-          </p>
-          <div className="card-actions justify-end">
-            <button
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="34"
+              height="34"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="icon icon-tabler icons-tabler-outline icon-tabler-info-square"
               style={{
                 transform: "translateZ(75px)",
                 transformStyle: "preserve-3d",
               }}
-              className="btn btn-primary hover:btn-accent btn-square z-30"
-              onClick={() => openModal(project)}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="icon icon-tabler icons-tabler-outline icon-tabler-info-circle"
-                style={{
-                  transform: "translateZ(75px)",
-                  transformStyle: "preserve-3d",
-                }}
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
-                <path d="M12 9h.01" />
-                <path d="M11 12h1v4h1" />
-              </svg>
-            </button>
-          </div>
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 9h.01" />
+              <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z" />
+              <path d="M11 12h1v4h1" />
+            </svg>
+          </button>
         </div>
       </div>
     </motion.div>
@@ -133,3 +146,83 @@ const AnimatedCard: React.FC<{
 };
 
 export default AnimatedCard;
+// <motion.div
+// onMouseMove={handleMouseMove}
+// onMouseLeave={handleMouseLeave}
+// ref={ref}
+// style={{
+//   transformStyle: "preserve-3d",
+//   transform,
+//   backgroundImage: `url('${project.image}')`,
+//   backgroundSize: "contain",
+//   backgroundPosition: "center",
+// }}
+//   className="relative min-h-40 max-w-lg rounded-xl"
+// >
+//   <div
+// style={{
+//   transform: "translateZ(75px)",
+//   transformStyle: "preserve-3d",
+// }}
+//     className="card shadow-2xl"
+//   >
+//     <div
+//       style={{
+//         transform: "translateZ(75px)",
+//         transformStyle: "preserve-3d",
+//       }}
+//       className="card-body"
+//     >
+//       <h2
+//         style={{
+//           transform: "translateZ(75px)",
+//           transformStyle: "preserve-3d",
+//         }}
+//         className="card-title text-slate-50"
+//       >
+//         {project.title}
+//       </h2>
+//       <p
+//         style={{
+//           transform: "translateZ(75px)",
+//           transformStyle: "preserve-3d",
+//         }}
+//         className="secondary-text"
+//       >
+//         {project.subtitle}
+//       </p>
+//       <div className="card-actions justify-end">
+//         <button
+//           onClick={() => openModal(project)}
+//           style={{
+//             transform: "translateZ(75px)",
+//             transformStyle: "preserve-3d",
+//           }}
+//           className="btn btn-primary hover:btn-accent btn-square z-30"
+//         >
+//           <svg
+//             xmlns="http://www.w3.org/2000/svg"
+//             width="24"
+//             height="24"
+//             viewBox="0 0 24 24"
+//             fill="none"
+//             stroke="currentColor"
+//             strokeWidth="2"
+//             strokeLinecap="round"
+//             strokeLinejoin="round"
+//             className="icon icon-tabler icons-tabler-outline icon-tabler-info-circle"
+//             style={{
+//               transform: "translateZ(75px)",
+//               transformStyle: "preserve-3d",
+//             }}
+//           >
+//             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+//             <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+//             <path d="M12 9h.01" />
+//             <path d="M11 12h1v4h1" />
+//           </svg>
+//         </button>
+//       </div>
+//     </div>
+//   </div>
+// </motion.div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { type Certificated } from "@/styles/interfaces/project";
+import { truncateText } from "@/utils/truncateText";
 const CertificatedCard: React.FC<{ certificate: Certificated }> = ({
   certificate,
 }) => {
@@ -14,9 +15,9 @@ const CertificatedCard: React.FC<{ certificate: Certificated }> = ({
         duration: 0.8,
         type: "spring",
       }}
-      className="mt-10 group overflow-hidden p-8 rounded-xl bg-base-100 h-fit"
+      className="mt-10 group overflow-hidden p-8 rounded-xl bg-secondary bg-opacity-25 h-fit"
     >
-      <h3 className="font-mono font-medium mb-4 text-primary">{certificate.title}</h3>
+      <h3 className="font-mono font-medium mb-4 text-accent">{certificate.title}</h3>
       {/* Image */}
       <div className="border border-blue-500/10 flex relative  rounded-lg hover:scale-105 hover:translate-y-1 transition-all duration-300 ease-in-out">
         <img
@@ -27,7 +28,7 @@ const CertificatedCard: React.FC<{ certificate: Certificated }> = ({
       </div>
       {/* Text */}
       <div className=" mt-6 pb-6">
-        <p className="text-primary">{certificate.description}</p>
+        <p className="text-accent">{truncateText(certificate.description, 10)}</p>
       </div>
       {/* BUttons */}
       <div className="flex gap-3 -mb-8 py-4">

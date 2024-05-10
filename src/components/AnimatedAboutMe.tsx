@@ -41,7 +41,7 @@ const AnimatedAboutMe: React.FC = () => {
               ease: "backIn",
               duration: 1,
             }}
-            className="text-2xl base-text font-nunito font-semibold md:text-4xl"
+            className="text-2xl text-secondary font-nunito font-semibold md:text-4xl"
           >
             ¡Hola!{" "}
             <motion.span

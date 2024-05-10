@@ -65,11 +65,11 @@ const Hero = () => {
               }}
               className="font-nunito font-semibold base-text text-3xl leading-tight sm:text-4xl md:text-5xl xl:text-6xl z-10"
             >
-              Ramiro Gumma{" "}
-              <span className="text-transparent bg-clip-text hero-text">
-                Full-Stack
-              </span>{" "}
-              Developer
+              <span className="name_title ">Ramiro Gumma</span>{" "}
+              <span className="text-transparent bg-clip-text hero-text font-light text-3xl sm:text-4xl md:text-5xl ">
+                Full-Stack{" "}
+              </span>
+              <span className="name_title ">Developer</span>
             </motion.h1>
             <motion.p
               animate={{
@@ -91,7 +91,7 @@ const Hero = () => {
                 opacity: [0, 50, 100],
               }}
               transition={{
-                duration: .3,
+                duration: 0.3,
                 ease: "easeIn",
                 delay: 1,
               }}
@@ -136,7 +136,7 @@ const Hero = () => {
                     duration: 2,
                   }}
                   href="ramirogumma@hotmail.com"
-                  className="btn btn-md btn-outline btn-ghost btn-circle"
+                  className="btn btn-outline btn-ghost px-3 py-2 hover:text-secondary"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +168,8 @@ const Hero = () => {
                   }}
                   href="https://www.linkedin.com/in/ramiro-gabriel-gumma-400993240/"
                   target="_blank"
-                  className="btn btn-md btn-outline btn-ghost  btn-circle "
+                  className="btn btn-outline btn-ghost px-3 py-2 hover:text-secondary"
+
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -203,7 +204,8 @@ const Hero = () => {
                   }}
                   href="https://github.com/Hamipluf"
                   target="_blank"
-                  className="btn btn-md btn-outline btn-ghost  btn-circle "
+                  className="btn btn-outline btn-ghost px-3 py-2 hover:text-secondary"
+
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -234,7 +236,8 @@ const Hero = () => {
                   }}
                   href=" https://w.app/RamaDev"
                   target="_blank"
-                  className="btn btn-md btn-outline btn-ghost  btn-circle "
+                  className="btn btn-outline btn-ghost px-3 py-2 hover:text-secondary"
+
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

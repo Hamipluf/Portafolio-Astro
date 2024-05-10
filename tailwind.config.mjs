@@ -32,20 +32,39 @@ export default {
             "linear-gradient(to bottom right, #733F2D 20%, #F29E38 30%, #F2F2F2 )",
             "font-family": "Poetsen One, sans-serif"
           },
+          ".name_title": {
+            "color": "transparent",
+            "padding":" 0 5px",
+            "text-transform": "uppercase",
+            "-webkit-text-stroke":" 1px #201f1e",
+            "text-stroke": "1px #201f1e",
+          }
         },
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
-          "primary": "#213140",
-          "secondary": "#73A2BF",
-          "accent": "#9AC7D9",
-          "neutral": "#4A738C",
-          "base-100": "#0A0B0D",
+          "primary": "#0f0f0f",
+          "secondary": "#7046f3",
+          "accent": "#f1f1f3",
+          "neutral": "#edecf1",
+          "base-100": "#e6e5e8",
           ".base-text": {
-            "color": "#F2F1EB",
+            "color": "#101010",
           },
           ".secodary-text": {
             "color": "#A0A697",
           },
+          ".hero-text": {
+            "background-image":
+            "linear-gradient(to bottom right, #e6e5e8 20%, #7046f3 30%, #0f0f0f )",
+            "font-family": "PT Mono, monospace"
+          },
+          ".name_title": {
+            "color": "transparent",
+            "padding":" 0 5px",
+            "text-transform": "uppercase",
+            "-webkit-text-stroke":" 0.5px #f1f1f3",
+            "text-stroke": "0.5px #f1f1f3",
+          }
         },
       },
     ],
