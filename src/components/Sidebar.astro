@@ -1,15 +1,18 @@
 ---
 import ChangeTheme from "@/components/ChangeTheme.astro";
+import { useTranslations, getLangFromUrl } from "@/i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <aside
   class="fixed min-h-[90vh] mx-4 my-4 w-16 flex flex-col space-y-10 items-center justify-center rounded-md bg-secondary z-50"
 >
-  <!-- Hero -->
+  <!-- Index -->
   <a
-    href="#Hero"
+    href={`/${lang}`}
     class="tooltip tooltip-right h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral"
-    data-tip="Home"
+    data-tip={t("nav.home")}
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -30,9 +33,9 @@ import ChangeTheme from "@/components/ChangeTheme.astro";
   </a>
   <!-- AboutMe -->
   <a
-    href="#AboutMe"
+    href={`/${lang}/about-me`}
     class="tooltip tooltip-right h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral"
-    data-tip="Conozcame"
+    data-tip={t("nav.about")}
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -45,11 +48,11 @@ import ChangeTheme from "@/components/ChangeTheme.astro";
         clip-rule="evenodd"></path></svg
     >
   </a>
-  <!-- Expirience -->
+  <!-- Experience -->
   <a
-    href="#Expirience"
+    href={`/${lang}/experience`}
     class="tooltip tooltip-right h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral"
-    data-tip="Experiencia"
+    data-tip={t("nav.expirience")}
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -70,9 +73,10 @@ import ChangeTheme from "@/components/ChangeTheme.astro";
   </a>
   <!-- Projects -->
   <a
-    href="#Projects"
+  href={`/${lang}/expirience`}
+
     class="tooltip tooltip-right h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral"
-    data-tip="Projectos"
+    data-tip={t("nav.projects")}
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -92,9 +96,10 @@ import ChangeTheme from "@/components/ChangeTheme.astro";
   </a>
   <!-- Certificates -->
   <a
+    href={`/${lang}/certificates`}
     class="tooltip tooltip-right h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral"
     data-tip="Certificados"
-    href="#Certificates"
+    data-tip={t("nav.certificates")}
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -118,8 +123,8 @@ import ChangeTheme from "@/components/ChangeTheme.astro";
 
   <!-- Theme -->
   <div
-    class="tooltip tooltip-right h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer  text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral :"
-    data-tip="Change Theme"
+    class="tooltip tooltip-right h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral :"
+    data-tip={t("nav.theme")}
   >
     <ChangeTheme />
   </div>

@@ -2,9 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { type Certificated } from "@/styles/interfaces/project";
 import { truncateText } from "@/utils/truncateText";
-const CertificatedCard: React.FC<{ certificate: Certificated }> = ({
-  certificate,
+import { getLangFromUrl } from "@/i18n/utils";
+const CertificatedCard: React.FC<{ certificate: Certificated, locale: string }> = ({
+  certificate, locale
 }) => {
+  const image = locale === 'es' ? certificate.image : `../../${certificate.image}`
+  console.log(image)
   return (
     <motion.div
       animate={{
@@ -22,7 +25,7 @@ const CertificatedCard: React.FC<{ certificate: Certificated }> = ({
       <div className="border border-blue-500/10 flex relative  rounded-lg hover:scale-105 hover:translate-y-1 transition-all duration-300 ease-in-out">
         <img
           className="hover:rounded-lg transition-all duration-300 ease-in-out"
-          src={certificate.image}
+          src={image}
           alt={certificate.id_certificate || ""}
         />
       </div>
