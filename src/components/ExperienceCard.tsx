@@ -1,6 +1,9 @@
 import React from "react";
 
 const ExperienceCard = () => {
+  const theme = localStorage.getItem('theme');
+  console.log(theme)
+
   return (
     <>
       <div className="flex m-4 items-center w-full">
@@ -46,7 +49,7 @@ const ExperienceCard = () => {
             <time className="font-mono italic">Ene-2022 -- Dec-2023</time>
             <div className="text-lg font-black">
               Freelancer Backend{" "}
-              <span className="opacity-40 text-sm font-medium text-secondary">
+              <span className="opacity-80 text-sm font-medium text-secondary">
                 -Freewaves.live · Autónomo Capital Federal, Argentina
               </span>
             </div>
@@ -149,7 +152,7 @@ const ExperienceCard = () => {
             <time className="font-mono italic">Dic-2023 -- Actualidad</time>
             <div className="text-lg font-black">
               Freelancer FullStack{" "}
-              <span className="opacity-40 text-sm font-medium text-secondary">
+              <span className="opacity-80 text-sm font-medium text-secondary">
                 - Autónomo Capital Federal, Argentina
               </span>
             </div>

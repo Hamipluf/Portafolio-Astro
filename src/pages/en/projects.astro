@@ -1,8 +1,11 @@
 ---
-import Briefcase from "@/components/Briefcase.astro";
+import ProjectAnimated from "@/components/ProjectAnimated";
+import project_data from "@/utils/project-data.json";
 import Layout from "@/layouts/Layout.astro";
 ---
 
-<Layout title="Ramiro.Dev">
-  <Briefcase />
+<Layout title="Briefcase">
+  <section id="Projects" class="flex justify-center  w-full h-screen">
+    <ProjectAnimated projects={project_data} client:visible/>
+  </section>
 </Layout>

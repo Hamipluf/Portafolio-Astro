@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import AnimatedCard from "./AnimatedCard";
-import type { Project } from "@/styles/interfaces/project";
+import type { Project } from "@/utils/interfaces/project";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 
 interface ProjectsAnimatedProps {

@@ -3,9 +3,6 @@ import Layout from "@/layouts/Layout.astro";
 import certificated_data from "@/utils/certificated-data.json";
 import CertificatedCard from "@/components/CertificatedCard";
 const data = certificated_data.reverse();
-const { currentLocale } = Astro;
-
-console.log(currentLocale);
 ---
 
 <Layout title="Certificates">
@@ -22,7 +19,7 @@ console.log(currentLocale);
       >
         {
           data.map((certificate) => (
-            <CertificatedCard certificate={certificate} locale={currentLocale} client:visible />
+            <CertificatedCard certificate={certificate} client:visible />
           ))
         }
       </div>

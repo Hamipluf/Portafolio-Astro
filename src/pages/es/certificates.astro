@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import certificated_data from "@/utils/certificated-data.json";
-import CertificatedCard from "../components/CertificatedCard";
+import CertificatedCard from "@/components/CertificatedCard";
 const data = certificated_data.reverse();
 ---
 
@@ -19,7 +19,7 @@ const data = certificated_data.reverse();
       >
         {
           data.map((certificate) => (
-            <CertificatedCard certificate={certificate} client:visible />
+            <CertificatedCard certificate={certificate}  client:visible />
           ))
         }
       </div>

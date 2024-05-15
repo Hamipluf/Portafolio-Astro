@@ -52,7 +52,7 @@ const AnimatedAboutMe: React.FC = () => {
                 delay: 1,
                 duration: 0.5,
               }}
-              className=" text-[#A61D42] font-sans"
+              className=" text-base-100 font-sans"
             >
               Soy Ramiro Gumma, un desarrollador FullStack MERN
             </motion.span>{" "}
