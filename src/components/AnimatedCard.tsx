@@ -1,5 +1,9 @@
 import React, { useRef } from "react";
+<<<<<<< HEAD
 import { truncateText } from "@/utils/truncateText";
+=======
+
+>>>>>>> adf55566b67ecd810e90c3d8e046239478612774
 import {
   motion,
   useMotionTemplate,
@@ -20,8 +24,13 @@ const AnimatedCard: React.FC<{
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
+<<<<<<< HEAD
   const xSpring = useSpring(x, { duration: .5, damping: 30 });
   const ySpring = useSpring(y, { duration: 1, damping: 30 });
+=======
+  const xSpring = useSpring(x, { duration: 0.5, damping: 15 });
+  const ySpring = useSpring(y, { duration: 0.5, damping: 15 });
+>>>>>>> adf55566b67ecd810e90c3d8e046239478612774
 
   const transform = useMotionTemplate`rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
 
@@ -59,7 +68,11 @@ const AnimatedCard: React.FC<{
         transformStyle: "preserve-3d",
         transform,
       }}
+<<<<<<< HEAD
       className="card card-side bg-secondary bg-opacity-20 shadow-xl h-56"
+=======
+      className="relative min-h-40 max-w-lg rounded-xl"
+>>>>>>> adf55566b67ecd810e90c3d8e046239478612774
     >
       {project && project.image && (
         <figure
@@ -82,6 +95,7 @@ const AnimatedCard: React.FC<{
           transform: "translateZ(75px)",
           transformStyle: "preserve-3d",
         }}
+<<<<<<< HEAD
         className="card-body"
       >
         <h2
@@ -102,6 +116,15 @@ const AnimatedCard: React.FC<{
         >
           {truncateText(project.description, 12)}
         </p>
+=======
+        className="card shadow-xl image-full"
+      >
+        {project.image && (
+          <figure className="bg-white opacity-60">
+            <img src={project.image} alt={project.slug} />
+          </figure>
+        )}
+>>>>>>> adf55566b67ecd810e90c3d8e046239478612774
         <div
           style={{
             transform: "translateZ(75px)",
@@ -114,6 +137,7 @@ const AnimatedCard: React.FC<{
               transform: "translateZ(75px)",
               transformStyle: "preserve-3d",
             }}
+<<<<<<< HEAD
             onClick={() => openModal(project)}
             className="btn btn-accent px-2 shadow-2xl"
           >
@@ -128,6 +152,23 @@ const AnimatedCard: React.FC<{
               strokeLinecap="round"
               strokeLinejoin="round"
               className="icon icon-tabler icons-tabler-outline icon-tabler-info-square"
+=======
+            className="card-title base-text"
+          >
+            {project.title}
+          </h2>
+          <p
+            style={{
+              transform: "translateZ(75px)",
+              transformStyle: "preserve-3d",
+            }}
+            className="base-text"
+          >
+            {project.subtitle}
+          </p>
+          <div className="card-actions justify-end">
+            <button
+>>>>>>> adf55566b67ecd810e90c3d8e046239478612774
               style={{
                 transform: "translateZ(75px)",
                 transformStyle: "preserve-3d",

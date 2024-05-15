@@ -42,6 +42,7 @@ export default {
         },
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
+<<<<<<< HEAD
           "primary": "#0f0f0f",
           "secondary": "#7046f3",
           "accent": "#f1f1f3",
@@ -49,9 +50,24 @@ export default {
           "base-100": "#e6e5e8",
           ".base-text": {
             "color": "#101010",
+=======
+          "primary": "#191919",
+          "secondary": "#DDAC4B",
+          "accent": "#A61D42",
+          "neutral": "#4A738C",
+          "base-100": "#363438",
+          ".base-text": {
+            "font-family": "Kanit , sans-serif",
+            "color": "#F1F1F1",
+>>>>>>> adf55566b67ecd810e90c3d8e046239478612774
           },
           ".secodary-text": {
-            "color": "#A0A697",
+            "font-family": "Josefin Sans , sans-serif",
+          },
+          ".hero-text": {
+            "background-image":
+            "linear-gradient(to bottom right, #363438 20%, #DDAC4B 30%, #191919 )",
+            "font-family": "Poetsen One, sans-serif"
           },
           ".hero-text": {
             "background-image":

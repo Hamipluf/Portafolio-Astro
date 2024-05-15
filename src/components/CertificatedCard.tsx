@@ -7,7 +7,6 @@ const CertificatedCard: React.FC<{ certificate: Certificated, locale: string }> 
   certificate, locale
 }) => {
   const image = locale === 'es' ? certificate.image : `../../${certificate.image}`
-  console.log(image)
   return (
     <motion.div
       animate={{
@@ -20,9 +19,9 @@ const CertificatedCard: React.FC<{ certificate: Certificated, locale: string }> 
       }}
       className="mt-10 group overflow-hidden p-8 rounded-xl bg-secondary bg-opacity-25 h-fit"
     >
-      <h3 className="font-mono font-medium mb-4 text-accent">{certificate.title}</h3>
+      <h3 className="font-mono font-medium mb-4 text-secondary">{certificate.title}</h3>
       {/* Image */}
-      <div className="border border-blue-500/10 flex relative  rounded-lg hover:scale-105 hover:translate-y-1 transition-all duration-300 ease-in-out">
+      <div className="border border-blue-500/10 flex relative rounded-lg hover:scale-105 hover:translate-y-1 transition-all duration-300 ease-in-out">
         <img
           className="hover:rounded-lg transition-all duration-300 ease-in-out"
           src={image}
