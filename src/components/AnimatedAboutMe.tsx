@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 const AnimatedAboutMe: React.FC = () => {
@@ -9,6 +9,7 @@ const AnimatedAboutMe: React.FC = () => {
     animate: { y: [100, 0], opacity: [0, 100] },
     transition: { duration: 0.6, ease: "easeIn" },
   };
+
   return (
     <div
       ref={ref}
@@ -23,13 +24,7 @@ const AnimatedAboutMe: React.FC = () => {
           transition={{ duration: 0.5, type: "spring" }}
           className="md:5/12 lg:w-5/12"
         >
-          <img
-            src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
-            alt="image"
-            loading="lazy"
-            width=""
-            height=""
-          />
+          <div className="profile-image m-10 w-full h-[80vh]"></div>
         </motion.div>
         <div className="md:7/12 lg:w-6/12 m-4">
           <motion.h2

@@ -1,10 +1,10 @@
 ---
-import AnimatedAboutMe from "@/components/AnimatedAboutMe"
-import Layout from "@/layouts/Layout.astro"
+import AnimatedAboutMe from "@/components/AnimatedAboutMe";
+import Layout from "@/layouts/Layout.astro";
 ---
-<Layout title="About Me">
-    <section class="min-h-screen w-full" id="AboutMe">
-     <AnimatedAboutMe client:visible/>
-    </section>
-    </Layout>
 
+<Layout title="About Me">
+  <section class="min-h-screen w-full" id="AboutMe">
+    <AnimatedAboutMe client:only />
+  </section>
+</Layout>

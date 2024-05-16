@@ -1,6 +1,7 @@
 ---
 import ChangeTheme from "@/components/ChangeTheme.astro";
 import { useTranslations, getLangFromUrl } from "@/i18n/utils";
+import SelectLenguaje from "@/components/SelectLenguaje";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
@@ -8,6 +9,7 @@ const t = useTranslations(lang);
 <aside
   class="fixed min-h-[90vh] mx-4 my-4 w-16 flex flex-col space-y-10 items-center justify-center rounded-md bg-secondary z-50"
 >
+  <SelectLenguaje client:visible />
   <!-- Index -->
   <a
     href={`/${lang}`}
@@ -73,8 +75,7 @@ const t = useTranslations(lang);
   </a>
   <!-- Projects -->
   <a
-  href={`/${lang}/projects`}
-
+    href={`/${lang}/projects`}
     class="tooltip tooltip-right h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral"
     data-tip={t("nav.projects")}
   >

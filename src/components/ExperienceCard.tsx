@@ -1,8 +1,5 @@
 import React from "react";
-
-const ExperienceCard = () => {
-  const theme = localStorage.getItem('theme');
-  console.log(theme)
+const ExperienceCard: React.FC = () => {
 
   return (
     <>

@@ -27,6 +27,13 @@ export default {
             "font-family": "Lato, sans-serif",
             "color": "#727374",
           },
+          ".profile-image": {
+            'background-image': 'url("/assets/perfil-color.jpeg")', 
+            'background-size': 'cover',
+            'background-position': 'center',
+            'border-radius': '1%',
+            'box-shadow': '-10px 15px 27px -12px rgb(242,158,56)'
+          }, 
           ".hero-text": {
             "background-image":
             "linear-gradient(to bottom right, #733F2D 20%, #F29E38 30%, #F2F2F2 )",
@@ -63,6 +70,13 @@ export default {
             "linear-gradient(to bottom right, #e6e5e8 20%, #7046f3 30%, #0f0f0f )",
             "font-family": "PT Mono, monospace"
           },
+          ".profile-image": {
+            'background-image': 'url("/assets/perfil-gris.jpeg")', 
+            'background-size': 'cover',
+            'background-position': 'center',
+            'border-radius': '1%',
+            'box-shadow': '-10px 15px 5px 0px rgba(255,255,255,1)'
+            }, 
           ".name_title": {
             "color": "transparent",
             "padding":" 0 5px",
