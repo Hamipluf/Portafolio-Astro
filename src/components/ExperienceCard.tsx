@@ -1,12 +1,16 @@
+import { getI18N } from "@/i18n";
 import React from "react";
-const ExperienceCard: React.FC = () => {
+const ExperienceCard: React.FC<{ currentLocale: string | undefined }> = ({
+  currentLocale,
+}) => {
+  const i18n = getI18N({ currentLocale });
 
   return (
     <>
       <div className="flex m-4 items-center w-full">
         <div>
           <h2 className="text-xl text-accent font-semibold m-4 underline underline-offset-4 shadow-xl">
-            Experiencia laboral
+            {i18n.EXPERIENCIE.TITLE}
           </h2>
         </div>
         <div>
@@ -43,18 +47,14 @@ const ExperienceCard: React.FC = () => {
             </svg>
           </div>
           <div className="timeline-start md:text-end mb-10 mx-2 text-accent">
-            <time className="font-mono italic">Ene-2022 -- Dec-2023</time>
+            <time className="font-mono italic">{i18n.EXPERIENCIE["JOB-1"].DATE}</time>
             <div className="text-lg font-black">
-              Freelancer Backend{" "}
+              {i18n.EXPERIENCIE["JOB-1"].POSITION}{" "}
               <span className="opacity-80 text-sm font-medium text-secondary">
-                -Freewaves.live · Autónomo Capital Federal, Argentina
+                {i18n.EXPERIENCIE["JOB-1"].COMPANY}
               </span>
             </div>
-            Desarrollo de una API rest y un WebSocket para reacciones en tiempo
-            real, con NodeJS y ExpressJS. Recibe el evento por metodo POST, lo
-            procesa dependiendo del nombre y le agrega una marca de tiempo con
-            un contador por evento, ademas de verificar si los datos enviados
-            son validos.
+            {i18n.EXPERIENCIE["JOB-1"].DESCRIPTION}
             <div className="flex justify-end gap-4 w-full my-2">
               <div className="tooltip" data-tip="Node.JS">
                 <svg
@@ -146,15 +146,14 @@ const ExperienceCard: React.FC = () => {
             </svg>
           </div>
           <div className="timeline-end mb-10 text-accent">
-            <time className="font-mono italic">Dic-2023 -- Actualidad</time>
+            <time className="font-mono italic">{i18n.EXPERIENCIE["JOB-2"].DATE}</time>
             <div className="text-lg font-black">
-              Freelancer FullStack{" "}
+             {i18n.EXPERIENCIE["JOB-2"].POSITION} {" "}
               <span className="opacity-80 text-sm font-medium text-secondary">
-                - Autónomo Capital Federal, Argentina
+                {i18n.EXPERIENCIE["JOB-2"].COMPANY}
               </span>
             </div>
-            Desarrollo de projecto personales. Mantenimiento de API REST
-            recepción de eventos y procesamiento de datos.
+            {i18n.EXPERIENCIE["JOB-2"].DESCRIPTION}
           </div>
           <hr />
         </li>

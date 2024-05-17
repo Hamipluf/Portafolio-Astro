@@ -1,0 +1,35 @@
+{
+  "ABOUT_ME": {
+    "GREET": "¡Hello!",
+    "IM": "I'm Ramiro Gumma, a FullStack MERN developer",
+    "BASED": "based in Buenos Aires, Argentina.",
+    "DESCRIPTION": "Since my early days in the world of web development, I have been driven by an unwavering desire to learn and continuously improve. My background includes studies at Coderhouse, backed by certifications at LinkedIn, FreeCodeCamp and HackerRank, which demonstrates my dedication and technical skills.",
+    "DESCRIPTION_2": "My current focus is on the most relevant technologies such as HTML, CSS, Javascript, Node.js, React and Next.js. In addition, I have solid experience using tools such as Express, MongoDB, PostgreSQL, AWS, Websocket, Socket.io, Nodemailer, Strapi and Stripe for backend development, as well as React, Tailwind, Framer.motion and Axios for the frontend.",
+    "DESCRIPTION_3": "What sets me apart is my ability to agilely adapt to management methodologies, which allows me to offer fast and effective solutions to meet my clients' needs. In addition, my level of English is B1, which allows me to communicate effectively in professional environments and work in international teams. My main goal is to deliver exceptional results that not only meet expectations, but exceed them."
+  },
+  "HERO": {
+    "NAME": "Ramiro Gumma",
+    "TITLE": "Full-Stack",
+    "TITLE_2": "Developer",
+    "DESCRIPTION": " FullStack MERN Developer | +3 years of experience : I convert ideas into code🚀",
+    "LOCATION": "- Capital Federal, Argentina"
+  },
+  "EXPERIENCIE": {
+    "TITLE": "Work experience",
+    "JOB-1": {
+      "DATE": "Ene-2022 -- Dec-2023",
+      "POSITION": "Freelancer Backend",
+      "COMPANY": "-Freewaves.live · Freelancer Capital Federal, Argentina",
+      "DESCRIPTION": "Development of a rest API and a WebSocket for real-time feedback, with NodeJS and ExpressJS. It receives the event by POST method, processes it depending on the name and adds a timestamp with a counter per event, as well as verifying if the data sent is valid."
+    },
+    "JOB-2": {
+      "DATE": "Dec-2023 -- Current",
+      "POSITION": "Freelancer FullStack",
+      "COMPANY": "- Freelancer Capital Federal, Argentina",
+      "DESCRIPTION": "Personal project development. REST API maintenance, event reception and data processing.."
+    }
+  },
+  "CERTIFICATES": {
+    "TITLE": "Studies and Certificates"
+  }
+}

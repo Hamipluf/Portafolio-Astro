@@ -1,28 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import certificated_data from "@/utils/certificated-data.json";
-import CertificatedCard from "@/components/CertificatedCard";
-const data = certificated_data.reverse();
+import CertificatedComponent from "@/components/Certificates.astro";
 ---
 
 <Layout title="Certificados">
-  <section class="min-h-screen w-full" id="Certificates">
-    <div class="container px-6 mx-auto">
-      <h1
-        class="text-2xl base-text font-semibold capitalize underline underline-offset-2 m-2"
-      >
-        Estudios y Certificados
-      </h1>
-
-      <div
-        class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 items-stretch justify-stretch"
-      >
-        {
-          data.map((certificate) => (
-            <CertificatedCard certificate={certificate}  client:visible />
-          ))
-        }
-      </div>
-    </div>
-  </section></Layout
->
+  <CertificatedComponent />
+</Layout>

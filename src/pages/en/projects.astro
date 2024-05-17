@@ -1,7 +1,13 @@
 ---
 import ProjectAnimated from "@/components/ProjectAnimated";
-import project_data from "@/utils/project-data.json";
 import Layout from "@/layouts/Layout.astro";
+import project_data_es from "@/utils/project-data-es.json";
+import project_data_en from "@/utils/project-data-en.json";
+let project_data;
+const { currentLocale } = Astro;
+currentLocale === "es"
+  ? (project_data = project_data_es)
+  : (project_data = project_data_en);
 ---
 
 <Layout title="Briefcase">

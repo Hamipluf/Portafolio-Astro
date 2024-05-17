@@ -1,0 +1,35 @@
+{
+  "ABOUT_ME": {
+    "GREET": "¡Hola!",
+    "IM": "Soy Ramiro Gumma, un desarrollador FullStack MERN",
+    "BASED": "con sede en Buenos Aires, Argentina.",
+    "DESCRIPTION": "Desde mis comienzos en el mundo del desarrollo web, he sido impulsado por un inquebrantable deseo de aprendizaje y mejora continua. Mi formación incluye estudios en Coderhouse, respaldados por certificaciones en LinkedIn, FreeCodeCamp y HackerRank, lo que demuestra mi dedicación y habilidades técnicas.",
+    "DESCRIPTION_2": "Mi enfoque actual se centra en las tecnologías más relevantes, como HTML, CSS, Javascript, Node.js, React y Next.js. Además, cuento con una sólida experiencia en el uso de herramientas como Express, MongoDB, PostgreSQL, AWS, Websocket, Socket.io, Nodemailer, Strapi y Stripe para el desarrollo backend, así como React, Tailwind, Framer.motion y Axios para el frontend.",
+    "DESCRIPTION_3": "Lo que me distingue es mi capacidad para adaptarme ágilmente a las metodologías de gestión, lo que me permite ofrecer soluciones rápidas y efectivas para satisfacer las necesidades de mis clientes. Además, mi nivel de inglés es B1, lo que me permite comunicarme eficazmente en entornos profesionales y trabajar en equipos internacionales. Mi principal objetivo es entregar resultados excepcionales que no solo cumplan con las expectativas, sino que las superen."
+  },
+  "HERO": {
+    "NAME": "Ramiro Gumma",
+    "TITLE": "Full-Stack",
+    "TITLE_2": "Desarrollador",
+    "DESCRIPTION": "Desarrollador FullStack MERN | +3 años de experiencia | Convierto ideas en codigo🚀",
+    "LOCATION": "- Capital Federal, Argentina"
+  },
+  "EXPERIENCIE": {
+    "TITLE": "Experiencia laboral",
+    "JOB-1": {
+      "DATE": "Ene-2022 -- Dic-2023",
+      "POSITION": "Autonomo Backend",
+      "COMPANY": "-Freewaves.live · Autónomo Capital Federal, Argentina",
+      "DESCRIPTION": "Desarrollo de una API rest y un WebSocket para reacciones en tiempo real, con NodeJS y ExpressJS. Recibe el evento por metodo POST, lo procesa dependiendo del nombre y le agrega una marca de tiempo con un contador por evento, ademas de verificar si los datos enviados son validos."
+    },
+    "JOB-2": {
+      "DATE": "Dic-2023 -- Actualidad",
+      "POSITION": "Autonomo FullStack",
+      "COMPANY": "- Freelancer Capital Federal, Argentina",
+      "DESCRIPTION": "Personal project development. REST API maintenance, event reception and data processing.."
+    }
+  },
+  "CERTIFICATES": {
+    "TITLE": "Estudios Y Certificados"
+  }
+}

@@ -1,9 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import React, { useRef } from "react";
+import { motion } from "framer-motion";
+import { getI18N } from "@/i18n/index";
 
-const AnimatedAboutMe: React.FC = () => {
+const AnimatedAboutMe: React.FC<{ currentLocale: string | undefined }> = ({
+  currentLocale,
+}) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const i18n = getI18N({ currentLocale });
 
   const animate_p = {
     animate: { y: [100, 0], opacity: [0, 100] },
@@ -38,7 +41,7 @@ const AnimatedAboutMe: React.FC = () => {
             }}
             className="text-2xl text-secondary font-nunito font-semibold md:text-4xl"
           >
-            ¡Hola!{" "}
+            {i18n.ABOUT_ME.GREET}{" "}
             <motion.span
               animate={{
                 opacity: [0, 10],
@@ -49,40 +52,26 @@ const AnimatedAboutMe: React.FC = () => {
               }}
               className=" text-base-100 font-sans"
             >
-              Soy Ramiro Gumma, un desarrollador FullStack MERN
+              {i18n.ABOUT_ME.IM}
             </motion.span>{" "}
-            con sede en Buenos Aires, Argentina.
+            {i18n.ABOUT_ME.BASED}
           </motion.h2>
           <motion.p
             animate={animate_p.animate}
             transition={animate_p.transition}
             className="mt-6 secondary-text"
           >
-            Desde mis comienzos en el mundo del desarrollo web, he sido
-            impulsado por un inquebrantable deseo de aprendizaje y mejora
-            continua. Mi formación incluye estudios en Coderhouse, respaldados
-            por certificaciones en LinkedIn, FreeCodeCamp y HackerRank, lo que
-            demuestra mi dedicación y habilidades técnicas. <br />
-            Mi enfoque actual se centra en las tecnologías más relevantes, como
-            HTML, CSS, Javascript, Node.js, React y Next.js. Además, cuento con
-            una sólida experiencia en el uso de herramientas como Express,
-            MongoDB, PostgreSQL, AWS, Websocket, Socket.io, Nodemailer, Strapi y
-            Stripe para el desarrollo backend, así como React, Tailwind,
-            Framer.motion y Axios para el frontend.
+            {i18n.ABOUT_ME.DESCRIPTION}
+
+            <br />
+            {i18n.ABOUT_ME.DESCRIPTION_2}
           </motion.p>
           <motion.p
             animate={animate_p.animate}
             transition={{ ...animate_p.transition, delay: 0.2 }}
             className="mt-4 secondary-text"
           >
-            Lo que me distingue es mi capacidad para adaptarme ágilmente a las
-            metodologías de gestión, lo que me permite ofrecer soluciones
-            rápidas y efectivas para satisfacer las necesidades de mis clientes.
-            Además, mi nivel de inglés es B1, lo que me permite comunicarme
-            eficazmente en entornos profesionales y trabajar en equipos
-            internacionales. Mi principal objetivo es entregar resultados
-            excepcionales que no solo cumplan con las expectativas, sino que las
-            superen.
+            {i18n.ABOUT_ME.DESCRIPTION_3}
           </motion.p>
         </div>
       </div>

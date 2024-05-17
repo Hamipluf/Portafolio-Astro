@@ -1,0 +1,79 @@
+[
+    {
+      "id": 1,
+      "title": "Resto Sync Client",
+      "subtitle": "Restaurant management software client developed with React and TypeScript",
+      "description": "Managed the daily operations of a restaurant, including shift control, inventory, orders, product analysis, and billing. Used software to automate repetitive tasks, improve operational efficiency, and reduce costs. Generated detailed reports to identify trends, optimize processes, and make strategic decisions.",
+      "demo_url": null,
+      "finished": false,
+      "github": "https://github.com/Hamipluf/RestoSync-Client",
+      "slug": "resto-sync-client",
+      "tools": [
+        "Axios",
+        "React Query Tanstack",
+        "React",
+        "TypeScript",
+        "Redux TLK",
+        "Tailwind"
+      ],
+      "image": "assets/RestoSyncCodeClient.png"
+    },
+    {
+      "id": 2,
+      "title": "Resto Sync Server",
+      "subtitle": "Backend development for a restaurant management application based on layered architecture and OOP with Node.js",
+      "description": "Designed and implemented a layered architecture to efficiently separate business logic from infrastructure, facilitating scalability and long-term maintenance. Applying Object-Oriented Programming (OOP) principles, I created decoupled classes and objects to enhance code modularity and reuse. Developed RESTful API services to provide backend functionalities to client applications, ensuring efficient and secure communication. Managed application data with a relational database in PostgreSQL, ensuring reliable and efficient storage. Implemented unit testing in the data access layer to prevent future issues in production. Backend development is still ongoing, with a continuous focus on improvement and optimization.",
+      "demo_url": null,
+      "finished": false,
+      "github": "https://github.com/Hamipluf/RestoSync-Server",
+      "slug": "resto-sync-server",
+      "tools": [
+        "Mocha",
+        "OOP",
+        "Node.JS",
+        "PostgreSQL",
+        "Chai",
+        "JWT",
+        "Express",
+        "Multer",
+        "Passport"
+      ],
+      "image": "assets/RestoSyncCode.png"
+    },
+    {
+      "id": 3,
+      "title": "E-Commerce CoderHouse",
+      "subtitle": "Final project for the Backend Developer course at CoderHouse. Developed a comprehensive e-commerce application using Node.js, Express.js, Handlebars, MongoDB, NodeMailer, and Stripe",
+      "description": "Implemented a robust backend using Node.js and Express.js, handling user authentication, product management, order processing, and payment integration. Used Handlebars template engine to dynamically generate web pages, ensuring a smooth user experience. Employed MongoDB as the database to effectively store and manage product information, user data, and order details. Integrated NodeMailer to send transactional emails, such as order confirmations and account notifications. Implemented Stripe as the payment gateway to securely process online payments and manage various payment methods. Developed comprehensive API documentation using Swagger to facilitate seamless integration with frontend applications. Optimized user experience: Implemented JWT authentication for secure login and enhanced authorization. Enhanced e-commerce functionality: Developed features for product navigation, shopping cart management, and order placement. Robust payment processing: Integrated Stripe for secure and seamless online payments.",
+      "demo_url": null,
+      "finished": true,
+      "github": "https://github.com/Hamipluf/E-Commerce_coderhouse",
+      "slug": "resto-sync-server",
+      "tools": [
+        "MongoDB",
+        "OOP",
+        "Node.JS",
+        "Nodemailer",
+        "Socket.io",
+        "Swagger",
+        "JWT",
+        "Express",
+        "Handlebars",
+        "Passport"
+      ],
+      "image": "assets/e-commerce-coderhouse.PNG"
+    },
+    {
+      "id": 4,
+      "title": "Netflix Clone",
+      "subtitle": "Development of a Netflix clone with React, Redux, Firestore, and Google authentication.",
+      "description": "Developed a functional web application similar to Netflix, with an intuitive user interface and optimized performance. Implemented Redux as a state management tool to facilitate project maintenance and scalability. Integrated Firestore as a NoSQL database to enable efficient and scalable data storage and retrieval. Used Google Auth for user authentication, providing secure and personalized access to the application's content. Utilized the TMDB API and Axios for effective movie data consumption and processing. Applied conditionals and authentications to ensure a personalized and secure user experience.",
+      "demo_url": "https://netflix-clone-rg.firebaseapp.com/",
+      "finished": true,
+      "github": "https://github.com/Hamipluf/E-Commerce_coderhouse",
+      "slug": "resto-sync-server",
+      "tools": ["React", "Axios", "Redux", "Firebase", "CSS"],
+      "image": "assets/net.png"
+    }
+  ]
+  

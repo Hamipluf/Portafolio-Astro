@@ -1,0 +1,95 @@
+[
+    {
+      "id": 1,
+      "id_certificate": "9A0460B91A24",
+      "title": "REST API Certificate (Intermediate)",
+      "description": "Covers topics such as fetching data from an API and processing using parameters or pagination.",
+      "knowledge": ["Node.JS", "REST API", "JavaScript"],
+      "image": "assets/CertificatedhackerRankRestApi.PNG",
+      "institution": "HackerRank",
+      "url": "https://www.hackerrank.com/certificates/9a0460b91a24"
+    },
+    {
+      "id": 2,
+      "id_certificate": "B083E8FD69DC",
+      "title": "CSS Certificate",
+      "description": "Covers topics such as Cascade and Inheritance, exploring the fundamentals of text styling, understanding the use of layouts in CSS, understanding element boxing in CSS, among others.",
+      "knowledge": ["CSS", "CSS Flexbox", "CSS Grid", "Basic CSS"],
+      "image": "assets/CertificatedhackerRankCSS.PNG",
+      "institution": "HackerRank",
+      "url": "https://www.hackerrank.com/certificates/b083e8fd69dc"
+    },
+    {
+      "id": 3,
+      "id_certificate": "1DE998982993",
+      "title": "Node.JS Certificate (Intermediate)",
+      "description": "Understand concepts of event-driven architecture and concurrency.",
+      "knowledge": ["Node.js", "JavaScript"],
+      "image": "assets/CertificatedhackerRankNode.PNG",
+      "institution": "HackerRank",
+      "url": "https://www.hackerrank.com/certificates/1de998982993"
+    },
+    {
+      "id": 4,
+      "id_certificate": "67E02FE0B0D0",
+      "title": "Frontend Developer Certificate (React)",
+      "description": "Covers topics such as React, CSS, and JavaScript.",
+      "knowledge": ["React", "JavaScript", "CSS"],
+      "image": "assets/CertificatedhackerRankFrontendDevelop.PNG",
+      "institution": "HackerRank",
+      "url": "https://www.hackerrank.com/certificates/67e02fe0b0d0"
+    },
+    {
+      "id": 5,
+      "id_certificate": "189jeu",
+      "title": "EF Education First Certificate",
+      "description": "The level achieved is 43/100 on the EF SET score scale and B1 Intermediate according to the Common European Framework of Reference (CEFR).",
+      "knowledge": ["English"],
+      "image": "assets/EfCertificate.PNG",
+      "institution": "Education First",
+      "url": "https://cert.efset.org/189jeu"
+    },
+    {
+      "id": 6,
+      "id_certificate": "back-end-development-and-apis",
+      "title": "Back End Development and APIs Certificate",
+      "description": "CRUD and data processes for microservices and external APIs.",
+      "knowledge": [
+        "API Development",
+        "Express.JS",
+        "Representational State Transfer (REST)",
+        "Node.JS",
+        "MongoDB"
+      ],
+      "image": "assets/FreeCodeCampBackendCertificate.PNG",
+      "institution": "FreeCodeCamp",
+      "url": "https://www.freecodecamp.org/certification/Hamipluf/back-end-development-and-apis"
+    },
+    {
+      "id": 7,
+      "id_certificate": null,
+      "title": "Backend Programming",
+      "description": "Backend programming with the OOP paradigm. Backend development course.",
+      "knowledge": [
+        "Nodemailer",
+        "Stripe",
+        "Passport",
+        "Jets",
+        "Node.JS",
+        "Web socket",
+        "JavaScript",
+        "NestJS",
+        "MongoDB",
+        "Socket.IO",
+        "Twilio",
+        "Amazon Web Services (AWS)",
+        "Chai.JS",
+        "Express.JS",
+        "API Development"
+      ],
+      "image": "assets/CoderHouseCertificate.PNG",
+      "institution": "CoderHouse",
+      "url": "https://www.linkedin.com/school/coderhouse/"
+    }
+  ]
+  

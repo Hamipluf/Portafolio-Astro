@@ -45,7 +45,8 @@ export default {
             "text-transform": "uppercase",
             "-webkit-text-stroke":" 1px #201f1e",
             "text-stroke": "1px #201f1e",
-          }
+          },
+   
         },
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
@@ -83,7 +84,8 @@ export default {
             "text-transform": "uppercase",
             "-webkit-text-stroke":" 0.5px #f1f1f3",
             "text-stroke": "0.5px #f1f1f3",
-          }
+          },
+      
         },
       },
     ],

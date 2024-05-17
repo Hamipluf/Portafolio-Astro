@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { type Certificated } from "@/utils/interfaces/project";
 import { truncateText } from "@/utils/truncateText";
 const CertificatedCard: React.FC<{
-  certificate: Certificated
+  certificate: Certificated,
 }> = ({ certificate }) => {
   const image = `../../${certificate.image}`;
   return (

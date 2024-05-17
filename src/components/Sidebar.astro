@@ -4,12 +4,13 @@ import { useTranslations, getLangFromUrl } from "@/i18n/utils";
 import SelectLenguaje from "@/components/SelectLenguaje";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const path = Astro.url
 ---
 
 <aside
   class="fixed min-h-[90vh] mx-4 my-4 w-16 flex flex-col space-y-10 items-center justify-center rounded-md bg-secondary z-50"
 >
-  <SelectLenguaje client:visible />
+  <SelectLenguaje url={path.origin} path={path.pathname} client:only />
   <!-- Index -->
   <a
     href={`/${lang}`}

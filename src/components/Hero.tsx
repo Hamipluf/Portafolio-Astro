@@ -1,7 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Animated from "./Animated";
+import { getI18N } from "@/i18n/index";
+import type React from "react";
 
-const Hero = () => {
+const Hero: React.FC<{currentLocale: string | undefined}> = ({currentLocale}) => {
+  const i18n = getI18N({ currentLocale });
+
   return (
     <section id="Hero" className="min-h-screen rounded-lg m-4">
       <div className="flex  items-center h-full w-full px-5 ">
@@ -65,11 +69,11 @@ const Hero = () => {
               }}
               className="font-nunito font-semibold base-text text-3xl leading-tight sm:text-4xl md:text-5xl xl:text-6xl z-10"
             >
-              <span className="name_title ">Ramiro Gumma</span>{" "}
+              <span className="name_title ">{i18n.HERO.NAME}</span>{" "}
               <span className="text-transparent bg-clip-text hero-text font-light text-3xl sm:text-4xl md:text-5xl ">
-                Full-Stack{" "}
+                {i18n.HERO.TITLE}{" "}
               </span>
-              <span className="name_title ">Developer</span>
+              <span className="name_title ">{i18n.HERO.TITLE_2}</span>
             </motion.h1>
             <motion.p
               animate={{
@@ -82,8 +86,7 @@ const Hero = () => {
               }}
               className="font-nunito text-xl mt-8 z-10"
             >
-              FullStack MERN Developer | +3 años de experiencia | Convierto
-              ideas en codigo🚀
+              {i18n.HERO.DESCRIPTION}
             </motion.p>
             <motion.p
               animate={{
@@ -113,7 +116,7 @@ const Hero = () => {
                 <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
                 <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
               </svg>
-              - Capital Federal, Argentina{" "}
+              {i18n.HERO.LOCATION}{" "}
               <img
                 className="w-7 h-7"
                 src="/assets/argentina.png"

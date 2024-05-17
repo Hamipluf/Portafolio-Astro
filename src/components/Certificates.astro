@@ -1,6 +1,14 @@
 ---
-import certificated_data from "@/utils/certificated-data.json";
+import certificated_data_es from "@/utils/certificated-data-es.json";
+import certificated_data_en from "@/utils/certificated-data-en.json";
+import { getI18N } from "@/i18n/index";
 import CertificatedCard from "./CertificatedCard";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+let data;
+currentLocale === "es"
+  ? (data = certificated_data_es)
+  : (data = certificated_data_en);
 ---
 
 <section class="min-h-screen w-full" id="Certificates">
@@ -8,14 +16,14 @@ import CertificatedCard from "./CertificatedCard";
     <h1
       class="text-2xl base-text font-semibold capitalize underline underline-offset-2 m-2"
     >
-      Estudios y Certificados
+      {i18n.CERTIFICATES.TITLE}
     </h1>
 
     <div
       class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 items-stretch justify-stretch"
     >
       {
-        certificated_data.reverse().map((certificate) => (
+        data.reverse().map((certificate) => (
           <CertificatedCard certificate={certificate} client:visible />
         ))
       }

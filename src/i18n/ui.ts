@@ -13,6 +13,7 @@ export const ui = {
         'nav.projects': 'Projectos',
         'nav.certificates': 'Certificados',
         'nav.theme': 'Cambiar Tema',
+      
     },
     en: {
         'nav.home': 'Home',
