@@ -35,16 +35,7 @@ const items: Image[] = [
     alt: "MongoDB Brand",
   },
 ];
-const getThemeClass = (theme: string) => {
-  switch (theme) {
-    case "cupcake":
-      return "cupcake";
-    case "dark":
-      return "dark";
-    default:
-      return "";
-  }
-};
+
 const Animated: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [theme, setTheme] = useState<string>('cupcake');
