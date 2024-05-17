@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import AnimatedCard from "./AnimatedCard";
 import type { Project } from "@/utils/interfaces/project";
-import { AnimatePresence, motion, useInView } from "framer-motion";
+import { AnimatePresence, useInView } from "framer-motion";
 
 interface ProjectsAnimatedProps {
   projects: Project[];

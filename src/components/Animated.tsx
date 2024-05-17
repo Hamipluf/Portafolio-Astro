@@ -89,7 +89,6 @@ const Animated: React.FC = () => {
 
     return () => clearInterval(intervalId);
   }, []);
-  const currentThemeClass = getThemeClass(theme);
   const currentImage =
     theme === "cupcake"
       ? items[currentIndex].imgCup
