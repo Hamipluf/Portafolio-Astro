@@ -9,6 +9,9 @@ interface ProjectsAnimatedProps {
 
 const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [windowsWidth, setWindowsWidth] = useState<number>(windows.innerWidth);
+
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -24,12 +27,13 @@ const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
     setSelectedProject(null);
   };
 
+  
   return (
     <>
       <AnimatePresence mode="sync">
         <div
           ref={ref}
-          className="flex justify-center items-center flex-wrap gap-10 h-full w-full"
+          className="flex justify-center items-center flex-wrap gap-10 h-full w-full m-5"
         >
           {projects.map((project) => (
             <div
@@ -69,9 +73,8 @@ const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
               </div>
               <div className="p-6">
                 <div
-                  className={`badge ${
-                    selectedProject.finished ? "badge-primary" : "badge-error"
-                  } badge-outline`}
+                  className={`badge ${selectedProject.finished ? "badge-primary" : "badge-error"
+                    } badge-outline`}
                 >
                   {selectedProject.finished ? "Finalizado" : "En desarrollo..."}
                 </div>

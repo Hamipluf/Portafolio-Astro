@@ -7,7 +7,7 @@ const ExperienceCard: React.FC<{ currentLocale: string | undefined }> = ({
 
   return (
     <>
-      <div className="flex m-4 items-center w-full">
+      <div className="flex m-4 items-center xw-full">
         <div>
           <h2 className="text-xl text-accent font-semibold m-4 underline underline-offset-4 shadow-xl">
             {i18n.EXPERIENCIE.TITLE}
@@ -34,7 +34,7 @@ const ExperienceCard: React.FC<{ currentLocale: string | undefined }> = ({
           </svg>
         </div>
       </div>
-      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical h-full m-10">
         <li>
           <div className="timeline-middle">
             <svg

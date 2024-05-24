@@ -51,6 +51,8 @@ const AnimatedCard: React.FC<{
 
   const image = `../../${project.image}`;
 
+  console.log(window.innerWidth)
+
   return (
     <motion.div
       onMouseMove={handleMouseMove}
@@ -60,7 +62,7 @@ const AnimatedCard: React.FC<{
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="card card-side bg-secondary bg-opacity-20 shadow-xl h-56"
+      className="card card-side bg-secondary bg-opacity-20 shadow-xl h-40 lg:h-56"
     >
       <figure
         style={{
@@ -70,7 +72,7 @@ const AnimatedCard: React.FC<{
         className="m-2 shadow-2xl"
       >
         <img
-          className="rounded-md w-40 h-full object-cover object-left "
+          className="rounded-md w-32 lg:w-40 h-full my-2 object-cover object-left "
           src={image}
           alt={project.slug}
         />
@@ -80,7 +82,7 @@ const AnimatedCard: React.FC<{
           transform: "translateZ(75px)",
           transformStyle: "preserve-3d",
         }}
-        className="card-body"
+        className="card-body w-10/12 h-4/6"
       >
         <h2
           style={{
@@ -96,7 +98,7 @@ const AnimatedCard: React.FC<{
             transform: "translateZ(75px)",
             transformStyle: "preserve-3d",
           }}
-          className="max-w-72"
+          className="max-w-md"
         >
           {truncateText(project.description, 12)}
         </p>
@@ -113,7 +115,7 @@ const AnimatedCard: React.FC<{
               transformStyle: "preserve-3d",
             }}
             onClick={() => openModal(project)}
-            className="btn btn-accent px-2 shadow-2xl"
+            className="btn btn-xs btn-accent px-2 shadow-2xl"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

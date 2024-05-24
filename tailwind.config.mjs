@@ -29,8 +29,8 @@ export default {
           },
           ".profile-image": {
             'background-image': 'url("/assets/perfil-color.jpeg")', 
-            'background-size': 'cover',
-            'background-position': 'center',
+            'background-position': '50% 20%',
+            'background-repeat': 'no-repeat',
             'border-radius': '1%',
             'box-shadow': '-10px 15px 27px -12px rgb(242,158,56)'
           }, 

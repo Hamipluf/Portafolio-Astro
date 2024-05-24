@@ -3,16 +3,16 @@ import Animated from "./Animated";
 import { getI18N } from "@/i18n/index";
 import type React from "react";
 
-const Hero: React.FC<{currentLocale: string | undefined}> = ({currentLocale}) => {
+const Hero: React.FC<{ currentLocale: string | undefined }> = ({ currentLocale }) => {
   const i18n = getI18N({ currentLocale });
 
   return (
-    <section id="Hero" className="min-h-screen rounded-lg m-4">
-      <div className="flex  items-center h-full w-full px-5 ">
-        <div className="absolute w-1/2 inset-y-0 lg:right-0 hidden lg:block">
+    <section id="Hero" className="min-h-screen w-full rounded-lg m-4">
+      <div className="flex flex-col lg:flex-row items-center h-full w-full px-5 ">
+        <div className="absolute w-1/2  flex flex-col items-center justify-center inset-y-0 lg:right-0 ">
           <motion.span
             id="dot"
-            className="absolute bg-accent -left-6 md:-left-30 top-24 lg:top-48 w-24 h-24 rotate-90 skew-x-12 rounded-3xl ball-1 blur-xl opacity-60 lg:opacity-95 lg:block hidden"
+            className="hidden lg:absolute bg-accent -left-6 md:-left-30 top-24 lg:top-48 w-24 h-24 rotate-90 skew-x-12 rounded-3xl ball-1 blur-xl opacity-60 lg:opacity-95 lg:block hidden"
             animate={{
               y: [0, -30, 0],
               scale: [1, 1.3, 1],
@@ -34,7 +34,7 @@ const Hero: React.FC<{currentLocale: string | undefined}> = ({currentLocale}) =>
               duration: 2,
             }}
             id="dot"
-            className="absolute right-80 bottom-32 w-24 h-24 rounded-3xl bg-secondary blur-xl opacity-80"
+            className="hidden lg:absolute right-80 bottom-32 w-24 h-24 rounded-3xl bg-secondary blur-xl opacity-80"
           ></motion.span>
         </div>
         <motion.span
@@ -48,13 +48,13 @@ const Hero: React.FC<{currentLocale: string | undefined}> = ({currentLocale}) =>
             duration: 2,
           }}
           id="dot"
-          className=" lg:w-2/12 aspect-square bg-base-100 absolute top-5 lg:left-60 rounded-full skew-y-12 blur-2xl opacity-60 skew-x-12 rotate-90"
+          className=" lg:w-2/12 w-5 aspect-square bg-base-100 hidden lg:absolute top-5 lg:left-60 rounded-full skew-y-12 blur-2xl opacity-60 skew-x-12 rotate-90"
         ></motion.span>
 
-        <div className="flex w-full h-full">
+        <div className="flex flex-col lg:flex-row w-full h-full">
           <div
-            className="flex flex-col justify-center items-center text-center lg:text-left lg:py-7 xl:py-8
-            lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0  "
+            className="flex flex-col justify-center  items-start  text-center lg:text-left lg:py-7 xl:py-8
+         max-w-3xl mx-auto lg:mx-0  "
           >
             <motion.h1
               animate={{
@@ -67,13 +67,14 @@ const Hero: React.FC<{currentLocale: string | undefined}> = ({currentLocale}) =>
                 type: "spring",
                 delay: 1,
               }}
-              className="font-nunito font-semibold base-text text-3xl leading-tight sm:text-4xl md:text-5xl xl:text-6xl z-10"
+              className="font-nunito font-semibold base-text text-xl md:text-3xl lg:text-6xl leading-tight text-left
+              z-10"
             >
-              <span className="name_title ">{i18n.HERO.NAME}</span>{" "}
-              <span className="text-transparent bg-clip-text hero-text font-light text-3xl sm:text-4xl md:text-5xl ">
+              <span className="name_title lg:text-5xl">{i18n.HERO.NAME}</span>{" "}
+              <span className="text-transparent bg-clip-text hero-text font-light text-2xl lg:text-5xl sm:text-4xl md:text-5xl ">
                 {i18n.HERO.TITLE}{" "}
               </span>
-              <span className="name_title ">{i18n.HERO.TITLE_2}</span>
+              <span className="name_title lg:text-5xl">{i18n.HERO.TITLE_2}</span>
             </motion.h1>
             <motion.p
               animate={{
@@ -84,7 +85,7 @@ const Hero: React.FC<{currentLocale: string | undefined}> = ({currentLocale}) =>
                 ease: "easeIn",
                 delay: 1,
               }}
-              className="font-nunito text-xl mt-8 z-10"
+              className="font-nunito text-sm md:text-md lg:text-xl mt-8 z-10 text-left"
             >
               {i18n.HERO.DESCRIPTION}
             </motion.p>
@@ -98,7 +99,7 @@ const Hero: React.FC<{currentLocale: string | undefined}> = ({currentLocale}) =>
                 ease: "easeIn",
                 delay: 1,
               }}
-              className="font-nunito font-medium flex items-center gap-x-2 my-10"
+              className="font-nunito font-light text-xs flex items-center gap-x-2 my-3 lg:my-10 md:my-5 lg:text-lg"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -125,9 +126,9 @@ const Hero: React.FC<{currentLocale: string | undefined}> = ({currentLocale}) =>
             </motion.p>
           </div>
 
-          <div className="flex flex-col justify-around items-center w-3/12 h-full">
+          <div className="flex flex-row-reverse justify-around lg:justify-between items-center w-full lg:w-3/12 xl:w-4/12 h-full ">
             <AnimatePresence mode="sync">
-              <div className="flex tems-center gap-5 w-full mt-5 z-10">
+              <div className="flex flex-col lg:flex-row lg:items-center items-end gap-5 w-full mt-5 z-10">
                 <motion.a
                   animate={{
                     y: [0, -10, 0],
@@ -262,7 +263,7 @@ const Hero: React.FC<{currentLocale: string | undefined}> = ({currentLocale}) =>
               </div>
             </AnimatePresence>
 
-            <div className="absolute bottom-60">
+            <div className="">
               <Animated />
             </div>
           </div>

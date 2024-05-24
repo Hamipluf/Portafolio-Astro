@@ -18,16 +18,16 @@ const AnimatedAboutMe: React.FC<{ currentLocale: string | undefined }> = ({
       ref={ref}
       className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6"
     >
-      <div className="space-y-3 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+      <div className="space-y-3 md:space-y-0 flex flex-col lg:flex-row lg:items-center lg:gap-12">
         <motion.div
           animate={{
             x: [-300, 0],
             opacity: [0, 100],
           }}
           transition={{ duration: 0.5, type: "spring" }}
-          className="md:5/12 lg:w-5/12"
+          className="w-full"
         >
-          <div className="profile-image m-10 w-full h-[80vh]"></div>
+          <div className="profile-image bg-cover m-10 w-10/12 h-[30vh] md:bg-[length:80%]  lg:bg-center md:h-[50vh] lg:h-[80vh]"></div>
         </motion.div>
         <div className="md:7/12 lg:w-6/12 m-4">
           <motion.h2
