@@ -9,8 +9,6 @@ interface ProjectsAnimatedProps {
 
 const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [windowsWidth, setWindowsWidth] = useState<number>(windows.innerWidth);
-
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -27,22 +25,21 @@ const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
     setSelectedProject(null);
   };
 
-  
   return (
     <>
       <AnimatePresence mode="sync">
         <div
           ref={ref}
-          className="flex justify-center items-center flex-wrap gap-10 h-full w-full m-5"
+          className="h-full w-full lg:grid lg:grid-cols-2 lg:gap-5 lg:m-4 lg:p-4"
         >
           {projects.map((project) => (
             <div
+              key={project.id}
               style={{
                 transform: isInView ? "none" : "translateX(-200px)",
                 opacity: isInView ? 1 : 0,
                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
               }}
-              key={project.id}
             >
               <AnimatedCard project={project} openModal={openModal} />
             </div>
@@ -73,8 +70,9 @@ const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
               </div>
               <div className="p-6">
                 <div
-                  className={`badge ${selectedProject.finished ? "badge-primary" : "badge-error"
-                    } badge-outline`}
+                  className={`badge ${
+                    selectedProject.finished ? "badge-primary" : "badge-error"
+                  } badge-outline`}
                 >
                   {selectedProject.finished ? "Finalizado" : "En desarrollo..."}
                 </div>

@@ -51,7 +51,6 @@ const AnimatedCard: React.FC<{
 
   const image = `../../${project.image}`;
 
-  console.log(window.innerWidth)
 
   return (
     <motion.div
@@ -62,7 +61,7 @@ const AnimatedCard: React.FC<{
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="card card-side bg-secondary bg-opacity-20 shadow-xl h-40 lg:h-56"
+      className="card card-side bg-secondary bg-opacity-20 shadow-xl lg:w-11/12"
     >
       <figure
         style={{

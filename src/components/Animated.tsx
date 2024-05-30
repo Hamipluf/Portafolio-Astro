@@ -81,7 +81,7 @@ const Animated: React.FC = () => {
     return () => clearInterval(intervalId);
   }, []);
   const currentImage =
-    theme === "cupcake"
+    theme === "dark"
       ? items[currentIndex].imgCup
       : items[currentIndex].imgDark;
 

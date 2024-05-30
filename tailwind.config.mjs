@@ -73,8 +73,8 @@ export default {
           },
           ".profile-image": {
             'background-image': 'url("/assets/perfil-gris.jpeg")', 
+            'background-position': '50% 20%',
             'background-size': 'cover',
-            'background-position': 'center',
             'border-radius': '1%',
             'box-shadow': '-10px 15px 5px 0px rgba(255,255,255,1)'
             }, 

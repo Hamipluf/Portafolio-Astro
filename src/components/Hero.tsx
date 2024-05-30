@@ -3,16 +3,18 @@ import Animated from "./Animated";
 import { getI18N } from "@/i18n/index";
 import type React from "react";
 
-const Hero: React.FC<{ currentLocale: string | undefined }> = ({ currentLocale }) => {
+const Hero: React.FC<{ currentLocale: string | undefined }> = ({
+  currentLocale,
+}) => {
   const i18n = getI18N({ currentLocale });
 
   return (
-    <section id="Hero" className="min-h-screen w-full rounded-lg m-4">
-      <div className="flex flex-col lg:flex-row items-center h-full w-full px-5 ">
+    <section id="Hero" className="h-screen w-full rounded-lg m-4">
+      <div className="flex flex-col lg:flex-row items-center h-screen  w-full px-5 ">
         <div className="absolute w-1/2  flex flex-col items-center justify-center inset-y-0 lg:right-0 ">
           <motion.span
             id="dot"
-            className="hidden lg:absolute bg-accent -left-6 md:-left-30 top-24 lg:top-48 w-24 h-24 rotate-90 skew-x-12 rounded-3xl ball-1 blur-xl opacity-60 lg:opacity-95 lg:block hidden"
+            className=" absolute bg-accent -left-6 md:-left-30 top-24 lg:top-72 w-24 h-24 rotate-90 skew-x-12 rounded-3xl ball-1 blur-xl opacity-60 lg:opacity-95 "
             animate={{
               y: [0, -30, 0],
               scale: [1, 1.3, 1],
@@ -34,7 +36,7 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({ currentLocale }
               duration: 2,
             }}
             id="dot"
-            className="hidden lg:absolute right-80 bottom-32 w-24 h-24 rounded-3xl bg-secondary blur-xl opacity-80"
+            className="absolute right-80 bottom-32 w-24 h-24 rounded-3xl bg-secondary blur-xl opacity-80"
           ></motion.span>
         </div>
         <motion.span
@@ -48,12 +50,12 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({ currentLocale }
             duration: 2,
           }}
           id="dot"
-          className=" lg:w-2/12 w-5 aspect-square bg-base-100 hidden lg:absolute top-5 lg:left-60 rounded-full skew-y-12 blur-2xl opacity-60 skew-x-12 rotate-90"
+          className=" absolute lg:w-2/12 w-5 aspect-square bg-base-100  top-5 lg:left-60 rounded-full skew-y-12 blur-2xl opacity-60 skew-x-12 rotate-90"
         ></motion.span>
 
         <div className="flex flex-col lg:flex-row w-full h-full">
           <div
-            className="flex flex-col justify-center  items-start  text-center lg:text-left lg:py-7 xl:py-8
+            className="flex flex-col justify-start  items-start  text-center lg:text-left lg:py-7 xl:py-8
          max-w-3xl mx-auto lg:mx-0  "
           >
             <motion.h1
@@ -67,14 +69,16 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({ currentLocale }
                 type: "spring",
                 delay: 1,
               }}
-              className="font-nunito font-semibold base-text text-xl md:text-3xl lg:text-6xl leading-tight text-left
+              className="font-nunito font-semibold base-text text-xl md:text-3xl lg:text-4xl leading-tight text-left
               z-10"
             >
-              <span className="name_title lg:text-5xl">{i18n.HERO.NAME}</span>{" "}
-              <span className="text-transparent bg-clip-text hero-text font-light text-2xl lg:text-5xl sm:text-4xl md:text-5xl ">
+              <span className="name_title lg:text-4xl xl:text-5xl">{i18n.HERO.NAME}</span>{" "}
+              <span className="text-transparent bg-clip-text hero-text font-light text-2xl lg:text-4xl  ">
                 {i18n.HERO.TITLE}{" "}
               </span>
-              <span className="name_title lg:text-5xl">{i18n.HERO.TITLE_2}</span>
+              <span className="name_title lg:text-4xl xl:text-5xl">
+                {i18n.HERO.TITLE_2}
+              </span>
             </motion.h1>
             <motion.p
               animate={{
@@ -85,7 +89,7 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({ currentLocale }
                 ease: "easeIn",
                 delay: 1,
               }}
-              className="font-nunito text-sm md:text-md lg:text-xl mt-8 z-10 text-left"
+              className="font-nunito text-sm md:text-md lg:text-lg mt-8 z-10 text-left"
             >
               {i18n.HERO.DESCRIPTION}
             </motion.p>
@@ -126,9 +130,9 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({ currentLocale }
             </motion.p>
           </div>
 
-          <div className="flex flex-row-reverse justify-around lg:justify-between items-center w-full lg:w-3/12 xl:w-4/12 h-full ">
-            <AnimatePresence mode="sync">
-              <div className="flex flex-col lg:flex-row lg:items-center items-end gap-5 w-full mt-5 z-10">
+          <div className="flex flex-row-reverse justify-around  items-center lg:flex-col lg:justify-center lg:items-center w-full lg:w-4/12 xl:w-4/12 lg:h-3/6 ">
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-end  items-end gap-5 w-full h-full mt-5 z-10">
+              <AnimatePresence mode="sync">
                 <motion.a
                   animate={{
                     y: [0, -10, 0],
@@ -173,7 +177,6 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({ currentLocale }
                   href="https://www.linkedin.com/in/ramiro-gabriel-gumma-400993240/"
                   target="_blank"
                   className="btn btn-outline btn-ghost px-3 py-2 hover:text-secondary"
-
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -209,7 +212,6 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({ currentLocale }
                   href="https://github.com/Hamipluf"
                   target="_blank"
                   className="btn btn-outline btn-ghost px-3 py-2 hover:text-secondary"
-
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -241,7 +243,6 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({ currentLocale }
                   href=" https://w.app/RamaDev"
                   target="_blank"
                   className="btn btn-outline btn-ghost px-3 py-2 hover:text-secondary"
-
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -260,8 +261,8 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({ currentLocale }
                     <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
                   </svg>
                 </motion.a>
-              </div>
-            </AnimatePresence>
+              </AnimatePresence>
+            </div>
 
             <div className="">
               <Animated />
