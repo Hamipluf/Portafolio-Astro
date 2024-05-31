@@ -1,54 +1,44 @@
-# Astro Starter Kit: Basics
+# 🚀 Portafolio-Astro
 
-```sh
-npm create astro@latest -- --template basics
-```
+Bienvenido a mi portafolio web personal, desarrollado con [Astro](https://astro.build/), el framework moderno para crear sitios web ultra rápidos. Aquí muestro mis habilidades, proyectos y experiencias profesionales.El proyecto muestra mis habilidades, proyectos y experiencias, proporcionando una plataforma para compartir mi trabajo con posibles empleadores y colaboradores.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🌟 Características
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **Tecnologías principales**: 
+  - Astro
+  - TypeScript
+  - JavaScript
+  - CSS
+  - Tailwind
+  - Framer-Motion
+- **Estructura del proyecto**:
+  - `public/`: Recursos estáticos
+  - `src/`: Componentes, layouts y páginas
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 🛠️ Instalación y Uso
 
-## 🚀 Project Structure
+Sigue estos sencillos pasos para ver y modificar el portafolio:
 
-Inside of your Astro project, you'll see the following folders and files:
+1. **Clonar el repositorio**
+   ```bash
+   git clone https://github.com/Hamipluf/Portafolio-Astro.git
+   cd Portafolio-Astro
+2. **Insalar Dependencias**
+   ```bash
+    npm install
+2. **Inicializar en produccion**
+   ```bash
+     npm start
+     
+ ## 🎯 Objetivos del Proyecto
+Demostrar habilidades técnicas: Exhibir mis conocimientos en desarrollo web moderno utilizando herramientas y frameworks avanzados.
+Proyectos destacados: Mostrar ejemplos de proyectos pasados y actuales.
+Interfaz atractiva: Proveer una experiencia de usuario atractiva y profesional.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 📬 Contacto
+Si te interesa mi trabajo y quieres saber más, ¡no dudes en contactarme!
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Email: ramirogumma@hotmail.com
+LinkedIn: https://www.linkedin.com/in/ramirogumma-fullstackdev/
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## ¡Gracias por visitar mi portafolio! Espero que disfrutes explorándolo tanto como yo disfruté creándolo.😎 ##
