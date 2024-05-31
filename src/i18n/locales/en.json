@@ -11,7 +11,7 @@
     "NAME": "Ramiro Gumma",
     "TITLE": "Full-Stack",
     "TITLE_2": "Developer",
-    "DESCRIPTION": " FullStack MERN Developer | +3 years of experience : I convert ideas into code🚀",
+    "DESCRIPTION": " FullStack MERN Developer | +3 years of experience | I convert ideas into code🚀",
     "LOCATION": "- Capital Federal, Argentina"
   },
   "EXPERIENCIE": {
@@ -31,5 +31,9 @@
   },
   "CERTIFICATES": {
     "TITLE": "Studies and Certificates"
+  },
+  "PROJECTS": {
+    "MORE_BUTTON":"MORE",
+    "MORE_TITLE": "Algunos de mis proyectos"
   }
 }

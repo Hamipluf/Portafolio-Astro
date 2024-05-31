@@ -74,5 +74,42 @@
     "slug": "resto-sync-server",
     "tools": ["React", "Axios", "Redux", "Firebase", "CSS"],
     "image": "../assets/net.png"
+  },
+  {
+    "id": 5,
+    "title": "Resto Sync Bucket",
+    "subtitle": "Desarrollo de una API-Rest para la subida, obtención y eliminación de imágenes en un bucket de Amazon S3. ",
+    "description": "Este proyecto es una API para la gestión de imágenes en Amazon S3. Permite a los usuarios subir, obtener y eliminar imágenes almacenadas en un bucket de S3 de manera eficiente y segura. La API está construida con Node.js y Express, utilizando varias dependencias para manejar la autenticación, la subida de archivos y la interacción con los servicios de AWS.",
+    "demo_url": null,
+    "finished": true,
+    "github": "https://github.com/Hamipluf/Resto-Sync-Bucket",
+    "slug": "resto-sync-bucket",
+    "tools": [
+      "AWS-sdk/client-s3",
+      "Express",
+      "jSONwebtoken",
+      "Multer",
+      "passport"
+    ],
+    "image": "../assets/RestoSyncBucketS3.png"
+  },
+  {
+    "id": 6,
+    "title": "Portafolio Astro",
+    "subtitle": "Desarrollo de mi portafolio web FullStack. ",
+    "description": "Este es mi portafolio web personal, desarrollado con Astro, un moderno framework para la creación de sitios web rápidos y eficientes. El proyecto muestra mis habilidades, proyectos y experiencias, proporcionando una plataforma para compartir mi trabajo con posibles empleadores y colaboradores.",
+    "demo_url": null,
+    "finished": true,
+    "github": "https://github.com/Hamipluf/Portafolio-Astro",
+    "slug": "portafolio-web-astro",
+    "tools": [
+      "Astro",
+      "TypeScript",
+      "JavaScript",
+      "CSS",
+      "Tailwind",
+      "Framer-Motion"
+    ],
+    "image": "../assets/PortafolioWeb.png"
   }
 ]

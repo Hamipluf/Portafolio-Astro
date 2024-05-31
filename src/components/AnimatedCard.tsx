@@ -114,7 +114,7 @@ const AnimatedCard: React.FC<{
               transformStyle: "preserve-3d",
             }}
             onClick={() => openModal(project)}
-            className="btn btn-xs btn-accent px-2 shadow-2xl"
+            className="btn btn-accent px-2 shadow-2xl"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

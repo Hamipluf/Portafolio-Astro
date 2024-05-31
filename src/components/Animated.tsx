@@ -38,7 +38,7 @@ const items: Image[] = [
 
 const Animated: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [theme, setTheme] = useState<string>('cupcake');
+  const [theme, setTheme] = useState<string>('dark');
   const variants = {
     enter: (direction: number) => ({
       y: direction > 0 ? 300 : -300,
@@ -81,7 +81,7 @@ const Animated: React.FC = () => {
     return () => clearInterval(intervalId);
   }, []);
   const currentImage =
-    theme === "dark"
+    theme === "cupcake"
       ? items[currentIndex].imgCup
       : items[currentIndex].imgDark;
 

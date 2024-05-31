@@ -2,57 +2,122 @@ import React, { useRef, useState } from "react";
 import AnimatedCard from "./AnimatedCard";
 import type { Project } from "@/utils/interfaces/project";
 import { AnimatePresence, useInView } from "framer-motion";
+import "../styles/index.css";
+import { getI18N } from "@/i18n";
 
-interface ProjectsAnimatedProps {
+const ProjectsAnimated: React.FC<{
   projects: Project[];
-}
-
-const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
+  currentLocale: string | undefined;
+}> = ({ projects, currentLocale }) => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const i18n = getI18N({ currentLocale });
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const openModal = (project: Project) => {
+  const openModalProject = (project: Project) => {
     setSelectedProject(project);
     const modal = document.getElementById(project.slug) as HTMLDialogElement;
     if (modal) {
       modal.showModal();
     }
   };
+  const openMoreProjects = () => {
+    const modal = document.getElementById("more_projects") as HTMLDialogElement;
+    if (modal) {
+      modal.showModal();
+    }
+  };
 
-  const closeModal = () => {
-    setSelectedProject(null);
+  const closeModalMoreProjects = () => {
+    const modal = document.getElementById("more_projects") as HTMLDialogElement;
+    if (modal) {
+      modal.close();
+    }
   };
 
   return (
     <>
-      <AnimatePresence mode="sync">
-        <div
-          ref={ref}
-          className="h-full w-full lg:grid lg:grid-cols-2 lg:gap-5 lg:m-4 lg:p-4"
-        >
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              style={{
-                transform: isInView ? "none" : "translateX(-200px)",
-                opacity: isInView ? 1 : 0,
-                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-              }}
+      <div className="flex flex-col min-h-screen w-full my-5">
+        <div className="self-end mx-12">
+          <button
+            onClick={() => openMoreProjects()}
+            className="group relative right-0 overflow-hidden bg-secondary focus:ring-4 focus:ring-accent inline-flex items-center px-7 py-2.5 rounded-lg text-white justify-center"
+          >
+            <span className="z-40">{i18n.PROJECTS.MORE_BUTTON}</span>
+            <svg
+              className="z-40 ml-2 -mr-1 w-3 h-3 transition-all duration-300 group-hover:translate-x-1"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <AnimatedCard project={project} openModal={openModal} />
-            </div>
-          ))}
+              <path
+                fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <div className="absolute inset-0 h-[200%] w-[200%] rotate-45 translate-x-[-70%] transition-all group-hover:scale-100 bg-white/30 group-hover:translate-x-[50%] z-20 duration-1000"></div>
+          </button>
         </div>
-      </AnimatePresence>
+        <AnimatePresence mode="sync">
+          <div
+            ref={ref}
+            className="h-full w-full lg:grid lg:grid-cols-2 lg:gap-5 lg:m-4 lg:p-4 overflow-hidden"
+          >
+            {projects.slice(0, 4).map((project) => (
+              <div
+                key={project.id}
+                style={{
+                  transform: isInView ? "none" : "translateX(-200px)",
+                  opacity: isInView ? 1 : 0,
+                  transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                }}
+              >
+                <AnimatedCard project={project} openModal={openModalProject} />
+              </div>
+            ))}
+          </div>
+        </AnimatePresence>
+      </div>
+
+      <dialog id="more_projects" className="modal">
+        <div className="modal-box max-w-max bg-primary">
+          <form method="dialog">
+            <button
+              onClick={() => closeModalMoreProjects()}
+              className="btn btn-xs btn-circle btn-secondary absolute right-4 top-4"
+            >
+              ✕
+            </button>
+          </form>
+          <h3 className="font-bold text-xl underline underline-offset-2 py-4">
+            {i18n.PROJECTS.MORE_TITLE}
+          </h3>
+          <div className="h-20 carousel carousel-vertical rounded-box">
+            {projects.slice(4, projects.length).map((project) => (
+              <div
+                key={project.id}
+                className="carousel-item h-full"
+                style={{
+                  transform: isInView ? "none" : "translateX(-200px)",
+                  opacity: isInView ? 1 : 0,
+                  transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                }}
+              >
+                <AnimatedCard project={project} openModal={openModalProject} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </dialog>
 
       {selectedProject && (
         <dialog id={selectedProject.slug} className="modal ">
           <div className="modal-box glass p-2 ">
             <form method="dialog">
               <button
-                onClick={closeModal}
+                onClick={() => setSelectedProject(null)}
                 className="btn btn-xs btn-circle btn-secondary absolute right-4 top-4"
               >
                 ✕
@@ -71,12 +136,12 @@ const ProjectsAnimated: React.FC<ProjectsAnimatedProps> = ({ projects }) => {
               <div className="p-6">
                 <div
                   className={`badge ${
-                    selectedProject.finished ? "badge-primary" : "badge-error"
+                    selectedProject.finished ? "badge-accent" : "badge-error"
                   } badge-outline`}
                 >
                   {selectedProject.finished ? "Finalizado" : "En desarrollo..."}
                 </div>
-                <h3 className="mb-2 block base-text text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                <h3 className="mb-2 block text-accent text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                   {selectedProject.title}
                 </h3>
                 <p className="mb-8 block secondary-text text-base font-normal leading-relaxed text-gray-700 antialiased">

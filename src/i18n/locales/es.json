@@ -31,5 +31,9 @@
   },
   "CERTIFICATES": {
     "TITLE": "Estudios Y Certificados"
+  },
+  "PROJECTS": {
+    "MORE_BUTTON": "MAS PROJECTOS",
+    "MORE_TITLE": "Some of my projects"
   }
 }
