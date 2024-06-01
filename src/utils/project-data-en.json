@@ -1,116 +1,139 @@
 [
-    {
-      "id": 1,
-      "title": "Resto Sync Client",
-      "subtitle": "Restaurant management software client developed with React and TypeScript",
-      "description": "Managed the daily operations of a restaurant, including shift control, inventory, orders, product analysis, and billing. Used software to automate repetitive tasks, improve operational efficiency, and reduce costs. Generated detailed reports to identify trends, optimize processes, and make strategic decisions.",
-      "demo_url": null,
-      "finished": false,
-      "github": "https://github.com/Hamipluf/RestoSync-Client",
-      "slug": "resto-sync-client",
-      "tools": [
-        "Axios",
-        "React Query Tanstack",
-        "React",
-        "TypeScript",
-        "Redux TLK",
-        "Tailwind"
-      ],
-      "image": "assets/RestoSyncCodeClient.png"
-    },
-    {
-      "id": 2,
-      "title": "Resto Sync Server",
-      "subtitle": "Backend development for a restaurant management application based on layered architecture and OOP with Node.js",
-      "description": "Designed and implemented a layered architecture to efficiently separate business logic from infrastructure, facilitating scalability and long-term maintenance. Applying Object-Oriented Programming (OOP) principles, I created decoupled classes and objects to enhance code modularity and reuse. Developed RESTful API services to provide backend functionalities to client applications, ensuring efficient and secure communication. Managed application data with a relational database in PostgreSQL, ensuring reliable and efficient storage. Implemented unit testing in the data access layer to prevent future issues in production. Backend development is still ongoing, with a continuous focus on improvement and optimization.",
-      "demo_url": null,
-      "finished": false,
-      "github": "https://github.com/Hamipluf/RestoSync-Server",
-      "slug": "resto-sync-server",
-      "tools": [
-        "Mocha",
-        "OOP",
-        "Node.JS",
-        "PostgreSQL",
-        "Chai",
-        "JWT",
-        "Express",
-        "Multer",
-        "Passport"
-      ],
-      "image": "assets/RestoSyncCode.png"
-    },
-    {
-      "id": 3,
-      "title": "E-Commerce CoderHouse",
-      "subtitle": "Final project for the Backend Developer course at CoderHouse. Developed a comprehensive e-commerce application using Node.js, Express.js, Handlebars, MongoDB, NodeMailer, and Stripe",
-      "description": "Implemented a robust backend using Node.js and Express.js, handling user authentication, product management, order processing, and payment integration. Used Handlebars template engine to dynamically generate web pages, ensuring a smooth user experience. Employed MongoDB as the database to effectively store and manage product information, user data, and order details. Integrated NodeMailer to send transactional emails, such as order confirmations and account notifications. Implemented Stripe as the payment gateway to securely process online payments and manage various payment methods. Developed comprehensive API documentation using Swagger to facilitate seamless integration with frontend applications. Optimized user experience: Implemented JWT authentication for secure login and enhanced authorization. Enhanced e-commerce functionality: Developed features for product navigation, shopping cart management, and order placement. Robust payment processing: Integrated Stripe for secure and seamless online payments.",
-      "demo_url": null,
-      "finished": true,
-      "github": "https://github.com/Hamipluf/E-Commerce_coderhouse",
-      "slug": "resto-sync-server",
-      "tools": [
-        "MongoDB",
-        "OOP",
-        "Node.JS",
-        "Nodemailer",
-        "Socket.io",
-        "Swagger",
-        "JWT",
-        "Express",
-        "Handlebars",
-        "Passport"
-      ],
-      "image": "assets/e-commerce-coderhouse.PNG"
-    },
-    {
-      "id": 4,
-      "title": "Netflix Clone",
-      "subtitle": "Development of a Netflix clone with React, Redux, Firestore, and Google authentication.",
-      "description": "Developed a functional web application similar to Netflix, with an intuitive user interface and optimized performance. Implemented Redux as a state management tool to facilitate project maintenance and scalability. Integrated Firestore as a NoSQL database to enable efficient and scalable data storage and retrieval. Used Google Auth for user authentication, providing secure and personalized access to the application's content. Utilized the TMDB API and Axios for effective movie data consumption and processing. Applied conditionals and authentications to ensure a personalized and secure user experience.",
-      "demo_url": "https://netflix-clone-rg.firebaseapp.com/",
-      "finished": true,
-      "github": "https://github.com/Hamipluf/E-Commerce_coderhouse",
-      "slug": "resto-sync-server",
-      "tools": ["React", "Axios", "Redux", "Firebase", "CSS"],
-      "image": "assets/net.png"
-    },
-    {
-      "id": 5,
-      "title": "Resto Sync Bucket",
-      "subtitle": "Development of an API-Rest for uploading, retrieving and deleting images in an Amazon S3 bucket.",
-      "description": "This project is an API for managing images in Amazon S3. It allows users to upload, get and delete images stored in an S3 bucket efficiently and securely. The API is built with Node.js and Express, using various dependencies to handle authentication, file upload and interaction with AWS services.",
-      "demo_url": null,
-      "finished": true,
-      "github": "https://github.com/Hamipluf/Resto-Sync-Bucket",
-      "slug": "resto-sync-bucket",
-      "tools": [
-        "AWS-sdk/client-s3",
-        "Express",
-        "jSONwebtoken",
-        "Multer",
-        "passport"
-      ],
-      "image": "../assets/RestoSyncBucketS3.png"
-    },
-    {
-      "id": 6,
-      "title": "Portafolio Astro",
-      "subtitle": "Development of my FullStack web portfolio.",
-      "description": "This is my personal web portfolio, developed with Astro, a modern framework for creating fast and efficient websites. The project showcases my skills, projects and experiences, providing a platform to share my work with potential employers and collaborators.",
-      "demo_url": null,
-      "finished": true,
-      "github": "https://github.com/Hamipluf/Portafolio-Astro",
-      "slug": "portafolio-web-astro",
-      "tools": [
-        "Astro",
-        "TypeScript",
-        "JavaScript",
-        "CSS",
-        "Tailwind",
-        "Framer-Motion"
-      ],
-      "image": "../assets/PortafolioWeb.png"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "Resto Sync Client",
+    "subtitle": "Restaurant management software client developed with React and TypeScript",
+    "description": "Managed the daily operations of a restaurant, including shift control, inventory, orders, product analysis, and billing. Used software to automate repetitive tasks, improve operational efficiency, and reduce costs. Generated detailed reports to identify trends, optimize processes, and make strategic decisions.",
+    "demo_url": null,
+    "finished": false,
+    "github": "https://github.com/Hamipluf/RestoSync-Client",
+    "slug": "resto-sync-client",
+    "tools": [
+      "Axios",
+      "React Query Tanstack",
+      "React",
+      "TypeScript",
+      "Redux TLK",
+      "Tailwind"
+    ],
+    "image": "assets/RestoSyncCodeClient.png"
+  },
+  {
+    "id": 2,
+    "title": "Resto Sync Server",
+    "subtitle": "Backend development for a restaurant management application based on layered architecture and OOP with Node.js",
+    "description": "Designed and implemented a layered architecture to efficiently separate business logic from infrastructure, facilitating scalability and long-term maintenance. Applying Object-Oriented Programming (OOP) principles, I created decoupled classes and objects to enhance code modularity and reuse. Developed RESTful API services to provide backend functionalities to client applications, ensuring efficient and secure communication. Managed application data with a relational database in PostgreSQL, ensuring reliable and efficient storage. Implemented unit testing in the data access layer to prevent future issues in production. Backend development is still ongoing, with a continuous focus on improvement and optimization.",
+    "demo_url": null,
+    "finished": false,
+    "github": "https://github.com/Hamipluf/RestoSync-Server",
+    "slug": "resto-sync-server",
+    "tools": [
+      "Mocha",
+      "OOP",
+      "Node.JS",
+      "PostgreSQL",
+      "Chai",
+      "JWT",
+      "Express",
+      "Multer",
+      "Passport"
+    ],
+    "image": "assets/RestoSyncCode.png"
+  },
+  {
+    "id": 3,
+    "title": "E-Commerce CoderHouse",
+    "subtitle": "Final project for the Backend Developer course at CoderHouse. Developed a comprehensive e-commerce application using Node.js, Express.js, Handlebars, MongoDB, NodeMailer, and Stripe",
+    "description": "Implemented a robust backend using Node.js and Express.js, handling user authentication, product management, order processing, and payment integration. Used Handlebars template engine to dynamically generate web pages, ensuring a smooth user experience. Employed MongoDB as the database to effectively store and manage product information, user data, and order details. Integrated NodeMailer to send transactional emails, such as order confirmations and account notifications. Implemented Stripe as the payment gateway to securely process online payments and manage various payment methods. Developed comprehensive API documentation using Swagger to facilitate seamless integration with frontend applications. Optimized user experience: Implemented JWT authentication for secure login and enhanced authorization. Enhanced e-commerce functionality: Developed features for product navigation, shopping cart management, and order placement. Robust payment processing: Integrated Stripe for secure and seamless online payments.",
+    "demo_url": null,
+    "finished": true,
+    "github": "https://github.com/Hamipluf/E-Commerce_coderhouse",
+    "slug": "resto-sync-server",
+    "tools": [
+      "MongoDB",
+      "OOP",
+      "Node.JS",
+      "Nodemailer",
+      "Socket.io",
+      "Swagger",
+      "JWT",
+      "Express",
+      "Handlebars",
+      "Passport"
+    ],
+    "image": "assets/e-commerce-coderhouse.PNG"
+  },
+  {
+    "id": 4,
+    "title": "Netflix Clone",
+    "subtitle": "Development of a Netflix clone with React, Redux, Firestore, and Google authentication.",
+    "description": "Developed a functional web application similar to Netflix, with an intuitive user interface and optimized performance. Implemented Redux as a state management tool to facilitate project maintenance and scalability. Integrated Firestore as a NoSQL database to enable efficient and scalable data storage and retrieval. Used Google Auth for user authentication, providing secure and personalized access to the application's content. Utilized the TMDB API and Axios for effective movie data consumption and processing. Applied conditionals and authentications to ensure a personalized and secure user experience.",
+    "demo_url": "https://netflix-clone-rg.firebaseapp.com/",
+    "finished": true,
+    "github": "https://github.com/Hamipluf/E-Commerce_coderhouse",
+    "slug": "resto-sync-server",
+    "tools": ["React", "Axios", "Redux", "Firebase", "CSS"],
+    "image": "assets/net.png"
+  },
+  {
+    "id": 5,
+    "title": "Resto Sync Bucket",
+    "subtitle": "Development of an API-Rest for uploading, retrieving and deleting images in an Amazon S3 bucket.",
+    "description": "This project is an API for managing images in Amazon S3. It allows users to upload, get and delete images stored in an S3 bucket efficiently and securely. The API is built with Node.js and Express, using various dependencies to handle authentication, file upload and interaction with AWS services.",
+    "demo_url": null,
+    "finished": true,
+    "github": "https://github.com/Hamipluf/Resto-Sync-Bucket",
+    "slug": "resto-sync-bucket",
+    "tools": [
+      "AWS-sdk/client-s3",
+      "Express",
+      "jSONwebtoken",
+      "Multer",
+      "passport"
+    ],
+    "image": "../assets/RestoSyncBucketS3.png"
+  },
+  {
+    "id": 6,
+    "title": "Portafolio Astro",
+    "subtitle": "Development of my FullStack web portfolio.",
+    "description": "This is my personal web portfolio, developed with Astro, a modern framework for creating fast and efficient websites. The project showcases my skills, projects and experiences, providing a platform to share my work with potential employers and collaborators.",
+    "demo_url": null,
+    "finished": true,
+    "github": "https://github.com/Hamipluf/Portafolio-Astro",
+    "slug": "portafolio-web-astro",
+    "tools": [
+      "Astro",
+      "TypeScript",
+      "JavaScript",
+      "CSS",
+      "Tailwind",
+      "Framer-Motion"
+    ],
+    "image": "../assets/PortafolioWeb.png"
+  },
+  {
+    "id": 7,
+    "title": "PIM-next-admin",
+    "subtitle": "Professional data management application.",
+    "description": "This repository contains an administration dashboard project developed with Next.js. The system allows the management of professional data, including authentication, storage and organization of information, with advanced search and filtering functionalities..",
+    "demo_url": null,
+    "finished": true,
+    "github": "https://github.com/Hamipluf/pim-next-admin",
+    "slug": "pimp-next-admin",
+    "tools": ["Next.js", "PostgreSQL:", "JavaScript", "JWT", "Tailwind CSS"],
+    "image": "../assets/pim-next-admin.png"
+  },
+  {
+    "id": 8,
+    "title": "API FreeWaves 1.0.0",
+    "subtitle": "Api Rest and Web socket.",
+    "description": "This repository contains an API and an event management system developed with Node.js and WebSockets. The project allows the reception, processing and visualization of events in real time, with organized storage.",
+    "demo_url": null,
+    "finished": true,
+    "github": "https://github.com/Hamipluf/Socket-FreeWaves",
+    "slug": "socket-freewaves",
+    "tools": ["Node.JS", "Express", "WebSockets", "Socket.io", "ZOD"],
+    "image": "../assets/API-FreeWaves.png"
+  }
+]

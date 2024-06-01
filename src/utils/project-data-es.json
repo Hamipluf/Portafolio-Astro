@@ -111,5 +111,35 @@
       "Framer-Motion"
     ],
     "image": "../assets/PortafolioWeb.png"
+  },
+  {
+    "id": 7,
+    "title": "PIM-next-admin",
+    "subtitle": "Aplicación para la gestión de datos de profesionales.",
+    "description": "Este repositorio contiene un proyecto de dashboard de administración desarrollado con Next.js. El sistema permite la gestión de datos de profesionales, incluyendo autenticación, almacenamiento y organización de información, con funcionalidades avanzadas de búsqueda y filtrado.",
+    "demo_url": null,
+    "finished": true,
+    "github": "https://github.com/Hamipluf/pim-next-admin",
+    "slug": "pimp-next-admin",
+    "tools": ["Next.js", "PostgreSQL:", "JavaScript", "JWT", "Tailwind CSS"],
+    "image": "../assets/pim-next-admin.png"
+  },
+  {
+    "id": 8,
+    "title": "API FreeWaves 1.0.0",
+    "subtitle": "Api Rest y Web socket.",
+    "description": "Este repositorio contiene una API y un sistema de administración de eventos desarrollados con Node.js y WebSockets. El proyecto permite la recepción, procesamiento y visualización de eventos en tiempo real, con almacenamiento organizado.",
+    "demo_url": null,
+    "finished": true,
+    "github": "https://github.com/Hamipluf/Socket-FreeWaves",
+    "slug": "socket-freewaves",
+    "tools": [
+      "Node.JS",
+      "Express",
+      "WebSockets",
+      "Socket.io",
+      "ZOD"
+    ],
+    "image": "../assets/API-FreeWaves.png"
   }
 ]

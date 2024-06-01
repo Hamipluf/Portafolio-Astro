@@ -63,7 +63,7 @@ const ProjectsAnimated: React.FC<{
         <AnimatePresence mode="sync">
           <div
             ref={ref}
-            className="h-full w-full lg:grid lg:grid-cols-2 lg:gap-5 lg:m-4 lg:p-4 overflow-hidden"
+            className="h-full w-fullx lg:grid lg:grid-cols-2 lg:gap-5 lg:m-4 lg:p-4 overflow-hidden"
           >
             {projects.slice(0, 4).map((project) => (
               <div
@@ -82,7 +82,7 @@ const ProjectsAnimated: React.FC<{
       </div>
 
       <dialog id="more_projects" className="modal">
-        <div className="modal-box max-w-max bg-primary">
+        <div className="modal-box max-w-max h-[90vh] bg-primary">
           <form method="dialog">
             <button
               onClick={() => closeModalMoreProjects()}
@@ -94,7 +94,7 @@ const ProjectsAnimated: React.FC<{
           <h3 className="font-bold text-xl underline underline-offset-2 py-4">
             {i18n.PROJECTS.MORE_TITLE}
           </h3>
-          <div className="h-20 carousel carousel-vertical rounded-box">
+          <div className="max-h-fit carousel carousel-vertical rounded-box gap-y-10  ">
             {projects.slice(4, projects.length).map((project) => (
               <div
                 key={project.id}
