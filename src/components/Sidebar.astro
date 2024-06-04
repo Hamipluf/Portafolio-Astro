@@ -1,20 +1,24 @@
 ---
 import ChangeTheme from "@/components/ChangeTheme.astro";
-import { useTranslations, getLangFromUrl } from "@/i18n/utils";
+import {
+  useTranslations,
+  getLangFromUrl,
+  useTranslatedPath,
+} from "@/i18n/utils";
 import SelectLenguaje from "@/components/SelectLenguaje";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const path = Astro.url
+const translatePath = useTranslatedPath(lang);
 ---
 
 <aside
   class="fixed min-h-[90vh] mx-4 my-4 w-10 md:w-13 lg:w-16 flex flex-col space-y-10 items-center justify-center rounded-md bg-secondary z-50"
 >
-  <SelectLenguaje url={path.origin} path={path.pathname} client:only />
+  <SelectLenguaje url={Astro.url} client:only />
   <!-- Index -->
   <a
-    href={`/${lang}`}
-    class="tooltip tooltip-right h-8 w-8 lg:h-10 lg:w-10  flex items-center justify-center rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral"
+    href={translatePath("/")}
+    class="tooltip tooltip-right h-8 w-8 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral"
     data-tip={t("nav.home")}
   >
     <svg
@@ -36,7 +40,7 @@ const path = Astro.url
   </a>
   <!-- AboutMe -->
   <a
-    href={`/${lang}/about-me`}
+    href={translatePath("/about-me/")}
     class="tooltip tooltip-right h-8 w-8 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral"
     data-tip={t("nav.about")}
   >
@@ -53,8 +57,8 @@ const path = Astro.url
   </a>
   <!-- Experience -->
   <a
-    href={`/${lang}/experience`}
-    class="tooltip tooltip-right  h-8 w-8 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral"
+    href={translatePath("/experience/")}
+    class="tooltip tooltip-right h-8 w-8 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral"
     data-tip={t("nav.expirience")}
   >
     <svg
@@ -76,7 +80,7 @@ const path = Astro.url
   </a>
   <!-- Projects -->
   <a
-    href={`/${lang}/projects`}
+    href={translatePath("/projects/")}
     class="tooltip tooltip-right h-8 w-8 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral"
     data-tip={t("nav.projects")}
   >
@@ -98,7 +102,7 @@ const path = Astro.url
   </a>
   <!-- Certificates -->
   <a
-    href={`/${lang}/certificates`}
+    href={translatePath("/certificates/")}
     class="tooltip tooltip-right h-8 w-8 lg:h-10 lg:w-10 flex items-center justify-center rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral"
     data-tip="Certificados"
     data-tip={t("nav.certificates")}

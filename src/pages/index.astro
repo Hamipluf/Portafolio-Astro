@@ -1,3 +1,9 @@
 ---
-return Astro.redirect('/es/');
+import Layout from "../layouts/Layout.astro";
+import Hero from "@/components/Hero";
+const { currentLocale } = Astro;
 ---
+
+<Layout title="Ramiro.Dev">
+  <Hero currentLocale={currentLocale} client:only />
+</Layout>
