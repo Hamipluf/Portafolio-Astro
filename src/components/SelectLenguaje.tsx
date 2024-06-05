@@ -47,7 +47,7 @@ const StaggeredDropDown: React.FC<{ url: URL }> = ({ url }) => {
     open: { scale: 1, y: 0 },
     closed: { scale: 0, y: -7 },
   };
-const path = url.pathname.split('/')[2]
+  const path = url.pathname.split("/")[2];
 
   return (
     <motion.div animate={open ? "open" : "closed"} className="relative flex">
@@ -57,12 +57,51 @@ const path = url.pathname.split('/')[2]
         style={{ translateY: "50%" }}
         className="flex flex-col gap-2 p-2 rounded-lg bg-secondary shadow-xl absolute top-[-20%] left-[150%] w-32 overflow-hidden"
       >
-        {Object.entries(languages).map(([lang, label], index) => (
+        {Object.entries(languages).map(
+          ([lang, label], index) =>
+            url.pathname.split("/")[1] !== "en" && (
+              <motion.li
+                key={index}
+                variants={itemVariants}
+                onClick={() => {
+                  setOpen(false),
+                    window.location.assign(`/${lang}${url.pathname}`);
+                }}
+                className="flex justify-center items-center p-1 gap-2 w-11/12 text-xs font-medium  rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral"
+              >
+                <motion.span variants={actionIconVariants}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="icon icon-tabler icons-tabler-outline icon-tabler-language"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 5h7" />
+                    <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+                    <path d="M5 9c0 2.144 2.952 3.908 6.7 4" />
+                    <path d="M12 20l4 -9l4 9" />
+                    <path d="M19.1 18h-6.2" />
+                  </svg>
+                </motion.span>
+                <span>{label}</span>
+              </motion.li>
+            )
+        )}
+        {url.pathname.split("/")[1] === "en" && (
           <motion.li
-            key={index}
             variants={itemVariants}
-            onClick={() => setOpen(false)}
-            className="flex justify-center items-center gap-2 w-11/12 text-xs font-medium  rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral"
+            onClick={() => {
+              setOpen(false),
+                window.location.assign(`/${path ?? ""}`);
+            }}
+            className="flex justify-center items-center gap-2 p-1 w-11/12 text-xs font-medium  rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral"
           >
             <motion.span variants={actionIconVariants}>
               <svg
@@ -85,41 +124,13 @@ const path = url.pathname.split('/')[2]
                 <path d="M19.1 18h-6.2" />
               </svg>
             </motion.span>
-            <a href={`/${lang}${url.pathname}`}>{label}</a>
+            <span> Español</span>
           </motion.li>
-        ))}
-        <motion.li
-          variants={itemVariants}
-          onClick={() => setOpen(false)}
-          className="flex justify-center items-center gap-2 w-11/12 text-xs font-medium  rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral"
-        >
-          <motion.span variants={actionIconVariants}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="icon icon-tabler icons-tabler-outline icon-tabler-language"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M4 5h7" />
-              <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-              <path d="M5 9c0 2.144 2.952 3.908 6.7 4" />
-              <path d="M12 20l4 -9l4 9" />
-              <path d="M19.1 18h-6.2" />
-            </svg>
-          </motion.span>
-          <a href={`/${path ?? ''}`}>Español</a>
-        </motion.li>
+        )}
       </motion.ul>
       <button
         onClick={() => setOpen((pv) => !pv)}
-        className="tooltip tooltip-right h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral"
+        className="tooltip tooltip-right h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer text-base-100 hover:text-secondary hover:bg-accent hover:duration-300 hover:ease-linear focus:bg-neutral focus:text-secondary"
         data-tip={"Lenguaje"}
       >
         <motion.span variants={iconVariants}>
