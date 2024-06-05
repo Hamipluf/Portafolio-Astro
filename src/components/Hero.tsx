@@ -72,7 +72,9 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({
               className="font-nunito font-semibold base-text text-xl md:text-3xl lg:text-4xl leading-tight text-left
               z-10"
             >
-              <span className="name_title lg:text-4xl xl:text-5xl">{i18n.HERO.NAME}</span>{" "}
+              <span className="name_title lg:text-4xl xl:text-5xl">
+                {i18n.HERO.NAME}
+              </span>{" "}
               <span className="text-transparent bg-clip-text hero-text font-light text-2xl lg:text-4xl  ">
                 {i18n.HERO.TITLE}{" "}
               </span>
@@ -93,7 +95,7 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({
             >
               {i18n.HERO.DESCRIPTION}
             </motion.p>
-            <motion.p
+            <motion.div
               animate={{
                 y: [30, 0],
                 opacity: [0, 50, 100],
@@ -121,13 +123,37 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({
                 <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
                 <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
               </svg>
-              {i18n.HERO.LOCATION}{" "}
+              <p> {i18n.HERO.LOCATION} </p>
               <img
                 className="w-7 h-7"
                 src="/assets/argentina.png"
                 alt="Bandera argentina"
               />
-            </motion.p>
+              <a
+                download="cv-ramiroGumma-Fullstack.pdf"
+                href="assets/cv-turing.pdf"
+                className="btn btn-outline btn-sm btn-ghost hover:text-secondary"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="icon icon-tabler icons-tabler-outline icon-tabler-file-cv"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                  <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                  <path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" />
+                  <path d="M13 11l1.5 6l1.5 -6" />
+                </svg>
+              </a>
+            </motion.div>
           </div>
 
           <div className="flex flex-row-reverse justify-around  items-center lg:flex-col lg:justify-center lg:items-center w-full lg:w-4/12 xl:w-4/12 lg:h-3/6 ">
