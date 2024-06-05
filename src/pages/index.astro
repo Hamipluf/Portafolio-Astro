@@ -5,5 +5,5 @@ const { currentLocale } = Astro;
 ---
 
 <Layout title="Ramiro.Dev">
-  <Hero currentLocale={currentLocale} client:only />
+  <Hero currentLocale={currentLocale} client:idle/>
 </Layout>

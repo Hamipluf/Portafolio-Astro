@@ -5,13 +5,17 @@ import project_data_en from "@/utils/project-data-en.json";
 import Layout from "@/layouts/Layout.astro";
 let project_data;
 const { currentLocale } = Astro;
-currentLocale === "es"
-  ? (project_data = project_data_es)
-  : (project_data = project_data_en);
+currentLocale === "en"
+  ? (project_data = project_data_en)
+  : (project_data = project_data_es);
 ---
 
 <Layout title="Portafolio">
   <section id="Projects" class="w-full h-screen">
-    <ProjectAnimated projects={project_data} currentLocale={currentLocale} client:only />
+    <ProjectAnimated
+      projects={project_data}
+      currentLocale={currentLocale}
+      client:idle
+    />
   </section>
 </Layout>

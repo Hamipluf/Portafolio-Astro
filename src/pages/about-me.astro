@@ -6,6 +6,6 @@ const { currentLocale } = Astro;
 
 <Layout title="Conozcame">
   <section class="min-h-screen w-full" id="AboutMe">
-    <AnimatedAboutMe currentLocale={currentLocale} client:only />
+    <AnimatedAboutMe currentLocale={currentLocale} client:visible />
   </section>
 </Layout>
