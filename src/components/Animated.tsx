@@ -38,7 +38,7 @@ const items: Image[] = [
 
 const Animated: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [theme, setTheme] = useState<string>('dark');
+  const [theme, setTheme] = useState<string>('cupcake');
   const variants = {
     enter: (direction: number) => ({
       y: direction > 0 ? 300 : -300,
