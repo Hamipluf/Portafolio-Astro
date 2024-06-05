@@ -11,7 +11,7 @@ export const ui = {
         'nav.home': 'Inicio',
         'nav.about': 'Conozcame',
         'nav.expirience': 'Experiencia',
-        'nav.projects': 'Projectos',
+        'nav.projects': 'Proyectos',
         'nav.certificates': 'Certificados',
         'nav.theme': 'Cambiar Tema',
       
