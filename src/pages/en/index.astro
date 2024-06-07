@@ -1,12 +1,10 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Hero from "@/components/Hero";
-const { currentLocale } = Astro;
 ---
 
 <Layout title="Ramiro.Dev">
   <section id="Hero" class="relative overflow-hidden">
-    <Hero currentLocale={currentLocale} client:idle />
+    <Hero client:idle />
   </section>
-
 </Layout>

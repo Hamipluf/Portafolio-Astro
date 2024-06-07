@@ -15,12 +15,10 @@ const { currentLocale } = Astro;
   <Head title={title} />
   <body class="bg-primary">
     <div class="containter">
-      <div>
-        <Sidebar />
-      </div>
-      <div class="h-screen w-full overflow-x-hidden">
+      <Sidebar />
+      <main>
         <slot />
-      </div>
+      </main>
     </div>
     <style is:global>
       html {
@@ -35,16 +33,27 @@ const { currentLocale } = Astro;
       }
 
       .containter {
-        display: grid;
-        grid-template-columns: 0.1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
+        overflow-x: hidden;
+        width: 100%;
+      }
+
+      main {
+        position: relative;
+        left: 100px;
+        width: 95%;
       }
 
       aside {
         background-color: var(--aside-color);
         color: var(--bg-color);
+      }
+
+      
+      @media (min-width: 375px) {
+        main {
+          left: 50px;
+          width: 85%;
+        }
       }
 
       code {
