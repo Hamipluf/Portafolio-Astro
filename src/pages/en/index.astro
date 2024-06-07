@@ -5,7 +5,7 @@ const { currentLocale } = Astro;
 ---
 
 <Layout title="Ramiro.Dev">
-  <section id="Hero" class="max-h-screen w-full rounded-lg m-4 ">
+  <section id="Hero" class="relative overflow-hidden">
     <Hero currentLocale={currentLocale} client:idle />
   </section>
 

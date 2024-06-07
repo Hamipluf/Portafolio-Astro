@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
+import WaterDropGrid from "./WaterDropGrid";
 import Animated from "./Animated";
 import { getI18N } from "@/i18n/index";
 import type React from "react";
@@ -9,6 +10,7 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({
   const i18n = getI18N({ currentLocale });
 
   return (
+    <>
       <div className="w-full flex flex-col lg:flex-row items-center px-5 ">
         <div className="absolute w-1/2  flex flex-col items-center justify-center inset-y-0 lg:right-0 ">
           <motion.span
@@ -295,6 +297,9 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({
           </div>
         </div>
       </div>
+      <WaterDropGrid />
+
+          </>
   );
 };
 
