@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { type Certificated } from "@/utils/interfaces/project";
 import { truncateText } from "@/utils/truncateText";
 const CertificatedCard: React.FC<{
-  certificate: Certificated,
+  certificate: Certificated;
 }> = ({ certificate }) => {
   const image = `../../${certificate.image}`;
   return (
@@ -16,7 +16,7 @@ const CertificatedCard: React.FC<{
         duration: 0.8,
         type: "spring",
       }}
-      className="mt-10 group overflow-hidden p-8 rounded-xl bg-secondary bg-opacity-25 h-fit"
+      className="mt-10 group overflow-hidden p-8 rounded-xl bg-secondary bg-opacity-25 max-h-fit"
     >
       <h3 className="font-mono font-medium mb-4 text-secondary">
         {certificate.title}
@@ -24,7 +24,8 @@ const CertificatedCard: React.FC<{
       {/* Image */}
       <div className="border border-blue-500/10 flex relative rounded-lg hover:scale-105 hover:translate-y-1 transition-all duration-300 ease-in-out">
         <img
-          className="hover:rounded-lg transition-all duration-300 ease-in-out"
+          style={{ width: "100%", height: "200px" }}
+          className="object-cover hover:rounded-lg transition-all duration-300 ease-in-out"
           src={image}
           alt={certificate.id_certificate || ""}
         />

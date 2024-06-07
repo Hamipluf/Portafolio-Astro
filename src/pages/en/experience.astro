@@ -1,11 +1,12 @@
 ---
 import ExperienceCard from "@/components/ExperienceCard";
 import Layout from "@/layouts/Layout.astro";
+
 const { currentLocale } = Astro;
 ---
 
 <Layout title="Experience">
-  <section class="w-full h-screen" id="Expirience">
+  <section class="w-full max-h-screen" id="Expirience">
     <ExperienceCard currentLocale={currentLocale} client:visible />
   </section>
 </Layout>

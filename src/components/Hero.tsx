@@ -9,8 +9,7 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({
   const i18n = getI18N({ currentLocale });
 
   return (
-    <section id="Hero" className="h-screen w-full rounded-lg m-4">
-      <div className="flex flex-col lg:flex-row items-center h-screen  w-full px-5 ">
+      <div className="w-full flex flex-col lg:flex-row items-center px-5 ">
         <div className="absolute w-1/2  flex flex-col items-center justify-center inset-y-0 lg:right-0 ">
           <motion.span
             id="dot"
@@ -156,7 +155,7 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({
             </motion.div>
           </div>
 
-          <div className="flex flex-row-reverse justify-around  items-center lg:flex-col lg:justify-center lg:items-center w-full lg:w-4/12 xl:w-4/12 lg:h-3/6 ">
+          <div className="flex flex-row-reverse justify-around  items-center lg:flex-col lg:justify-center lg:items-center w-full lg:w-4/12 xl:w-4/12  ">
             <div className="flex flex-col lg:flex-row lg:items-start lg:justify-end  items-end gap-5 w-full h-full mt-5 z-10">
               <AnimatePresence mode="sync">
                 <motion.a
@@ -169,7 +168,7 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({
                     repeat: Infinity,
                     duration: 2,
                   }}
-                  href="ramirogumma@hotmail.com"
+                  href="mailto:ramirogumma@hotmail.com"
                   className="btn btn-outline btn-ghost px-3 py-2 hover:text-secondary"
                 >
                   <svg
@@ -296,7 +295,6 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({
           </div>
         </div>
       </div>
-    </section>
   );
 };
 
