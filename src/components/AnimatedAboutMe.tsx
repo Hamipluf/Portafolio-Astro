@@ -16,9 +16,9 @@ const AnimatedAboutMe: React.FC<{ currentLocale: string | undefined }> = ({
   return (
     <div
       ref={ref}
-      className="container h-screen w-full m-auto px-6 text-gray-600 md:px-12 xl:px-6"
+      className="h-screen w-full lg:w-screen px-6 text-gray-600 md:px-12 xl:px-6"
     >
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row lg:items-start lg:gapy-2 lg:justify-between lg:w-full">
         {/* Profile image */}
         <motion.div
           animate={{
@@ -31,7 +31,7 @@ const AnimatedAboutMe: React.FC<{ currentLocale: string | undefined }> = ({
           <div className="profile-image m-10 w-10/12 h-[30vh] lg:bg-center md:h-[50vh] lg:h-[70vh] lg:w-[95%] lg:my-4 lg:mx-2"></div>
         </motion.div>
         {/* Text */}
-        <div className="md:7/12 lg:w-full lg:flex lg:flex-col lg:justify-start lg:items-start lg:h-full">
+        <div className="md:7/12 lg:w-full lg:flex lg:flex-col lg:justify-stretch lg:items-stretch ">
           <motion.h2
             animate={{
               x: [-200, 0],
@@ -41,7 +41,7 @@ const AnimatedAboutMe: React.FC<{ currentLocale: string | undefined }> = ({
               ease: "backIn",
               duration: 1,
             }}
-            className="text-2xl text-secondary font-nunito font-semibold md:text-4xl  m-4"
+            className="text-2xl text-secondary font-nunito font-semibold md:text-3xl lg:w-full"
           >
             {i18n.ABOUT_ME.GREET}{" "}
             <motion.span

@@ -25,7 +25,7 @@ const Block = ({ className, ...rest }: BlockProps) => {
         damping: 50,
       }}
       className={twMerge(
-        "col-span-4 rounded-lg border border-zinc-700 bg-zinc-800 p-6",
+        "col-span-4 rounded-lg border-2 border-secondary bg-opacity-60 bg-primary p-6",
         className
       )}
       {...rest}

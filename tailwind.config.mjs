@@ -20,8 +20,13 @@ export default {
           "neutral": "#A64153",
           "base-100": "#733F2D",
           ".base-text": {
-            "font-family": "Montserrat, sans-serif",
-            "color": "#201f1e",
+            "color": "#9898A0",
+          },
+          ".avatar-image": {
+            'background-image': 'url("assets/perfil-color.jpeg")', 
+            'background-repeat': 'no-repeat',
+            'background-position': 'center',
+            'background-size': 'contain',
           },
           ".secondary-text": {
             "font-family": "Lato, sans-serif",
@@ -31,6 +36,7 @@ export default {
             'background-image': 'url("/assets/perfil-color.jpeg")', 
             'background-position': '50% 20%',
             'background-repeat': 'no-repeat',
+            'background-size': 'cover',
             'border-radius': '1%',
             'box-shadow': '-10px 15px 27px -12px rgb(242,158,56)'
           }, 
@@ -55,8 +61,14 @@ export default {
           "accent": "#f1f1f3",
           "neutral": "#edecf1",
           "base-100": "#e6e5e8",
+          ".avatar-image": {
+            'background-image': 'url("assets/perfil-gris.jpeg")', 
+            'background-repeat': 'no-repeat',
+            'background-size': 'contain', 
+            'bacground-position': "center"
+          },
           ".base-text": {
-            "color": "#101010",
+            "color": "#9898A0",
           },
           ".secodary-text": {
             "font-family": "Josefin Sans , sans-serif",

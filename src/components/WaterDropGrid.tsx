@@ -2,14 +2,14 @@ import anime from "animejs";
 
 const WaterDropGrid: React.FC = () => {
   return (
-    <div className="relative grid place-content-end mx-auto mt-10 bg-transparent w-fit">
+    <div className="relative grid place-content-end mx-auto bg-transparent w-fit">
       <DotGrid />
     </div>
   );
 };
 
-const GRID_WIDTH = 50;
-const GRID_HEIGHT = 10;
+const GRID_WIDTH = 13;
+const GRID_HEIGHT = 4;
 const DotGrid = () => {
   const handleDotClick = (e: any) => {
     anime({
