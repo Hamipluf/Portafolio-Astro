@@ -27,7 +27,6 @@ const HeaderBlock: React.FC<{ currentLocale: string | undefined }> = ({ currentL
       </h1>
 
 
-      <ContactZone />
     </Block>
   )
 }

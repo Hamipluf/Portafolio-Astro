@@ -38,11 +38,11 @@ const ProjectsAnimated: React.FC<{
 
   return (
     <>
-      <div className="flex flex-col min-h-screen w-full my-5">
+      <div className="flex flex-col min-h-screen">
         <div className="self-end mx-12">
           <button
             onClick={() => openMoreProjects()}
-            className="group relative right-0 overflow-hidden bg-secondary focus:ring-4 focus:ring-accent inline-flex items-center px-7 py-2.5 rounded-lg text-white justify-center"
+            className="group relative right-0 top-5 overflow-hidden bg-secondary focus:ring-4 focus:ring-accent inline-flex items-center px-5 py-1.5 rounded-lg text-white justify-center"
           >
             <span className="z-40">{i18n.PROJECTS.MORE_BUTTON}</span>
             <svg
@@ -63,7 +63,7 @@ const ProjectsAnimated: React.FC<{
         <AnimatePresence mode="sync">
           <div
             ref={ref}
-            className="h-full w-fullx lg:grid lg:grid-cols-2 lg:gap-5 lg:m-4 lg:p-4 overflow-hidden"
+            className="h-full w-full lg:grid lg:grid-cols-2  lg:gap-y-5 lg:m-4 lg:p-4 overflow-hidden"
           >
             {projects.slice(0, 4).map((project) => (
               <div

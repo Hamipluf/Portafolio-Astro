@@ -7,9 +7,9 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
-import type { Project } from "@/utils/interfaces/project";
+import type { Project } from "@/utils/interfaces/project" ;
 
-const ROTATION_RANGE = 34.5;
+const ROTATION_RANGE = 3.5;
 const HALF_ROTATION_RANGE = ROTATION_RANGE / 2;
 
 const AnimatedCard: React.FC<{
@@ -21,7 +21,7 @@ const AnimatedCard: React.FC<{
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
-  const xSpring = useSpring(x, { duration: 0.5, damping: 30 });
+  const xSpring = useSpring(x, { duration: 1, damping: 30 });
   const ySpring = useSpring(y, { duration: 1, damping: 30 });
 
   const transform = useMotionTemplate`rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
@@ -49,8 +49,6 @@ const AnimatedCard: React.FC<{
     y.set(0);
   };
 
-  const image = `../../${project.image}`;
-
 
   return (
     <motion.div
@@ -61,7 +59,7 @@ const AnimatedCard: React.FC<{
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="card card-side bg-secondary bg-opacity-20 shadow-xl lg:w-11/12"
+      className="card card-compact card-side bg-secondary bg-opacity-20 shadow-xl lg:w-10/12"
     >
       <figure
         style={{
@@ -72,7 +70,7 @@ const AnimatedCard: React.FC<{
       >
         <img
           className="rounded-md w-32 lg:w-40 h-full my-2 object-cover object-left "
-          src={image}
+          src={project.image}
           alt={project.slug}
         />
       </figure>
@@ -114,12 +112,12 @@ const AnimatedCard: React.FC<{
               transformStyle: "preserve-3d",
             }}
             onClick={() => openModal(project)}
-            className="btn btn-accent px-2 shadow-2xl"
+            className="btn btn-accent btn-sm px-2 shadow-2xl"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="34"
-              height="34"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"

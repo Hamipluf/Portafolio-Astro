@@ -1,3 +1,11 @@
+<script>
+  import { themeChange } from "theme-change";
+
+  document.addEventListener("astro:page-load", () => {
+    themeChange();
+  });
+</script>
+
 <label class="swap swap-rotate">
   {/* this hidden checkbox controls the state */}
   <input
