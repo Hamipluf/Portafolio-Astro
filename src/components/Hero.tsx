@@ -18,7 +18,7 @@ const Hero: React.FC<{ currentLocale: string | undefined }> = ({ currentLocale }
         transition={{
           staggerChildren: 0.05,
         }}
-        className=" grid w-full grid-flow-dense grid-cols-12 gap-4"
+        className=" grid w-full grid-flow-dense grid-cols-12 gap-4 gap-y-6"
       >
         <HeaderBlock currentLocale={currentLocale} />
         <SocialsBlock currentLocale={currentLocale} />

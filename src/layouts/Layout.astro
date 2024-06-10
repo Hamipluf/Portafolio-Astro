@@ -16,7 +16,7 @@ const { currentLocale } = Astro;
   <body class="bg-primary">
     <div class="containter">
       <Sidebar />
-      <main>
+      <main class="relative left-5 w-full ">
         <slot />
       </main>
     </div>
@@ -35,11 +35,7 @@ const { currentLocale } = Astro;
         width: 100%;
       }
 
-      main {
-        position: relative;
-        left: 100px;
-        width: 95%;
-      }
+   
 
       aside {
         background-color: var(--aside-color);
@@ -47,12 +43,7 @@ const { currentLocale } = Astro;
       }
 
       
-      @media (min-width: 375px) {
-        main {
-          left: 50px;
-          width: 85%;
-        }
-      }
+   
 
       code {
         font-family:
