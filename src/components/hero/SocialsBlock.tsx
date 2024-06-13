@@ -1,9 +1,7 @@
 import Block from "./Block";
 import { motion } from 'framer-motion'
-import { getI18N } from '@/i18n/index'
 
-const SocialsBlock: React.FC<{ currentLocale: string | undefined }> = ({ currentLocale }) => {
-  const i18n = getI18N({ currentLocale });
+const SocialsBlock: React.FC = () => {
   return <>
     <Block
       whileHover={{

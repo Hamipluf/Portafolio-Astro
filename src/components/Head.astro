@@ -1,22 +1,9 @@
 ---
 const { title } = Astro.props;
-import { ViewTransitions } from "astro:transitions";
+// import { ViewTransitions } from "astro:transitions";
 ---
 
 <head>
-  <script>
-    document.addEventListener("astro:page-load", () => {
-      if (localStorage.getItem("theme") === null) {
-        document.documentElement.setAttribute("data-theme", "cupcake");
-      } else
-        document.documentElement.setAttribute(
-          "data-theme",
-          "dark",
-        );
-    });
-  </script>
-
-  <ViewTransitions initial="fade" in="fade" out="fade" />
   <meta charset="UTF-8" />
   <meta name="description" content="Astro description" />
   <meta name="viewport" content="width=device-width" />
@@ -47,4 +34,5 @@ import { ViewTransitions } from "astro:transitions";
   <!-- Font Montserrat-->
   <meta name="generator" content={Astro.generator} />
   <title>{title}</title>
+  <!-- <ViewTransitions /> -->
 </head>

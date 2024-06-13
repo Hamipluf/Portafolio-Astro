@@ -1,13 +1,9 @@
 import { getI18N } from "@/i18n";
 import {
-  motion,
-  inView,
-  delay,
-  AnimatePresence,
-  easeIn,
-  easeInOut,
+  motion
+
 } from "framer-motion";
-import React, { useRef } from "react";
+import React from "react";
 const ExperienceCard: React.FC<{ currentLocale: string | undefined }> = ({
   currentLocale,
 }) => {
@@ -28,7 +24,7 @@ const ExperienceCard: React.FC<{ currentLocale: string | undefined }> = ({
       <motion.div
         animate={{ opacity: [0, 1] }}
         transition={{ duration: 0.8 }}
-        className="flex m-4 items-center w-full"
+        className="flex flex-col m-4 lg:mx-10 items-start max-h-screen w-full "
       >
         <div>
           <h2 className="text-xl text-accent font-semibold m-4 ml-10 underline underline-offset-4 shadow-xl">
@@ -55,10 +51,9 @@ const ExperienceCard: React.FC<{ currentLocale: string | undefined }> = ({
             <path d="M3 13a20 20 0 0 0 18 0"></path>
           </svg>
         </div>
-      </motion.div>
         <motion.ul
           animate={"inital"}
-          className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical m-10"
+          className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical m-10 "
         >
           <motion.li variants={itemVariants}>
             <div className="timeline-middle">
@@ -187,6 +182,8 @@ const ExperienceCard: React.FC<{ currentLocale: string | undefined }> = ({
             <hr />
           </motion.li>
         </motion.ul>
+      </motion.div>
+
     </>
   );
 };

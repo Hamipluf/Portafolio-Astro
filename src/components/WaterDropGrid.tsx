@@ -8,7 +8,7 @@ const WaterDropGrid: React.FC = () => {
   );
 };
 
-const GRID_WIDTH = 13;
+const GRID_WIDTH = 19;
 const GRID_HEIGHT = 4;
 const DotGrid = () => {
   const handleDotClick = (e: any) => {

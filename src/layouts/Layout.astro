@@ -1,6 +1,8 @@
 ---
 import Head from "@/components/Head.astro";
 import Sidebar from "@/components/Sidebar.astro";
+// Supports weights 100-900
+import "@fontsource-variable/onest";
 interface Props {
   title: string;
 }
@@ -16,7 +18,7 @@ const { currentLocale } = Astro;
   <body class="bg-primary">
     <div class="containter">
       <Sidebar />
-      <main class="relative left-5 w-full ">
+      <main class="relative w-full">
         <slot />
       </main>
     </div>
@@ -25,6 +27,7 @@ const { currentLocale } = Astro;
         scroll-behavior: smooth;
       }
       body {
+        font-family: "Onest Variable", sans-serif;
         display: flex;
         flex-direction: column;
         overscroll-behavior: none;
@@ -35,15 +38,10 @@ const { currentLocale } = Astro;
         width: 100%;
       }
 
-   
-
       aside {
         background-color: var(--aside-color);
         color: var(--bg-color);
       }
-
-      
-   
 
       code {
         font-family:

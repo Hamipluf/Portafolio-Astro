@@ -1,14 +1,21 @@
+<script is:inline>
+  if (localStorage.getItem("theme") === null) {
+    document.documentElement.setAttribute("data-theme", "cupcake");
+  } else
+    document.documentElement.setAttribute(
+      "data-theme",
+      localStorage.getItem("theme"),
+    );
+</script>
 <script>
   import { themeChange } from "theme-change";
-
-  document.addEventListener("astro:page-load", () => {
-    themeChange();
-  });
+  themeChange();
 </script>
 
 <label class="swap swap-rotate">
   {/* this hidden checkbox controls the state */}
   <input
+    id="toggle-theme"
     data-toggle-theme="dark,cupcake"
     data-act-class="ACTIVECLASS"
     type="checkbox"

@@ -59,7 +59,7 @@ const AnimatedCard: React.FC<{
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="card card-compact card-side bg-secondary bg-opacity-20 shadow-xl lg:w-10/12"
+      className="card card-compact my-10 lg:my-0 lg:card-normal card-side bg-secondary bg-opacity-20 shadow-xl lg:m-4 w-10/12"
     >
       <figure
         style={{
@@ -70,7 +70,7 @@ const AnimatedCard: React.FC<{
       >
         <img
           className="rounded-md w-32 lg:w-40 h-full my-2 object-cover object-left "
-          src={project.image}
+          src={project.image || ''}
           alt={project.slug}
         />
       </figure>
