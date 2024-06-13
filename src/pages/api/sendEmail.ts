@@ -1,8 +1,7 @@
 import type { APIRoute } from 'astro'
-import { EmailTemplate } from '@/components/email-template';
-import { Resend } from 'resend';
-const resend = new Resend(import.meta.env.RESEND_API_KEY);
-
+// import { EmailTemplate } from '@/components/email-template';
+import sgMail from '@sendgrid/mail';
+sgMail.setApiKey(import.meta.env.SENDGRID_API_KEY);
 
 export const POST: APIRoute = async ({ request, cookies, redirect }) => {
     const body = await request.json();
@@ -15,40 +14,31 @@ export const POST: APIRoute = async ({ request, cookies, redirect }) => {
                 message: 'Ingrese un email valido'
             }), { status: 400 })
     }
+    const msg = {
+        to: email,
+        from: 'ramirogumma@hotmail.com',
+        bcc: 'ramirogumma@hotmail.com',
+        subject: "¡Pronto me pondré en contacto contigo!",
+        html: '<p>Pronto me pondre en contacto contigo</p>',
+    };
     try {
-
-        const { data, error } = await resend.emails.send({
-            from: 'Acme <onboarding@resend.dev>',
-            to: ['ramirogumma@gmail.com'],
-            subject: 'Hello world',
-            html: "<p>Hi</p>"
-        });
-
-        if (error) {
-            console.log(error)
-            return new Response(
-                JSON.stringify({
-                    success: false,
-                    message: error.message,
-                    data: error
-                }), { status: 400 }
-            )
-        }
-        console.log(data)
-        return new Response(
+        const email = await sgMail.send(msg);
+        return email[0].statusCode === 202 ? new Response(
             JSON.stringify({
                 success: true,
-                message: 'Email enviado',
-                data: data
-            })
-        )
+                message: 'E-mail enviado',
+            }, { status: 204 })) : new Response(
+                JSON.stringify({
+                    success: false,
+                    message: 'Error enviando el mail',
+                }, { status: 404 }))
     } catch (error) {
         return new Response(
             JSON.stringify({
                 success: false,
                 message: 'Error en el servidor',
-                data: data
-            },{ status: 500})
+                data: error
+            }, { status: 500 })
         )
     }
 

@@ -12,24 +12,23 @@ const EmailListBlock: React.FC<{ currentLocale: string }> = ({ currentLocale }) 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('/api/email', formData);
+      const { data, error } = await axios.post('/api/email', formData);
       if (!data.success) return setError({ error: true, message: data.message })
-      handleSendMail(formData.email)
-     return setSuccess({ success: true, message: i18n.SUCCESS.EMAIL_SUCCESS })
+      if (error) return setError({ error: true, message: data.message })
+      await handleSendMail(formData)
+      return setSuccess({ success: true, message: i18n.SUCCESS.EMAIL_SUCCESS })
     } catch (error) {
-      parseInt(error.response.data.data.code) === 23505 ? setSuccess(i18n.ERROR.EMAIL_EXISTS) : setError({ error: true, message: i18n.ERROR.EMAIL_EXISTS })
+      parseInt(error.response.data.data?.code) === 23505 && setSuccess(i18n.ERROR.EMAIL_EXISTS)
+      setError({ error: true, message: error.response.data.message })
     }
   }
 
   const handleSendMail = async (email: string) => {
     try {
       const { data, error } = await axios.post('/api/sendEmail', email);
-      console.log({
-        data,
-        error
-      })
+      data.success ? console.log(data.message) : console.error(error.message)
     } catch (error) {
-      console.log(error)
+      console.error(error)
     }
   }
 
@@ -40,9 +39,7 @@ const EmailListBlock: React.FC<{ currentLocale: string }> = ({ currentLocale }) 
   return (
     <>
       <Block className="col-span-12 md:col-span-9">
-        <button onClick={() => handleSendMail({email: 'ramirogumma@gmail.com'})} className="btn">
-          Email
-        </button>
+
         <div className="flex flex-col gap-y-2">
 
           <p className="mb-3 text-lg">{i18n.CONTACT_ME.TITLE}</p>
@@ -52,7 +49,7 @@ const EmailListBlock: React.FC<{ currentLocale: string }> = ({ currentLocale }) 
           >
             <input
               value={formData.email}
-              onChange={(e) => { handleChange(e), setError({ error: false, message: '' }), setSuccess(null) }}
+              onChange={(e) => { handleChange(e), setError({ error: false, message: '' }), setSuccess({ success: false, message: '' }) }}
               type="email"
               name="email"
               id="email"

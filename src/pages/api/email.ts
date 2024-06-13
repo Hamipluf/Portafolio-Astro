@@ -1,14 +1,12 @@
 import { supabase } from '@/lib/supabase'
 import type { APIRoute } from 'astro'
 import { EmailTemplate } from '@/components/email-template';
-import { Resend } from 'resend';
-const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
 
 export const POST: APIRoute = async ({ request, cookies, redirect }) => {
-  const body = await request.json();
-  const email = body.email
-  const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const { email } = await request.json()
+  const regexEmail = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
+  console.log(email)
   if (!regexEmail.test(email)) {
     return new Response(
       JSON.stringify({
