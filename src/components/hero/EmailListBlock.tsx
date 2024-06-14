@@ -2,37 +2,36 @@ import { useState } from 'react'
 import Block from "./Block";
 import axios from 'axios'
 import { getI18N } from '@/i18n/index'
-const EmailListBlock: React.FC<{ currentLocale: string }> = ({ currentLocale }) => {
+const EmailListBlock: React.FC<{ currentLocale: string | undefined }> = ({ currentLocale }) => {
   const i18n = getI18N({ currentLocale });
 
   const [formData, setFormData] = useState({ email: '' });
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState({ error: false, message: '' });
   const [success, setSuccess] = useState({ success: false, message: '' });
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
-      const { data, error } = await axios.post('/api/email', formData);
+      const { data, error }: any = await axios.post('/api/email', formData);
       if (!data.success) return setError({ error: true, message: data.message })
       if (error) return setError({ error: true, message: data.message })
       await handleSendMail(formData)
       return setSuccess({ success: true, message: i18n.SUCCESS.EMAIL_SUCCESS })
-    } catch (error) {
-      parseInt(error.response.data.data?.code) === 23505 && setSuccess(i18n.ERROR.EMAIL_EXISTS)
+    } catch (error: any) {
+      parseInt(error.response.data.data?.code) === 23505 && setSuccess({ success: true, message: i18n.ERROR.EMAIL_EXISTS })
       setError({ error: true, message: error.response.data.message })
     }
   }
 
-  const handleSendMail = async (email: string) => {
+  const handleSendMail = async (formData: { email: string }) => {
     try {
-      const { data, error } = await axios.post('/api/sendEmail', email);
+      const { data, error }: any = await axios.post('/api/sendEmail', formData);
       data.success ? console.log(data.message) : console.error(error.message)
     } catch (error) {
       console.error(error)
     }
   }
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     setFormData({ email: value });
   };
