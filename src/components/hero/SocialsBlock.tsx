@@ -98,7 +98,7 @@ const SocialsBlock: React.FC = () => {
                         duration: 2,
                         delay: 0.1,
                     }}
-                    href="https://www.linkedin.com/in/ramiro-gabriel-gumma-400993240/"
+                    href="https://www.linkedin.com/in/ramirogumma-fullstackdev/"
                     target="_blank"
                     className="flex items-center justify-center w-full h-full text-primary"
                 >
@@ -141,7 +141,7 @@ const SocialsBlock: React.FC = () => {
                         duration: 2,
                         delay: 0.3,
                     }}
-                    href=" https://w.app/RamaDev"
+                    href="https://w.app/RamaDev"
                     target="_blank"
                     className="flex items-center justify-center w-full h-full text-primary"
                 >
