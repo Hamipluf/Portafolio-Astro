@@ -16,7 +16,7 @@
       "Redux TLK",
       "Tailwind"
     ],
-    "image": "assets/RestoSyncCodeClient.png"
+    "image": "../assets/RestoSyncCodeClient.png"
   },
   {
     "id": 2,
@@ -38,7 +38,7 @@
       "Multer",
       "Passport"
     ],
-    "image": "assets/RestoSyncCode.png"
+    "image": "../assets/RestoSyncCode.png"
   },
   {
     "id": 3,
@@ -61,7 +61,7 @@
       "Handlebars",
       "Passport"
     ],
-    "image": "assets/e-commerce-coderhouse.PNG"
+    "image": "../assets/e-commerce-coderhouse.PNG"
   },
   {
     "id": 4,

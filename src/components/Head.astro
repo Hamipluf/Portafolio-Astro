@@ -1,50 +1,50 @@
 ---
 const { title } = Astro.props;
-
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <head>
-    <script is:inline>
+  <script>
+    document.addEventListener("astro:page-load", () => {
       if (localStorage.getItem("theme") === null) {
         document.documentElement.setAttribute("data-theme", "cupcake");
       } else
         document.documentElement.setAttribute(
           "data-theme",
-          localStorage.getItem("theme")
+          "dark",
         );
-    </script>
-    <script>
-      import { themeChange } from "theme-change";
-      themeChange();
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <!-- Font PT Mono-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Mono&family=Poetsen+One&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Font PT Mono-->
-    <!-- Font Lato-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poetsen+One&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Font Lato-->
-    <!-- Font Montserrat-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poetsen+One&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Font Montserrat-->
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
+    });
+  </script>
+
+  <ViewTransitions initial="fade" in="fade" out="fade" />
+  <meta charset="UTF-8" />
+  <meta name="description" content="Astro description" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <!-- Font PT Mono-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Mono&family=Poetsen+One&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Font PT Mono-->
+  <!-- Font Lato-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poetsen+One&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Font Lato-->
+  <!-- Font Montserrat-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poetsen+One&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Font Montserrat-->
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+</head>

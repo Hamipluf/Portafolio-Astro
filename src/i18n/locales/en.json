@@ -8,10 +8,11 @@
     "DESCRIPTION_3": "What sets me apart is my ability to agilely adapt to management methodologies, which allows me to offer fast and effective solutions to meet my clients' needs. In addition, my level of English is B1, which allows me to communicate effectively in professional environments and work in international teams. My main goal is to deliver exceptional results that not only meet expectations, but exceed them."
   },
   "HERO": {
+    "GREET": "Hi!, I'm",
     "NAME": "Ramiro Gumma",
     "TITLE": "Full-Stack",
     "TITLE_2": "Developer",
-    "DESCRIPTION": " FullStack MERN Developer | +3 years of experience | I convert ideas into code🚀",
+    "DESCRIPTION": " FullStack MERN Developer | +3 years of experience | I convert ideas into code",
     "LOCATION": "- Capital Federal, Argentina"
   },
   "EXPERIENCIE": {
@@ -33,7 +34,7 @@
     "TITLE": "Studies and Certificates"
   },
   "PROJECTS": {
-    "MORE_BUTTON":"MORE",
+    "MORE_BUTTON": "MORE",
     "MORE_TITLE": "Algunos de mis proyectos"
   }
 }

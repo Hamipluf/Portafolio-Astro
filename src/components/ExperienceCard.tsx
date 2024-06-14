@@ -28,10 +28,10 @@ const ExperienceCard: React.FC<{ currentLocale: string | undefined }> = ({
       <motion.div
         animate={{ opacity: [0, 1] }}
         transition={{ duration: 0.8 }}
-        className="flex m-4 items-center"
+        className="flex m-4 items-center w-full"
       >
         <div>
-          <h2 className="text-xl text-accent font-semibold m-4 underline underline-offset-4 shadow-xl">
+          <h2 className="text-xl text-accent font-semibold m-4 ml-10 underline underline-offset-4 shadow-xl">
             {i18n.EXPERIENCIE.TITLE}
           </h2>
         </div>

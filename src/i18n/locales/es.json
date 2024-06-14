@@ -8,10 +8,11 @@
     "DESCRIPTION_3": "Lo que me distingue es mi capacidad para adaptarme ágilmente a las metodologías de gestión, lo que me permite ofrecer soluciones rápidas y efectivas para satisfacer las necesidades de mis clientes. Además, mi nivel de inglés es B1, lo que me permite comunicarme eficazmente en entornos profesionales y trabajar en equipos internacionales. Mi principal objetivo es entregar resultados excepcionales que no solo cumplan con las expectativas, sino que las superen."
   },
   "HERO": {
+    "GREET": "¡Hola!, Soy",
     "NAME": "Ramiro Gumma",
     "TITLE": "Full-Stack",
     "TITLE_2": "Desarrollador",
-    "DESCRIPTION": "Desarrollador FullStack MERN | +3 años de experiencia | Convierto ideas en codigo🚀",
+    "DESCRIPTION": "Desarrollador FullStack MERN | +3 años de experiencia | Convierto ideas en codigo",
     "LOCATION": "- Capital Federal, Argentina"
   },
   "EXPERIENCIE": {
