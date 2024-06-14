@@ -12,11 +12,11 @@ const HeaderBlock: React.FC<{ currentLocale: string | undefined }> = ({ currentL
             <div className="avatar-image w-full h-full"></div>
           </div>
         </div>
-        <div className="w-10/12">
+        <div className="hidden lg:block w-10/12">
           <WaterDropGrid />
         </div>
       </div>
-      <h1 className="text-3xl font-medium leading-tight">
+      <h1 className="text-3xl font-medium leading-tight text-neutral">
         {i18n.HERO.GREET} {" "}
         <span className="base-text">
           {i18n.HERO.NAME}{" "}

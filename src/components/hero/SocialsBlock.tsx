@@ -1,9 +1,7 @@
 import Block from "./Block";
 import { motion } from 'framer-motion'
-import { getI18N } from '@/i18n/index'
 
-const SocialsBlock: React.FC<{ currentLocale: string | undefined }> = ({ currentLocale }) => {
-  const i18n = getI18N({ currentLocale });
+const SocialsBlock: React.FC = () => {
   return <>
     <Block
       whileHover={{
@@ -100,7 +98,7 @@ const SocialsBlock: React.FC<{ currentLocale: string | undefined }> = ({ current
                         duration: 2,
                         delay: 0.1,
                     }}
-                    href="https://www.linkedin.com/in/ramiro-gabriel-gumma-400993240/"
+                    href="https://www.linkedin.com/in/ramirogumma-fullstackdev/"
                     target="_blank"
                     className="flex items-center justify-center w-full h-full text-primary"
                 >
@@ -143,7 +141,7 @@ const SocialsBlock: React.FC<{ currentLocale: string | undefined }> = ({ current
                         duration: 2,
                         delay: 0.3,
                     }}
-                    href=" https://w.app/RamaDev"
+                    href="https://w.app/RamaDev"
                     target="_blank"
                     className="flex items-center justify-center w-full h-full text-primary"
                 >

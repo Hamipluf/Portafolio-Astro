@@ -1,13 +1,9 @@
 import { getI18N } from "@/i18n";
 import {
-  motion,
-  inView,
-  delay,
-  AnimatePresence,
-  easeIn,
-  easeInOut,
+  motion
+
 } from "framer-motion";
-import React, { useRef } from "react";
+import React from "react";
 const ExperienceCard: React.FC<{ currentLocale: string | undefined }> = ({
   currentLocale,
 }) => {
@@ -28,11 +24,11 @@ const ExperienceCard: React.FC<{ currentLocale: string | undefined }> = ({
       <motion.div
         animate={{ opacity: [0, 1] }}
         transition={{ duration: 0.8 }}
-        className="flex m-4 items-center w-full"
+        className="flex flex-col m-4 lg:mx-10 items-start max-h-screen w-full "
       >
         <div>
           <h2 className="text-xl text-accent font-semibold m-4 ml-10 underline underline-offset-4 shadow-xl">
-            {i18n.EXPERIENCIE.TITLE}
+            {i18n.EXPERIENCE.TITLE}
           </h2>
         </div>
         <div>
@@ -55,10 +51,9 @@ const ExperienceCard: React.FC<{ currentLocale: string | undefined }> = ({
             <path d="M3 13a20 20 0 0 0 18 0"></path>
           </svg>
         </div>
-      </motion.div>
         <motion.ul
           animate={"inital"}
-          className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical m-10"
+          className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical m-10 "
         >
           <motion.li variants={itemVariants}>
             <div className="timeline-middle">
@@ -73,15 +68,15 @@ const ExperienceCard: React.FC<{ currentLocale: string | undefined }> = ({
             </div>
             <div className="timeline-start md:text-end mb-10 mx-2 text-accent">
               <time className="font-mono italic">
-                {i18n.EXPERIENCIE["JOB-1"].DATE}
+                {i18n.EXPERIENCE["JOB-1"].DATE}
               </time>
               <div className="text-lg font-black">
-                {i18n.EXPERIENCIE["JOB-1"].POSITION}{" "}
+                {i18n.EXPERIENCE["JOB-1"].POSITION}{" "}
                 <span className="opacity-80 text-sm font-medium text-secondary">
-                  {i18n.EXPERIENCIE["JOB-1"].COMPANY}
+                  {i18n.EXPERIENCE["JOB-1"].COMPANY}
                 </span>
               </div>
-              {i18n.EXPERIENCIE["JOB-1"].DESCRIPTION}
+              {i18n.EXPERIENCE["JOB-1"].DESCRIPTION}
               <div className="flex justify-end gap-4 w-full my-2">
                 <div className="tooltip" data-tip="Node.JS">
                   <svg
@@ -174,19 +169,21 @@ const ExperienceCard: React.FC<{ currentLocale: string | undefined }> = ({
             </div>
             <div className="timeline-end mb-10 text-accent">
               <time className="font-mono italic">
-                {i18n.EXPERIENCIE["JOB-2"].DATE}
+                {i18n.EXPERIENCE["JOB-2"].DATE}
               </time>
               <div className="text-lg font-black">
-                {i18n.EXPERIENCIE["JOB-2"].POSITION}{" "}
+                {i18n.EXPERIENCE["JOB-2"].POSITION}{" "}
                 <span className="opacity-80 text-sm font-medium text-secondary">
-                  {i18n.EXPERIENCIE["JOB-2"].COMPANY}
+                  {i18n.EXPERIENCE["JOB-2"].COMPANY}
                 </span>
               </div>
-              {i18n.EXPERIENCIE["JOB-2"].DESCRIPTION}
+              {i18n.EXPERIENCE["JOB-2"].DESCRIPTION}
             </div>
             <hr />
           </motion.li>
         </motion.ul>
+      </motion.div>
+
     </>
   );
 };
