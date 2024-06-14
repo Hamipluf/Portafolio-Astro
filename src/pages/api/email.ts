@@ -6,7 +6,6 @@ import { EmailTemplate } from '@/components/email-template';
 export const POST: APIRoute = async ({ request, cookies, redirect }) => {
   const { email } = await request.json()
   const regexEmail = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
-  console.log(email)
   if (!regexEmail.test(email)) {
     return new Response(
       JSON.stringify({
