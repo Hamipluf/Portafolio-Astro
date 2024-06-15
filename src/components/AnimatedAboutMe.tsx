@@ -14,7 +14,7 @@ const AnimatedAboutMe: React.FC<{ currentLocale: string | undefined }> = ({
   };
 
   return (
-    <div ref={ref} className="lg:max-h-screen w-full lg:mx-10">
+    <div ref={ref} className="m-10 w-full lg:mx-16">
       <div className="w-full h-full flex flex-col justify-around lg:flex-row lg:items-stretch ">
         {/* Profile image */}
         <motion.div

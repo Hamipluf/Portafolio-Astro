@@ -38,7 +38,8 @@
     "MORE_TITLE": "Some of my projects"
   },
   "CONTACT_ME": {
-    "TITLE": "Join my contact list"
+    "TITLE": "Join my contact list",
+    "BUTTON": "Join the list"
   },
   "ERROR": {
     "EMAIL_ERROR": "Error saving e-mail",

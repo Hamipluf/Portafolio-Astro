@@ -38,7 +38,8 @@
     "MORE_TITLE": "Algunos de mis proyectos"
   },
   "CONTACT_ME": {
-    "TITLE": "Ingresa en mi lista de contactos"
+    "TITLE": "Ingresa en mi lista de contactos",
+    "BUTTON": "Ingresar"
   },
   "ERROR": {
     "EMAIL_ERROR":"Error guardando el e-mail.",

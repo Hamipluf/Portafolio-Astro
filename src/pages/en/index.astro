@@ -4,8 +4,8 @@ import Hero from "@/components/Hero";
 const { currentLocale } = Astro;
 ---
 
-<Layout title="Ramiro.Dev">
-  <section id="Hero" class="relative left-20 overflow-hidden">
+<Layout title="Home">
+  <section id="Hero" class="relative mx-2 left-10 lg:left-20 overflow-hidden min-h-screen">
     <Hero currentLocale={currentLocale} client:idle />
   </section>
 </Layout>
