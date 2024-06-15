@@ -7,10 +7,12 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
-import type { Project } from "@/utils/interfaces/project" ;
+import type { Project } from "@/utils/interfaces/project";
 
 const ROTATION_RANGE = 3.5;
 const HALF_ROTATION_RANGE = ROTATION_RANGE / 2;
+
+
 
 const AnimatedCard: React.FC<{
   project: Project;
@@ -48,6 +50,9 @@ const AnimatedCard: React.FC<{
     x.set(0);
     y.set(0);
   };
+
+
+
 
 
   return (
@@ -97,7 +102,7 @@ const AnimatedCard: React.FC<{
           }}
           className="max-w-md"
         >
-          {truncateText(project.description, 12)}
+          {truncateText(project.description, 10)}
         </p>
         <div
           style={{
