@@ -1,23 +1,9 @@
-<script is:inline>
-  if (localStorage.getItem("theme") === null) {
-    document.documentElement.setAttribute("data-theme", "cupcake");
-  } else
-    document.documentElement.setAttribute(
-      "data-theme",
-      localStorage.getItem("theme"),
-    );
-</script>
-<script>
-  import { themeChange } from "theme-change";
-  themeChange();
-</script>
+---
+---
 
 <label class="swap swap-rotate">
-  {/* this hidden checkbox controls the state */}
   <input
-    id="toggle-theme"
-    data-toggle-theme="dark,cupcake"
-    data-act-class="ACTIVECLASS"
+    id="themeToggle"
     type="checkbox"
     class="theme-controller"
     value="synthwave"
@@ -25,7 +11,7 @@
 
   {/* sun icon */}
   <svg
-    class="swap-off fill-current w-6 h-6"
+    class="swap-off fill-current w-7 h-7"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
     ><path
@@ -35,7 +21,7 @@
 
   {/* moon icon */}
   <svg
-    class="swap-on fill-current w-6 h-6"
+    class="swap-on fill-current w-7 h-7"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
     ><path
@@ -43,3 +29,23 @@
     ></path></svg
   >
 </label>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const handleToggleClick = (e: any) => {
+      const element = document.documentElement;
+      element.classList.toggle("dark");
+
+      const isDark = element.classList.contains("dark");
+
+      document.documentElement.setAttribute(
+        "data-theme",
+        isDark ? "dark" : "cupcake",
+      );
+      localStorage.setItem("theme", isDark ? "dark" : "cupcake");
+    };
+    document
+      ?.getElementById("themeToggle")
+      ?.addEventListener("click", (e) => handleToggleClick(e));
+  });
+</script>

@@ -12,12 +12,23 @@ const { title } = Astro.props;
 const { currentLocale } = Astro;
 ---
 
-<!doctype html>
+<script>
+  document.addEventListener("astro:after-swap", () => {
+    function applyTheme() {
+      const storedTheme = localStorage.getItem("theme");
+      if (storedTheme) {
+        document.documentElement.setAttribute("data-theme", storedTheme);
+      }
+    }
+    applyTheme();
+  });
+</script>
+
 <html lang={currentLocale}>
   <Head title={title} />
   <body class="bg-primary">
     <div class="containter">
-      <Sidebar />
+      <Sidebar transition:persist />
       <main class="relative w-full">
         <slot />
       </main>
