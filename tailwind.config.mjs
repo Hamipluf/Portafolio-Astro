@@ -7,6 +7,7 @@ export default {
         'nunito': ['Nunito', 'sans-serif'],
         'permanent': ['Sedgwick Ave Display', 'cursive'],
       },
+
     },
   },
   daisyui: {
@@ -52,8 +53,9 @@ export default {
             "-webkit-text-stroke": " 1px #201f1e",
             "text-stroke": "1px #201f1e",
           },
-
         },
+      },
+      {
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
           "primary": "#0f0f0f",
@@ -70,13 +72,12 @@ export default {
           ".base-text": {
             "color": "#9898A0",
           },
-          ".secodary-text": {
-            "font-family": "Josefin Sans , sans-serif",
+          ".secondary-text": {
+            "font-family": "Josefin Sans, sans-serif",
           },
-
           ".hero-text": {
             'background-image':
-            "linear-gradient(to bottom right, #e6e5e8 20%, #7046f3 30%, #0f0f0f )",
+              "linear-gradient(to bottom right, #e6e5e8 20%, #7046f3 30%, #0f0f0f )",
             "font-family": "PT Mono, monospace"
           },
           ".profile-image": {
@@ -93,7 +94,6 @@ export default {
             "-webkit-text-stroke": " 0.5px #f1f1f3",
             "text-stroke": "0.5px #f1f1f3",
           },
-
         },
       },
     ],
