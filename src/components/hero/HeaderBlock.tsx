@@ -38,7 +38,7 @@ const HeaderBlock: React.FC<{ currentLocale: string | undefined }> = ({ currentL
 
           </a>
           <a
-            href="/assets/cv-turing.pdf"
+            href="/assets/CV-RamiroGumma_FullStackDeveloper.pdf"
             download="cv-RamiroGummaFullstack.pdf"
             rel="noopener"
             className="badge badge-secondary glass badge-outline h-7 px-1 max-w-fit md:hover:scale-105"
