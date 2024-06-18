@@ -11,6 +11,7 @@ Bienvenido a mi portafolio web personal, desarrollado con [Astro](https://astro.
   - CSS
   - Tailwind
   - Framer-Motion
+  - SendGrid
 - **Estructura del proyecto**:
   - `public/`: Recursos estáticos
   - `src/`: Componentes, layouts y páginas
