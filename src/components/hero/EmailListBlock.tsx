@@ -11,26 +11,17 @@ const EmailListBlock: React.FC<{ currentLocale: string | undefined }> = ({ curre
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
-      const { data, error }: any = await axios.post('/api/email', formData);
+      const { data }: any = await axios.post('/api/email', formData);
       if (!data.success) return setError({ error: true, message: data.message })
-      if (error) return console.log("TRY ERROR", error)
-      await handleSendMail(formData)
       return setSuccess({ success: true, message: i18n.SUCCESS.EMAIL_SUCCESS })
     } catch (error: any) {
-      console.log("CATCH", error)
+      console.error("Axios Catch", error)
       parseInt(error.response.data.data?.code) === 23505 && setSuccess({ success: true, message: i18n.ERROR.EMAIL_EXISTS })
       console.log({ error: error, message: error.response.data.message })
     }
   }
 
-  const handleSendMail = async (formData: { email: string }) => {
-    try {
-      const { data, error }: any = await axios.post('/api/sendEmail', formData);
-      data.success ? console.log(data.message) : console.error(error.message)
-    } catch (error) {
-      console.error(error)
-    }
-  }
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
