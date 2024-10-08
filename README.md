@@ -12,6 +12,8 @@ Bienvenido a mi portafolio web personal, desarrollado con [Astro](https://astro.
   - Tailwind
   - Framer-Motion
   - SendGrid
+  - Twilio
+  - PostgreSQL
 - **Estructura del proyecto**:
   - `public/`: Recursos estáticos
   - `src/`: Componentes, layouts y páginas
