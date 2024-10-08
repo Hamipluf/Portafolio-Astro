@@ -4,11 +4,12 @@ import axios from 'axios'
 import { getI18N } from '@/i18n/index'
 const EmailListBlock: React.FC<{ currentLocale: string | undefined }> = ({ currentLocale }) => {
   const i18n = getI18N({ currentLocale });
-
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({ email: '' });
   const [error, setError] = useState({ error: false, message: '' });
   const [success, setSuccess] = useState({ success: false, message: '' });
   const handleSubmit = async (e: any) => {
+    setLoading(true)
     e.preventDefault();
     try {
       const { data }: any = await axios.post('/api/email', formData);
@@ -18,6 +19,8 @@ const EmailListBlock: React.FC<{ currentLocale: string | undefined }> = ({ curre
       console.error("Axios Catch", error)
       parseInt(error.response.data.data?.code) === 23505 && setSuccess({ success: true, message: i18n.ERROR.EMAIL_EXISTS })
       console.log({ error: error, message: error.response.data.message })
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -51,8 +54,15 @@ const EmailListBlock: React.FC<{ currentLocale: string | undefined }> = ({ curre
               type="submit"
               className="btn btn-sm btn-accent btn-outline"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-mail-forward"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5" /><path d="M3 6l9 6l9 -6" /><path d="M15 18h6" /><path d="M18 15l3 3l-3 3" /></svg>
+            { 
+            loading 
+            ? (<span className="loading loading-ring loading-md"></span>)
+          :(<>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-mail-forward"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5" /><path d="M3 6l9 6l9 -6" /><path d="M15 18h6" /><path d="M18 15l3 3l-3 3" /></svg>
               {i18n.CONTACT_ME.BUTTON}
+              </>
+            ) 
+          }
             </button>
           </form>
           <div className="h-5">
