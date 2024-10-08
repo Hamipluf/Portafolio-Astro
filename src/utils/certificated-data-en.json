@@ -90,6 +90,22 @@
       "image": "assets/CoderHouseCertificate.PNG",
       "institution": "CoderHouse",
       "url": "https://www.linkedin.com/school/coderhouse/"
+    },
+    {
+      "id": 8,
+      "id_certificate": "24b7c740755b",
+      "title": "Software Engineer Certificate",
+      "description": "It covers topics like Problem solving, SQL, and REST API.",
+      "knowledge": [
+        "SQL",
+        "Node.JS",
+        "API Development",
+        "JavaScript",
+        "Problem Solving"
+      ],
+      "image": "assets/certificate_software_engineer.png",
+      "institution": "HackerRank",
+      "url": "https://www.hackerrank.com/certificates/24b7c740755b"
     }
   ]
   

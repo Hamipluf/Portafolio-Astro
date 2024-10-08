@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import type { Project } from "@/utils/interfaces/project";
 
-const ROTATION_RANGE = 3.5;
+const ROTATION_RANGE = 5.5;
 const HALF_ROTATION_RANGE = ROTATION_RANGE / 2;
 
 
@@ -23,8 +23,8 @@ const AnimatedCard: React.FC<{
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
-  const xSpring = useSpring(x, { duration: 1, damping: 30 });
-  const ySpring = useSpring(y, { duration: 1, damping: 30 });
+  const xSpring = useSpring(x, { duration: .5, damping: 20 });
+  const ySpring = useSpring(y, { duration: .5, damping: 20 });
 
   const transform = useMotionTemplate`rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
 

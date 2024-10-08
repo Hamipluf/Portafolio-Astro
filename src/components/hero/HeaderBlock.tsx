@@ -13,7 +13,7 @@ const HeaderBlock: React.FC<{ currentLocale: string | undefined }> = ({ currentL
             <div className="avatar-image w-full h-full"></div>
           </div>
         </div>
-        <div className="hidden lg:block w-10/12">
+        <div className="hidden lg:block w-11/12">
           <WaterDropGrid />
         </div>
       </div>

@@ -40,7 +40,7 @@
   },
   "CONTACT_ME": {
     "TITLE": "Ingresa en mi lista de contactos",
-    "BUTTON": "Ingresar"
+    "BUTTON": "Enviar"
   },
   "ERROR": {
     "EMAIL_ERROR":"Error guardando el e-mail.",

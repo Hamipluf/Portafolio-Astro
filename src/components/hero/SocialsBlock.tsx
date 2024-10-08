@@ -141,7 +141,7 @@ const SocialsBlock: React.FC = () => {
                         duration: 2,
                         delay: 0.3,
                     }}
-                    href="https://w.app/RamaDev"
+                    href="https://wa.me/+542901449363"
                     target="_blank"
                     className="flex items-center justify-center w-full h-full text-primary"
                 >

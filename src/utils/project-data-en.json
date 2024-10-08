@@ -73,7 +73,7 @@
     "github": "https://github.com/Hamipluf/E-Commerce_coderhouse",
     "slug": "resto-sync-server",
     "tools": ["React", "Axios", "Redux", "Firebase", "CSS"],
-    "image": "assets/net.png"
+    "image": "../assets/net.png"
   },
   {
     "id": 5,
