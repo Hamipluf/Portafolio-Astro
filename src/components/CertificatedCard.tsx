@@ -27,7 +27,7 @@ const CertificatedCard: React.FC<{
           style={{ width: "100%", height: "200px" }}
           className="object-cover hover:rounded-lg transition-all duration-300 ease-in-out"
           src={image}
-          alt={certificate.id_certificate || ""}
+          alt={certificate.id_certificate || certificate.description}
         />
       </div>
       {/* Text */}
