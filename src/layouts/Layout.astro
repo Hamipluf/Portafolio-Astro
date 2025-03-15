@@ -16,12 +16,9 @@ const { currentLocale } = Astro;
 <html lang={currentLocale}>
   <Head title={title} />
   <body class="bg-primary">
-    <div class="containter">
-      <Sidebar />
-      <main class="relative w-full">
+      <main >
         <slot />
       </main>
-    </div>
     <style is:global>
       html {
         scroll-behavior: smooth;
@@ -31,28 +28,6 @@ const { currentLocale } = Astro;
         display: flex;
         flex-direction: column;
         overscroll-behavior: none;
-      }
-
-      .containter {
-        overflow-x: hidden;
-        width: 100%;
-      }
-
-      aside {
-        background-color: var(--aside-color);
-        color: var(--bg-color);
-      }
-
-      code {
-        font-family:
-          Menlo,
-          Monaco,
-          Lucida Console,
-          Liberation Mono,
-          DejaVu Sans Mono,
-          Bitstream Vera Sans Mono,
-          Courier New,
-          monospace;
       }
     </style>
   </body>

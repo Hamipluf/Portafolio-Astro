@@ -5,7 +5,5 @@ const { currentLocale } = Astro;
 ---
 
 <Layout title="Inicio">
-  <section id="Hero" class="relative mx-2 left-10 lg:left-20 overflow-hidden min-h-screen">
     <Hero client:idle currentLocale={currentLocale} />
-  </section>
 </Layout>
